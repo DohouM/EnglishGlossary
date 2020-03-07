@@ -1,6 +1,7 @@
 
 public class Main {
 	public static void main(String[] args) {
-		System.out.println("Hello, world!");
+		Word hello = new Word("hello", "bonjour",1);
+		System.out.println(hello.toString());
 	}
 }

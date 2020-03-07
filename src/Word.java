@@ -6,7 +6,7 @@
  * @author jcl
  *
  */
-public class word {
+public class Word {
 	
 	private String englishWord;
 	private String frenchWord;
@@ -19,7 +19,7 @@ public class word {
 	 * @param frenchWord
 	 * @param difficulty
 	 */
-	public word(String englishWord, String frenchWord, int difficulty) {
+	public Word(String englishWord, String frenchWord, int difficulty) {
 		super();
 		this.englishWord = englishWord;
 		this.frenchWord = frenchWord;
@@ -63,4 +63,10 @@ public class word {
 		this.difficulty = difficulty;
 	}
 
+	@Override
+	public String toString() {
+		return "Word [english Word=" + englishWord + ", french Word=" + frenchWord + ", difficulty from 1 to 3 =" + difficulty + "]";
+	}
+
+	
 }
