@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class Windows extends JFrame implements ActionListener{
 	/**
@@ -17,6 +18,7 @@ public class Windows extends JFrame implements ActionListener{
 
 	private JButton button = new JButton("Conect");
 	private JLabel title = new JLabel("E-GLOSSARY");
+	private JTextField id = new JTextField("Your User Name");
 
 	public Windows() {
 		this.setTitle("interactive Glossary");
@@ -45,6 +47,7 @@ public class Windows extends JFrame implements ActionListener{
 		pan.setLayout(new BorderLayout());
 		pan.add(title, BorderLayout.NORTH);
 		pan.add(new Panel(), BorderLayout.CENTER);
+		pan.add(id, BorderLayout.WEST);
 		pan.add(button, BorderLayout.SOUTH);
 
 		this.setContentPane(pan);
@@ -55,6 +58,7 @@ public class Windows extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent arg0) { //Method that will be called when clicking on the button
 		
 		System.out.println("BT on");
+		this.setSize(1000, 800);
 
 	}
 
