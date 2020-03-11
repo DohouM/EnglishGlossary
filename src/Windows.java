@@ -1,5 +1,10 @@
-import java.awt.Color; 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
@@ -9,10 +14,13 @@ public class Windows extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	 private JButton button = new JButton("Conect");
+	 private JLabel title = new JLabel("E-GLOSSARY");
 
 public Windows(){             
     this.setTitle("interactive Glossary");
-    this.setSize(400, 100);
+    this.setSize(400, 800);
     this.setLocationRelativeTo(null);               
  
     //New object JPanel
@@ -20,8 +28,26 @@ public Windows(){
     //background color
     pan.setBackground(Color.ORANGE);        
     //We warn our JFrame that our JPanel will be her JPanel pane
-    this.setContentPane(new Panel());               
+
+    Font police = new Font("impact", Font.ITALIC, 30);
+    //It is applied to the JLabel
+    title.setFont(police);
+    //Changing the text color
+    title.setForeground(Color.blue);
+    //The text alignment is modified using static attributes
+    // JLabel class
+    title.setHorizontalAlignment(JLabel.CENTER);
+    
+    pan.setLayout(new BorderLayout());
+    pan.add(title,BorderLayout.NORTH);
+    pan.add(new Panel(), BorderLayout.CENTER);
+    pan.add(button, BorderLayout.SOUTH);
+    
+
+    this.setContentPane(pan);               
     this.setVisible(true);
+    
+
 
   }               
 }
