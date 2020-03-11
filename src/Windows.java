@@ -16,7 +16,7 @@ public class Windows extends JFrame implements ActionListener{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private JButton button = new JButton("Conect");
+	private JButton button = new JButton("Connect");
 	private JLabel title = new JLabel("E-GLOSSARY");
 	private JTextField id = new JTextField("Your User Name");
 	private JTextField password = new JTextField("Your Password");
