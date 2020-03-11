@@ -1,7 +1,14 @@
 
 public class User {
 	private String userName;
-	private String password;
+	
+	/**
+	 * @param userName
+	 */
+	public User(String userName) {
+		super();
+		this.userName = userName;
+	}
 	/**
 	 * @return the userName
 	 */
@@ -13,18 +20,6 @@ public class User {
 	 */
 	public void setUserName(String userName) {
 		this.userName = userName;
-	}
-	/**
-	 * @return the password
-	 */
-	public String getPassword() {
-		return password;
-	}
-	/**
-	 * @param password the password to set
-	 */
-	public void setPassword(String password) {
-		this.password = password;
 	}
 	
 }
