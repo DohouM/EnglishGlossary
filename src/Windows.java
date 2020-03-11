@@ -19,6 +19,7 @@ public class Windows extends JFrame implements ActionListener{
 	private JButton button = new JButton("Conect");
 	private JLabel title = new JLabel("E-GLOSSARY");
 	private JTextField id = new JTextField("Your User Name");
+	private JTextField password = new JTextField("Your Password");
 
 	public Windows() {
 		this.setTitle("interactive Glossary");
@@ -47,7 +48,8 @@ public class Windows extends JFrame implements ActionListener{
 		pan.setLayout(new BorderLayout());
 		pan.add(title, BorderLayout.NORTH);
 		pan.add(new Panel(), BorderLayout.CENTER);
-		pan.add(id, BorderLayout.WEST);
+		pan.add(id,BorderLayout.WEST);
+		pan.add(password,BorderLayout.AFTER_LINE_ENDS);
 		pan.add(button, BorderLayout.SOUTH);
 
 		this.setContentPane(pan);
@@ -59,6 +61,7 @@ public class Windows extends JFrame implements ActionListener{
 		
 		System.out.println("BT on");
 		this.setSize(1000, 800);
+		System.out.println("TEXT : id " + id.getText());
 
 	}
 
