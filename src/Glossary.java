@@ -1,32 +1,32 @@
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;;
-
-/**
- * 
- */
-
 /**
  * @author jcl
  *
  */
 public class Glossary {
+	private Word[] glossary;
 	
-	public String pathToCsv = ; // path to access csv file
 	
-	BufferedReader csvReader = new BufferedReader(new FileReader(pathToCsv));
-	while ((row = csvReader.readLine()) != null) {
-	    String[] data = row.split(",");
-	    // do something with the data
+	public void sort(){ //sort words alphabetically
 	}
-	csvReader.close();
 
+
+	/**
+	 * @return the glossary
+	 */
+	public Word[] getGlossary() {
+		return glossary;
+	}
+
+
+	/**
+	 * @param glossary the glossary to set
+	 */
+	public void setGlossary(Word[] glossary) {
+		this.glossary = glossary;
+	}
 	
-	
-	
-	
-	public void sort(){
+	public void modifier() {
 		
 	}
 }

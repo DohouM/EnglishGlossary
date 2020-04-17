@@ -1,3 +1,5 @@
+import java.io.Serializable;
+
 /**
  * 
  */
@@ -6,11 +8,15 @@
  * @author jcl
  *
  */
-public class Word {
+public class Word implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String englishWord;
 	private String frenchWord;
-	private int difficulty;  // ask the client for the moment difficulty is codded by 1,2 or 3, 3 is the most difficult
+	
 	
 	
 	
@@ -19,11 +25,10 @@ public class Word {
 	 * @param frenchWord
 	 * @param difficulty
 	 */
-	public Word(String englishWord, String frenchWord, int difficulty) {
+	public Word(String englishWord, String frenchWord) {
 		super();
 		this.englishWord = englishWord;
 		this.frenchWord = frenchWord;
-		this.difficulty = difficulty;
 	}
 	
 	/**
@@ -50,22 +55,10 @@ public class Word {
 	public void setFrenchWord(String frenchWord) {
 		this.frenchWord = frenchWord;
 	}
-	/**
-	 * @return the difficulty
-	 */
-	public int getDifficulty() {
-		return difficulty;
-	}
-	/**
-	 * @param difficulty the difficulty to set
-	 */
-	public void setDifficulty(int difficulty) {
-		this.difficulty = difficulty;
-	}
-
+	
 	@Override
 	public String toString() {
-		return "Word [english Word=" + englishWord + ", french Word=" + frenchWord + ", difficulty from 1 to 3 =" + difficulty + "]";
+		return "Word [english Word=" + englishWord + ", french Word=" + frenchWord+ "]";
 	}
 
 	
