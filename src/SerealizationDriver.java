@@ -3,32 +3,36 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 public class SerealizationDriver {
-	public static void main(String[] args) {
-//		Word hello = new Word("hello", "bonjour");
-//		try {
-//			FileOutputStream fos = new FileOutputStream("word.ser");
-//
-//			ObjectOutputStream oos = new ObjectOutputStream(fos);
-//
-//			oos.writeObject(hello);
-//			oos.close();
+	
+	public static void serealizeTabWord(Word[] words) {
+		try {
+		FileOutputStream fos = new FileOutputStream("words.ser");
 
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+		oos.writeObject(words);
+		oos.close();
+
+	} catch (FileNotFoundException e) {
+		e.printStackTrace();
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+	}
+	
+	public static Word[] deSerealizeTabWord() {
 		
 		try {
-			FileInputStream fis = new FileInputStream("word.ser");
+			FileInputStream fis = new FileInputStream("words.ser");
 
 			ObjectInputStream ois = new ObjectInputStream(fis);
 
-			Word word1 =(Word) ois.readObject();
+			Word[] words =(Word[]) ois.readObject();
 			ois.close();
-			System.out.println(word1);
+			return words;
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -36,5 +40,6 @@ public class SerealizationDriver {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
+		return null;
 	}
 }
