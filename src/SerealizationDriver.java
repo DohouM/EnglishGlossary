@@ -7,13 +7,13 @@ import java.io.ObjectOutputStream;
 
 public class SerealizationDriver {
 	
-	public static void serealizeTabWord(Word[] words) {
+	public static void serealizeGlossary(Glossary glossary) {
 		try {
-		FileOutputStream fos = new FileOutputStream("words.ser");
+		FileOutputStream fos = new FileOutputStream("glossary.ser");
 
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
 
-		oos.writeObject(words);
+		oos.writeObject(glossary);
 		oos.close();
 
 	} catch (FileNotFoundException e) {
@@ -23,16 +23,16 @@ public class SerealizationDriver {
 	}
 	}
 	
-	public static Word[] deSerealizeTabWord() {
+	public static Glossary deSerealizeGlossary() {
 		
 		try {
-			FileInputStream fis = new FileInputStream("words.ser");
+			FileInputStream fis = new FileInputStream("glossary.ser");
 
 			ObjectInputStream ois = new ObjectInputStream(fis);
 
-			Word[] words =(Word[]) ois.readObject();
+			Glossary glossary =(Glossary) ois.readObject();
 			ois.close();
-			return words;
+			return glossary;
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
