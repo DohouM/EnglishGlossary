@@ -1,8 +1,13 @@
 
 public class Main {
-	//public static void main(String[] args) {
-		Word hello = new Word("hello", "bonjour",1);
-		System.out.println(hello.toString());
+	public static void main(String[] args) {
+		Glossary glossary = new Glossary();
+		FilesDrivers.readCsv(glossary);
+		
+		for(Word w: glossary.getGlossary())
+		{
+		  System.out.println( w.toString());
+		}
 		new Windows();
 	
 	}

@@ -1,11 +1,19 @@
+import java.util.ArrayList;
+
 
 /**
  * @author jcl
  *
  */
 public class Glossary {
-	private Word[] glossary;
-	
+
+
+	private ArrayList<Word> glossary = new ArrayList<Word>();
+	/**
+	 * @param glossary
+	 */
+	public Glossary() {
+	}	
 	
 	public void sort(){ //sort words alphabetically
 	}
@@ -14,7 +22,7 @@ public class Glossary {
 	/**
 	 * @return the glossary
 	 */
-	public Word[] getGlossary() {
+	public ArrayList<Word> getGlossary() {
 		return glossary;
 	}
 
@@ -22,8 +30,12 @@ public class Glossary {
 	/**
 	 * @param glossary the glossary to set
 	 */
-	public void setGlossary(Word[] glossary) {
+	public void setGlossary(ArrayList<Word> glossary) {
 		this.glossary = glossary;
+	}
+	
+	public void addWordGlossary(Word word) {
+		glossary.add(word);
 	}
 	
 	public void modifier() {
