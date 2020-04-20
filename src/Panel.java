@@ -15,7 +15,7 @@ public class Panel extends JPanel {
 public void paintComponent(Graphics g){
 
     System.out.println("Je suis exécutée !");
-    Word hello = new Word("hello", "bonjour",1);
+    Word hello = new Word("hello", "bonjour");
     g.drawString(hello.toString(), 10, 20);
     
 

@@ -104,11 +104,5 @@ public class Windows extends JFrame implements ActionListener {
 		}
 
 	}
-	public void autentification() {
-		
-	}
-	public void saisieIdentifiants() {
-		
-	}
-
 }
+

@@ -7,9 +7,12 @@ public class Main {
 		Glossary glossary = new Glossary();
 		glossary.setGlossary(SerealizationDriver.deSerealizeGlossary());
 		
+		 
 		for(Word w: glossary.getGlossary())
 		{
+		if (w.getEnglishWord().contains("*")) {
 		  System.out.println( w.toString());
+		}
 		}
 		System.out.println(glossary.getGlossary().size());
 		new Windows();
