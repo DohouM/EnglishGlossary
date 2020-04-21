@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.Collections;
+
+
 
 
 /**
@@ -16,6 +19,7 @@ public class Glossary {
 	}	
 	
 	public void sort(){ //sort words alphabetically
+		Collections.sort(glossary);
 	}
 
 

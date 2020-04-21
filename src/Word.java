@@ -8,7 +8,7 @@ import java.io.Serializable;
  * @author jcl
  *
  */
-public class Word implements Serializable{
+public class Word implements Serializable, Comparable<Word>{
 	
 	/**
 	 * 
@@ -61,5 +61,16 @@ public class Word implements Serializable{
 		return "Word [english Word=" + englishWord + ", french Word=" + frenchWord+ "]";
 	}
 
+
+	@Override
+	public int compareTo(Word wordToCompare) {
+		
+		int compareFirst=(int) ((Word)wordToCompare).getEnglishWord().charAt(0);
+        /* For Ascending order*/
+		int firstLettre= (int) this.getEnglishWord().charAt(0);
+        return firstLettre-compareFirst;
+	}
+
 	
 }
+
