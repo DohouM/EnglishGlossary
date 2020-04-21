@@ -15,7 +15,7 @@ public class Glossary {
 	public Glossary() {
 	}
 
-	public void sort() { // sort words alphabetically
+	public void sortByEn() { // sort words alphabetically
 		Collections.sort(glossary);
 	}
 
@@ -34,7 +34,14 @@ public class Glossary {
 	}
 
 	public void addWordGlossary(Word word) {
+		this.glossary.add(word);
+		this.sortByEn();
+	}
+	
+	public void addWordStringOnly(String EnglishWord,String FrenchWord) {
+		Word word = new Word(EnglishWord, FrenchWord);
 		glossary.add(word);
+		this.sortByEn();
 	}
 
 	public String search(String keyWord) {

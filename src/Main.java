@@ -6,7 +6,8 @@ public class Main {
 //		SerealizationDriver.serealizeGlossary(glossary.getGlossary());
 		Glossary glossary = new Glossary();
 		glossary.setGlossary(SerealizationDriver.deSerealizeGlossary());
-		glossary.sort();
+
+		//glossary.addWordStringOnly("Hello*", "bonjour");
 		
 		 
 		for(Word w: glossary.getGlossary())
