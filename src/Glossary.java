@@ -37,19 +37,19 @@ public class Glossary {
 		glossary.add(word);
 	}
 
-	public Word search(String keyWord) {
+	public String search(String keyWord) {
 
 		for (Word w : this.glossary) {
-			if (w.getEnglishWord().contains("keyWord")) {
-				return w;
+			if (w.getEnglishWord().contains(keyWord)) {
+				return w.toString();
 			}
 		}
 		for (Word w : this.glossary) {
-			if (w.getFrenchWord().contains("keyWord")) {
-				return w;
+			if (w.getFrenchWord().contains(keyWord)) {
+				return w.toString();
 			}
 		}
-		return null;
+		return keyWord+" not found";
 	}
 
 	public void modify() {
