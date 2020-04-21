@@ -5,7 +5,11 @@ import java.util.Collections;
  * @author jcl
  *
  */
+
+
 public class Glossary {
+	
+	public static int numberOfWordPerPage=51;
 
 	private ArrayList<Word> glossary;
 
@@ -60,10 +64,25 @@ public class Glossary {
 		return keyWord+" not found";
 	}
 
-	public ArrayList<Word> page(int startPage,int endPage) {
+	public ArrayList<Word> page(int page) {
 		ArrayList<Word> list =new ArrayList<Word>();
-		int startWord=51*startPage;
-		int endWord=51*endPage;
+		page=page-1;
+		int startWord=numberOfWordPerPage*page;
+		int endWord=startWord+numberOfWordPerPage;
+		
+		for (int i=startWord; i<endWord; i++) {
+			list.add(this.glossary.get(i));
+		}
+		
+		return list;
+	}
+	
+	public ArrayList<Word> pages(int startPage,int endPage) {
+		ArrayList<Word> list =new ArrayList<Word>();
+		startPage=startPage-1;
+		endPage=endPage-1;
+		int startWord=numberOfWordPerPage*startPage;
+		int endWord=numberOfWordPerPage*endPage+numberOfWordPerPage-1;
 		
 		for (int i=startWord; i<=endWord; i++) {
 			list.add(this.glossary.get(i));
