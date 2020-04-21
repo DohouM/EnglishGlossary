@@ -7,12 +7,13 @@ import java.util.Collections;
  */
 public class Glossary {
 
-	private ArrayList<Word> glossary = new ArrayList<Word>();
+	private ArrayList<Word> glossary;
 
 	/**
 	 * @param glossary
 	 */
 	public Glossary() {
+		this.glossary = new ArrayList<Word>();
 	}
 
 	public void sortByEn() { // sort words alphabetically
@@ -59,7 +60,15 @@ public class Glossary {
 		return keyWord+" not found";
 	}
 
-	public void modify() {
-
+	public ArrayList<Word> page(int startPage,int endPage) {
+		ArrayList<Word> list =new ArrayList<Word>();
+		int startWord=51*startPage;
+		int endWord=51*endPage;
+		
+		for (int i=startWord; i<=endWord; i++) {
+			list.add(this.glossary.get(i));
+		}
+		
+		return list;
 	}
 }
