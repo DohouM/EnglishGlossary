@@ -7,6 +7,7 @@ public class Main {
 		Glossary glossary = new Glossary();
 		glossary.setGlossary(SerealizationDriver.deSerealizeGlossary());
 		glossary.sort();
+		
 		 
 		for(Word w: glossary.getGlossary())
 		{
