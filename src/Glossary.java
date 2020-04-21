@@ -44,6 +44,11 @@ public class Glossary {
 				return w;
 			}
 		}
+		for (Word w : this.glossary) {
+			if (w.getFrenchWord().contains("keyWord")) {
+				return w;
+			}
+		}
 		return null;
 	}
 
