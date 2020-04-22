@@ -12,16 +12,14 @@ public class Main {
 		 
 		for(Word w: glossary.pages(1,6))
 		{
-		//if (w.getEnglishWord().contains("*")) {
+		if (w.getEnglishWord().contains("*")) {
 		  System.out.println( w.toString());
-		//}
+		}
 		}
 		System.out.println(glossary.getGlossary().size());
 		System.out.println(glossary.search("clé USB"));
 		new Windows();
 	
 	}
-	public void modifierGlaussaire() {
-		
-	}
+
 }
