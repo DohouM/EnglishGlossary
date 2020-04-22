@@ -50,7 +50,7 @@ public class Glossary {
 	}
 
 	public String search(String keyWord) {
-
+//ArrayList à faire pour le return ->ajouter les mots ->plusieurs mots même traduction
 		for (Word w : this.glossary) {
 			if (w.getEnglishWord().contains(keyWord)) {
 				return w.toString();
