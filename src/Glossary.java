@@ -9,7 +9,7 @@ import java.util.Collections;
 
 public class Glossary {
 	
-	public static int numberOfWordPerPage=51;
+	private final static int numberOfWordPerPage=51;
 
 	private ArrayList<Word> glossary;
 
