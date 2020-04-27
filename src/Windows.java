@@ -71,12 +71,18 @@ public class Windows extends JFrame implements ActionListener {
 			title.setText("E-GLOSSARY AS " + this.user.getUserName());
 			this.setSize(1000, 800);
 			this.setLocationRelativeTo(null);
-			// Pan
+		    // Pan
 			JTabbedPane pane = new JTabbedPane();
 		    String titre = "Onglet";
-		    pane.add(titre, new JLabel(titre));
+		    pane.add(titre, new JLabel(titre+"Contenue"));
 		    pane.setTabComponentAt(0, new Tabs(titre, pane));
-			this.setContentPane(pane);
+			// Pan
+		    
+		    String titre2 = "Onglet2";
+		    pane.add(titre2, new Panel());
+
+			// frame
+		    this.setContentPane(pane);
 		}
 
 		if (arg0.getSource() == btTeacher) {

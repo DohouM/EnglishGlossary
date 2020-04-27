@@ -22,10 +22,6 @@ public Tabs(String titre, JTabbedPane pane) {
     setOpaque(false);
     JLabel label = new JLabel(titre);
     add(label);
-    JButton button = new JButton("❌");
-    button.setPreferredSize(new Dimension(50,30));
-    button.addActionListener(this);
-    add(button);
   }
  
   public void actionPerformed(ActionEvent e) {
