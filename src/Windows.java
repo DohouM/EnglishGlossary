@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
+import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 
 public class Windows extends JFrame implements ActionListener {
@@ -70,7 +71,12 @@ public class Windows extends JFrame implements ActionListener {
 			title.setText("E-GLOSSARY AS " + this.user.getUserName());
 			this.setSize(1000, 800);
 			this.setLocationRelativeTo(null);
-			this.setContentPane(new Panel());
+			// Pan
+			JTabbedPane pane = new JTabbedPane();
+		    String titre = "Onglet";
+		    pane.add(titre, new JLabel(titre));
+		    pane.setTabComponentAt(0, new Tabs(titre, pane));
+			this.setContentPane(pane);
 		}
 
 		if (arg0.getSource() == btTeacher) {
