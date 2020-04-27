@@ -73,14 +73,19 @@ public class Windows extends JFrame implements ActionListener {
 			this.setLocationRelativeTo(null);
 		    // Pan
 			JTabbedPane pane = new JTabbedPane();
-		    String titre = "Onglet";
-		    pane.add(titre, new JLabel(titre+"Contenue"));
+		    String titre = "Glossary";
+		    pane.add(titre, new Panel("glossary"));
 		    pane.setTabComponentAt(0, new Tabs(titre, pane));
 			// Pan
 		    
-		    String titre2 = "Onglet2";
-		    pane.add(titre2, new Panel());
+		    String titre2 = "Quiz";
+		    pane.add(titre2, new Panel("quiz"));
 
+			// Pan
+		    
+		    String titre3 = "proposal";
+		    pane.add(titre3, new Panel("proposal"));
+		    
 			// frame
 		    this.setContentPane(pane);
 		}

@@ -90,4 +90,8 @@ public class Glossary {
 		
 		return list;
 	}
+	
+	public int numberOfPages() {
+		return (int) Math.ceil(glossary.size()/(double)numberOfWordPerPage);
+	}
 }
