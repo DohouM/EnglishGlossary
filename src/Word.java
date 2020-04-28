@@ -19,7 +19,6 @@ public class Word implements Serializable, Comparable<Word>{
 	
 	
 	
-	
 	/**
 	 * @param englishWord
 	 * @param frenchWord

@@ -1,10 +1,13 @@
 
+
 public class Main {
+	public static Glossary glossary = new Glossary();
+	
 	public static void main(String[] args) {
 //		Glossary glossary = new Glossary();
 //		FilesDrivers.readCsv(glossary);
 //		SerealizationDriver.serealizeGlossary(glossary.getGlossary());
-		Glossary glossary = new Glossary();
+		
 		glossary.setGlossary(SerealizationDriver.deSerealizeGlossary());
 
 		//glossary.addWordStringOnly("Hello*", "bonjour");
@@ -19,7 +22,7 @@ public class Main {
 		System.out.println(glossary.getGlossary().size());
 		System.out.println(glossary.numberOfPages());
 		System.out.println(glossary.search("clé USB"));
-		new Windows();
+		new Windows(glossary);
 	
 	}
 
