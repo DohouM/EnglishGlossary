@@ -22,7 +22,7 @@ public class Main {
 		System.out.println(glossary.getGlossary().size());
 		System.out.println(glossary.numberOfPages());
 		System.out.println(glossary.search("clé USB"));
-		new Windows(glossary);
+		new ApplicationContext(glossary);
 	
 	}
 

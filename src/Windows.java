@@ -29,10 +29,9 @@ public class Windows extends JFrame implements ActionListener {
 	private JPasswordField password = new JPasswordField("");
 	
 	
-	private Glossary glossary;
 
-	public Windows(Glossary glos) {
-		this.setGlossary(glos);
+
+	public Windows() {
 		this.setTitle("interactive Glossary");
 		this.setSize(400, 200);
 		this.setLocationRelativeTo(null);
@@ -78,17 +77,17 @@ public class Windows extends JFrame implements ActionListener {
 		    // Pan
 			JTabbedPane pane = new JTabbedPane();
 		    String titre = "Glossary";
-		    pane.add(titre, new Panel("glossary",glossary));
+		    pane.add(titre, new PanelGlossary());
 		    pane.setTabComponentAt(0, new Tabs(titre, pane));
 			// Pan
 		    
 		    String titre2 = "Quiz";
-		    pane.add(titre2, new Panel("quiz",glossary));
+		    pane.add(titre2, new PanelQuiz());
 
 			// Pan
 		    
 		    String titre3 = "proposal";
-		    pane.add(titre3, new Panel("proposal",glossary));
+		    pane.add(titre3, new PanelProposal());
 		    
 			// frame
 		    this.setContentPane(pane);
@@ -126,18 +125,5 @@ public class Windows extends JFrame implements ActionListener {
 
 	}
 
-	/**
-	 * @return the glossary
-	 */
-	public Glossary getGlossary() {
-		return glossary;
-	}
-
-	/**
-	 * @param glossary the glossary to set
-	 */
-	public void setGlossary(Glossary glossary) {
-		this.glossary = glossary;
-	}
 }
 
