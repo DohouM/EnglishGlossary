@@ -36,6 +36,12 @@ public class PanelGlossary extends JPanel implements ActionListener{
 	JLabel fromP=new JLabel("From page");	
 	JLabel to=new JLabel("to");	
 	
+	//JScrollPane
+	JScrollPane tab = new JScrollPane();
+	
+	//JTable
+	JTable tableau;
+	
 	public PanelGlossary() {
 		super();
 		this.add(fromP);
@@ -62,6 +68,7 @@ public class PanelGlossary extends JPanel implements ActionListener{
 //		EnWords.setText(EnWordList);
 //		
 //		this.add(EnWords);
+		this.remove(tab);
 		
   		ArrayList<Word> WordList =ApplicationContext.getGlossary().pages((int)spinnerStart.getValue(),(int) spinnerEnd.getValue());
 		
@@ -76,9 +83,12 @@ public class PanelGlossary extends JPanel implements ActionListener{
         }
              
         String  title[] = {"English Words", "French Words"};
-        JTable tableau = new JTable(data, title);
-         
-        this.add(new JScrollPane(tableau));
+        tableau = new JTable(data, title);
+        
+
+        tab= new JScrollPane(tableau);
+       
+        this.add(tab);
 		
 		this.updateUI();
 		

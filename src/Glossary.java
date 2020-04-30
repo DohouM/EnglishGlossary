@@ -6,10 +6,9 @@ import java.util.Collections;
  *
  */
 
-
 public class Glossary {
-	
-	private final static int numberOfWordPerPage=51;
+
+	private final static int numberOfWordPerPage = 51;
 
 	private ArrayList<Word> glossary;
 
@@ -42,8 +41,8 @@ public class Glossary {
 		this.glossary.add(word);
 		this.sortByEn();
 	}
-	
-	public void addWordStringOnly(String EnglishWord,String FrenchWord) {
+
+	public void addWordStringOnly(String EnglishWord, String FrenchWord) {
 		Word word = new Word(EnglishWord, FrenchWord);
 		glossary.add(word);
 		this.sortByEn();
@@ -61,37 +60,42 @@ public class Glossary {
 				return w.toString();
 			}
 		}
-		return keyWord+" not found";
+		return keyWord + " not found";
 	}
 
 	public ArrayList<Word> page(int page) {
-		ArrayList<Word> list =new ArrayList<Word>();
-		page=page-1;
-		int startWord=numberOfWordPerPage*page;
-		int endWord=startWord+numberOfWordPerPage;
-		
-		for (int i=startWord; i<endWord; i++) {
+		ArrayList<Word> list = new ArrayList<Word>();
+		page = page - 1;
+		int startWord = numberOfWordPerPage * page;
+		int endWord = startWord + numberOfWordPerPage;
+
+		for (int i = startWord; i < endWord; i++) {
 			list.add(this.glossary.get(i));
 		}
-		
+
 		return list;
 	}
-	
-	public ArrayList<Word> pages(int startPage,int endPage) {
-		ArrayList<Word> list =new ArrayList<Word>();
-		startPage=startPage-1;
-		endPage=endPage-1;
-		int startWord=numberOfWordPerPage*startPage;
-		int endWord=numberOfWordPerPage*endPage+numberOfWordPerPage-1;
-		
-		for (int i=startWord; i<=endWord; i++) {
+
+	public ArrayList<Word> pages(int startPage, int endPage) {
+		ArrayList<Word> list = new ArrayList<Word>();
+		startPage = startPage - 1;
+		endPage = endPage - 1;
+		int startWord = numberOfWordPerPage * startPage;
+		int endWord;
+		if (endPage + 1 == this.numberOfPages()) {
+			endWord = this.glossary.size() - 1;
+		} else {
+			endWord = numberOfWordPerPage * endPage + numberOfWordPerPage - 1;
+		}
+
+		for (int i = startWord; i <= endWord; i++) {
 			list.add(this.glossary.get(i));
 		}
-		
+
 		return list;
 	}
-	
+
 	public int numberOfPages() {
-		return (int) Math.ceil(glossary.size()/(double)numberOfWordPerPage);
+		return (int) Math.ceil(glossary.size() / (double) numberOfWordPerPage);
 	}
 }
