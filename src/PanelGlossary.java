@@ -63,7 +63,7 @@ public class PanelGlossary extends JPanel implements ActionListener{
 //		
 //		this.add(EnWords);
 		
-		ArrayList<Word> WordList =ApplicationContext.getGlossary().pages((int)spinnerStart.getValue(),(int) spinnerEnd.getValue());
+  		ArrayList<Word> WordList =ApplicationContext.getGlossary().pages((int)spinnerStart.getValue(),(int) spinnerEnd.getValue());
 		
 		Object[][] data = new Object[WordList.size()][2];
 		 
@@ -80,7 +80,7 @@ public class PanelGlossary extends JPanel implements ActionListener{
          
         this.add(new JScrollPane(tableau));
 		
-		
+		this.updateUI();
 		
 	}
 
