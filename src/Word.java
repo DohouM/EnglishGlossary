@@ -36,6 +36,13 @@ public class Word implements Serializable, Comparable<Word>{
 	public String getEnglishWord() {
 		return englishWord;
 	}
+	
+	public String getEnglishWordWithoutMark() {
+		if (this.isMandatory()) {
+			return englishWord.replaceAll("\\*","");
+		}
+		return englishWord;
+	}
 	/**
 	 * @param englishWord the englishWord to set
 	 */

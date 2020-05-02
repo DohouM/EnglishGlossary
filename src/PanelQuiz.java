@@ -13,9 +13,12 @@ import javax.swing.JTable;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 
+
 public class PanelQuiz extends JPanel implements ActionListener {
 	
 	private int wordPerQuiz=20;
+
+
 
 	private static final long serialVersionUID = 1L;
 	// Spinners
@@ -46,6 +49,9 @@ public class PanelQuiz extends JPanel implements ActionListener {
 
 	// JCheckBox
 	JCheckBox checkbox = new JCheckBox("only mandatory words(*)");
+	
+	//keep results
+	Object[] QuizResults;
 
 	public PanelQuiz() {
 		super();
@@ -95,12 +101,15 @@ public class PanelQuiz extends JPanel implements ActionListener {
 			Collections.shuffle(WordList); //randomize word list
 			
 			Object[][] data = new Object[wordPerQuiz][2];
+			QuizResults= new Object[wordPerQuiz];
 			
 			int i = 0;
 			while (i < wordPerQuiz) {
 				data[i][0] = WordList.get(i).getFrenchWord();
 				data[i][1] = "";
+				QuizResults[i]= WordList.get(i).getEnglishWordWithoutMark();
 				i = i + 1;
+
 
 			}
 
@@ -121,7 +130,11 @@ public class PanelQuiz extends JPanel implements ActionListener {
 		if (arg0.getSource() == btConfirm) {
 			
 			for(int i=0; i<wordPerQuiz;i++) {
-				System.out.println(tableau.getValueAt(i,1));
+				if(QuizResults[i].equals(tableau.getValueAt(i,1))) {
+					tableau.setValueAt(tableau.getValueAt(i,1)+"✓",i,1);					
+				} else {
+					tableau.setValueAt(tableau.getValueAt(i,1)+" "+QuizResults[i],i,1);
+				}
 			}
 			
 			
