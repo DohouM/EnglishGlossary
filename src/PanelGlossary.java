@@ -30,7 +30,7 @@ public class PanelGlossary extends JPanel implements ActionListener{
 	JSpinner spinnerEnd = new JSpinner(endPages);
 	
 	//buttons
-	JButton runG = new JButton("run");
+	JButton btRun = new JButton("run");
 	
 	//labels
 	JLabel fromP=new JLabel("From page");	
@@ -48,8 +48,8 @@ public class PanelGlossary extends JPanel implements ActionListener{
 		this.add(spinnerStart);
 		this.add(to);
 		this.add(spinnerEnd);
-		runG.addActionListener(this);
-		this.add(runG);
+		btRun.addActionListener(this);
+		this.add(btRun);
 
 	}
 	/**
