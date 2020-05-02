@@ -131,9 +131,9 @@ public class PanelQuiz extends JPanel implements ActionListener {
 			
 			for(int i=0; i<wordPerQuiz;i++) {
 				if(QuizResults[i].equals(tableau.getValueAt(i,1))) {
-					tableau.setValueAt(tableau.getValueAt(i,1)+"✓",i,1);					
+					tableau.setValueAt(tableau.getValueAt(i,1)+"  ✓",i,1);					
 				} else {
-					tableau.setValueAt(tableau.getValueAt(i,1)+" "+QuizResults[i],i,1);
+					tableau.setValueAt(tableau.getValueAt(i,1)+" // "+QuizResults[i]+ "  ❌",i,1);
 				}
 			}
 			
