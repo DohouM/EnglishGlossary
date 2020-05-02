@@ -81,7 +81,7 @@ public class PanelQuiz extends JPanel implements ActionListener{
 
 		if (checkbox.isSelected()) {
 			 
-			WordList=
+			WordList=isMandatory()
 		}
 		Object[][] data = new Object[WordList.size()][2];
 		 

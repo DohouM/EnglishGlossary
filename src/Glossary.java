@@ -63,18 +63,18 @@ public class Glossary {
 		return keyWord + " not found";
 	}
 
-	public ArrayList<Word> page(int page) {
-		ArrayList<Word> list = new ArrayList<Word>();
-		page = page - 1;
-		int startWord = numberOfWordPerPage * page;
-		int endWord = startWord + numberOfWordPerPage;
-
-		for (int i = startWord; i < endWord; i++) {
-			list.add(this.glossary.get(i));
-		}
-
-		return list;
-	}
+//	public ArrayList<Word> page(int page) {
+//		ArrayList<Word> list = new ArrayList<Word>();
+//		page = page - 1;
+//		int startWord = numberOfWordPerPage * page;
+//		int endWord = startWord + numberOfWordPerPage;
+//
+//		for (int i = startWord; i < endWord; i++) {
+//			list.add(this.glossary.get(i));
+//		}
+//
+//		return list;
+//	}
 
 	public ArrayList<Word> pages(int startPage, int endPage) {
 		ArrayList<Word> list = new ArrayList<Word>();
@@ -92,6 +92,26 @@ public class Glossary {
 			list.add(this.glossary.get(i));
 		}
 
+		return list;
+	}
+	
+	public ArrayList<Word> pagesMandatory(int startPage, int endPage) {
+		ArrayList<Word> list = new ArrayList<Word>();
+		startPage = startPage - 1;
+		endPage = endPage - 1;
+		int startWord = numberOfWordPerPage * startPage;
+		int endWord;
+		if (endPage + 1 == this.numberOfPages()) {
+			endWord = this.glossary.size() - 1;
+		} else {
+			endWord = numberOfWordPerPage * endPage + numberOfWordPerPage - 1;
+		}
+
+		for (int i = startWord; i <= endWord; i++) {
+			if (this.glossary.get(i).isMandatory()) {
+				 list.add(this.glossary.get(i));
+			}
+		}
 		return list;
 	}
 

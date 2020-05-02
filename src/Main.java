@@ -15,7 +15,7 @@ public class Main {
 		 
 		for(Word w: glossary.pages(1,6))
 		{
-		if (w.getEnglishWord().contains("*")) {
+		if (w.isMandatory()) {
 		  System.out.println( w.toString());
 		}
 		}
