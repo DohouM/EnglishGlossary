@@ -111,14 +111,18 @@ public class PanelQuiz extends JPanel implements ActionListener {
 
 			this.add(tab);
 
-			btConfirm.addActionListener(this);
 			this.add(btConfirm);
-
+			btConfirm.addActionListener(this);
+			
 			this.updateUI();
 
 		}
 		
 		if (arg0.getSource() == btConfirm) {
+			
+			for(int i=0; i<wordPerQuiz;i++) {
+				System.out.println(tableau.getValueAt(i,1));
+			}
 			
 			
 			
