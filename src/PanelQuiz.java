@@ -3,6 +3,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -39,14 +40,23 @@ public class PanelQuiz extends JPanel implements ActionListener{
 	//JTable
 	JTable tableau;
 	
+	//JCheckBox
+	JCheckBox checkbox = new JCheckBox("only mandatory words(*)");
+	
 	public PanelQuiz() {
 		super();
 		this.add(fromP);
 		this.add(spinnerStart);
 		this.add(to);
 		this.add(spinnerEnd);
-		btPlay.addActionListener(this);
 		this.add(btPlay);
+		// add to a container
+		this.add(checkbox);
+		// set state
+		checkbox.setSelected(true);
+		
+		btPlay.addActionListener(this);
+	
 
 	}
 	/**
@@ -66,9 +76,13 @@ public class PanelQuiz extends JPanel implements ActionListener{
 //		
 //		this.add(EnWords);
 		this.remove(tab);
-		
-  		ArrayList<Word> WordList =ApplicationContext.getGlossary().pages((int)spinnerStart.getValue(),(int) spinnerEnd.getValue());
-		
+
+		ArrayList<Word> WordList =ApplicationContext.getGlossary().pages((int)spinnerStart.getValue(),(int) spinnerEnd.getValue());
+
+		if (checkbox.isSelected()) {
+			 
+			WordList=
+		}
 		Object[][] data = new Object[WordList.size()][2];
 		 
         int i = 0;
