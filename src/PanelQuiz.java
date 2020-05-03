@@ -40,6 +40,7 @@ public class PanelQuiz extends JPanel implements ActionListener {
 	// labels
 	JLabel fromP = new JLabel("From page");
 	JLabel to = new JLabel("to");
+	JLabel points=new JLabel("");
 
 	// JScrollPane
 	JScrollPane tab = new JScrollPane();
@@ -88,6 +89,7 @@ public class PanelQuiz extends JPanel implements ActionListener {
 		if (arg0.getSource() == btPlay) {
 			
 			this.remove(tab);
+			this.remove(points);
 
 			ArrayList<Word> WordList = ApplicationContext.getGlossary().pages((int) spinnerStart.getValue(),
 					(int) spinnerEnd.getValue());
@@ -128,17 +130,22 @@ public class PanelQuiz extends JPanel implements ActionListener {
 		}
 		
 		if (arg0.getSource() == btConfirm) {
+			int point=0;
+			this.remove(points);
 			
 			for(int i=0; i<wordPerQuiz;i++) {
 				if(QuizResults[i].equals(tableau.getValueAt(i,1))) {
-					tableau.setValueAt(tableau.getValueAt(i,1)+"  ✓",i,1);					
+					tableau.setValueAt(tableau.getValueAt(i,1)+"  ✓",i,1);
+					point++;
 				} else {
 					tableau.setValueAt(tableau.getValueAt(i,1)+" // "+QuizResults[i]+ "  ❌",i,1);
 				}
 			}
-			
-			
-			
+		
+			points = new JLabel(Integer.toString(point)+"/"+Integer.toString(wordPerQuiz));
+			this.add(points);
+			this.updateUI();
+
 		}
 	}
 
