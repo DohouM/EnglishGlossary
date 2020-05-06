@@ -74,7 +74,7 @@ public class Windows extends JFrame implements ActionListener {
 			title.setText("E-GLOSSARY AS " + this.user.getUserName());
 			this.setSize(1000, 800);
 			this.setLocationRelativeTo(null);
-		    JTabbedPane pane = LoadDtudentPanel();
+		    JTabbedPane pane = LoadStudentPanel();
 		    
 			// frame
 		    this.setContentPane(pane);
@@ -112,7 +112,7 @@ public class Windows extends JFrame implements ActionListener {
 
 	}
 
-	private JTabbedPane LoadDtudentPanel() {
+	private JTabbedPane LoadStudentPanel() {
 		// Pan
 		JTabbedPane pane = new JTabbedPane();
 		String titre = "Glossary";
@@ -128,6 +128,21 @@ public class Windows extends JFrame implements ActionListener {
 		String titre3 = "proposal";
 		pane.add(titre3, new PanelProposal());
 		return pane;
+	}
+	
+	private JTabbedPane LoadTeacherPanel() {
+		// Pan
+		JTabbedPane pane = new JTabbedPane();
+		String titre = "Glossary";
+		pane.add(titre, new PanelGlossary());
+		pane.setTabComponentAt(0, new Tabs(titre, pane));
+		// Pan
+		
+		String titre2 = "Quiz";
+		pane.add(titre2, new PanelQuiz());
+
+		// Pan
+		
 	}
 
 }
