@@ -106,11 +106,11 @@ public class Windows extends JFrame implements ActionListener {
 			// pan.add(new Panel(), BorderLayout.CENTER);
 			
 			conectpan.add(password, BorderLayout.CENTER);
+			conect.addActionListener(this);
 			conectpan.add(conect, BorderLayout.SOUTH);
 			this.setContentPane(conectpan);
 		}
-
-	}
+		
 
 	private JTabbedPane LoadStudentPanel() {
 		// Pan
