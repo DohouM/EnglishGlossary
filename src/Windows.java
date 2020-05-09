@@ -110,6 +110,7 @@ public class Windows extends JFrame implements ActionListener {
 			conectpan.add(conect, BorderLayout.SOUTH);
 			this.setContentPane(conectpan);
 		}
+		}
 		
 
 	private JTabbedPane LoadStudentPanel() {
