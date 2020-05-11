@@ -12,7 +12,9 @@ import java.util.Collections;
  */
 
 public class Glossary {
-
+    /**
+     * The number of word per pages into this glossary.
+     */
     private final int numberOfWordPerPage = 51;
     
     /**
