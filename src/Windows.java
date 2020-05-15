@@ -3,7 +3,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -11,6 +11,8 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
+import java.security.*;
+
 
 public class Windows extends JFrame implements ActionListener {
 	/**
@@ -28,8 +30,13 @@ public class Windows extends JFrame implements ActionListener {
 	private User user;
 	private JPasswordField password = new JPasswordField("");
 	
-	
 
+	private static final String passWordV1 = "admin";
+	
+	private static final String passWordV2 = toHexa(passWordV1);
+	
+	private static final String finalPassWord = toMD5Hash(passWordV2);
+	
 
 	public Windows() {
 		this.setTitle("interactive Glossary");
@@ -145,6 +152,51 @@ public class Windows extends JFrame implements ActionListener {
 		// Pan
 		
 	}
-
+	private static String toHexa (String source)
+	{
+		return toHexaHelp(source.getBytes());
+	}
+	
+	private static String toHexaHelp(byte[] source)
+	{
+		StringBuilder sb = new StringBuilder();
+		
+		for(byte b : source)
+		{
+			String toAppend = String.format("%2X", b).replace(" ", "0"); 
+			sb.append(toAppend);
+		}
+		
+		return sb.toString();
+	}
+	
+	private static String toMD5Hash(String source)
+	{
+		String result = "";
+		
+		try {
+		MessageDigest md5 = MessageDigest.getInstance("MD5");
+		byte[] md5HashBytes = md5.digest(source.getBytes());
+		
+		result = toHexaHelp(md5HashBytes);
+		}
+		catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	public static boolean comparable(String testPassWord)
+	{	
+		String testPassWordV2 = toHexa(testPassWord);
+		
+		String finalTestPassWord = toMD5Hash(testPassWordV2);
+		
+		if (finalTestPassWord.compareTo(finalPassWord)==0) 
+			return true;
+		else
+			return false;
+	}
 }
 

@@ -8,6 +8,8 @@ public class Main {
 //		FilesDrivers.readCsv(glossary);
 //		SerealizationDriver.serealizeGlossary(glossary.getGlossary());
 		
+		
+		
 		glossary.setGlossary(SerealizationDriver.deSerealizeGlossary());
 
 		//glossary.addWordStringOnly("Hello*", "bonjour");
@@ -23,7 +25,9 @@ public class Main {
 		System.out.println(glossary.numberOfPages());
 		System.out.println(glossary.search("clé USB"));
 		new ApplicationContext(glossary);
-	
+		
+		System.out.println(Windows.comparable("admin"));
+		System.out.println(Windows.comparable("kebab"));
 	}
 
 }
