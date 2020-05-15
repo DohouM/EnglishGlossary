@@ -119,7 +119,9 @@ public class Windows extends JFrame implements ActionListener {
 		}
 		
 		if (arg0.getSource() == conect) {
-				if (comparable((password.getPassword()).toString())==true)
+			char[] pass = password.getPassword();
+			String passString = new String(pass);
+				if (comparable(passString))
 						System.out.println("Good PassWord");
 				else
 					System.out.println("Try again");
