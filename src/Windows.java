@@ -117,6 +117,10 @@ public class Windows extends JFrame implements ActionListener {
 			conectpan.add(conect, BorderLayout.SOUTH);
 			this.setContentPane(conectpan);
 		}
+		
+		if (arg0.getSource() == conect) {
+
+		}
 		}
 		
 
