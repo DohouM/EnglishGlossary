@@ -38,9 +38,6 @@ public class Main {
 		System.out.println(glossary.numberOfPages());
 		System.out.println(glossary.search("clé USB"));
 		new ApplicationContext(glossary);
-		
-		System.out.println(Windows.comparable("admin"));
-		System.out.println(Windows.comparable("kebab"));
 
     }
 
