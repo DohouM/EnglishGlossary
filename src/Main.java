@@ -1,9 +1,22 @@
-
+/**
+ * Main class of the program, contains Main function, which is the core of the
+ * app.
+ * 
+ * @author Jean-Camille LAPIERRE, Dorian MOUNIER, Gabriel SAPONARA, Cyril
+ *         PIGEYRE, Medhy DOHOU
+ * @version 1.5
+ */
 
 public class Main {
-	public static Glossary glossary = new Glossary();
-	
-	public static void main(String[] args) {
+    public static Glossary glossary = new Glossary(SerealizationDriver.deSerealizeGlossary());
+
+    /**
+     * Main function of the program, launches every vital function of it.
+     * 
+     * @author Jean-Camille LAPIERRE, Dorian MOUNIER, Gabriel SAPONARA, Cyril
+     *         PIGEYRE, Medhy DOHOU
+     */
+    public static void main(String[] args) {
 //		Glossary glossary = new Glossary();
 //		FilesDrivers.readCsv(glossary);
 //		SerealizationDriver.serealizeGlossary(glossary.getGlossary());
@@ -28,6 +41,7 @@ public class Main {
 		
 		System.out.println(Windows.comparable("admin"));
 		System.out.println(Windows.comparable("kebab"));
-	}
+
+    }
 
 }
