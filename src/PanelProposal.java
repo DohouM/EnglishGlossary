@@ -3,6 +3,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -30,6 +31,8 @@ public class PanelProposal extends JPanel implements ActionListener {
 		this.add(englishWord);
 		this.add(fr);
 		this.add(frenchWord);
+		this.add(btCreate);
+		btCreate.addActionListener(this);
 	}
 
 	@Override
@@ -39,6 +42,12 @@ public class PanelProposal extends JPanel implements ActionListener {
 			Word proposalWord= new Word(englishWord.getText(),frenchWord.getText());
 			ProposalList proposal= new ProposalList();
 			proposal.addWord(proposalWord);
+			
+			JOptionPane.showMessageDialog(null,"Proposal Saved");
+			frenchWord.setText("");
+			englishWord.setText("");
+			
+			this.updateUI();
 		}
 		
 	}
