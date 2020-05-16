@@ -13,7 +13,6 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import java.security.*;
 
-
 public class Windows extends JFrame implements ActionListener {
 	/**
 	 * 
@@ -29,14 +28,12 @@ public class Windows extends JFrame implements ActionListener {
 	private JTextField id = new JTextField("Your User Name");
 	private User user;
 	private JPasswordField password = new JPasswordField("");
-	
 
 	private static final String passWordV1 = "admin";
-	
+
 	private static final String passWordV2 = toHexa(passWordV1);
-	
+
 	private static final String finalPassWord = toMD5Hash(passWordV2);
-	
 
 	public Windows() {
 		this.setTitle("interactive Glossary");
@@ -81,10 +78,10 @@ public class Windows extends JFrame implements ActionListener {
 			title.setText("E-GLOSSARY AS " + this.user.getUserName());
 			this.setSize(1000, 800);
 			this.setLocationRelativeTo(null);
-		    JTabbedPane pane = LoadStudentPanel();
-		    
+			JTabbedPane pane = LoadStudentPanel();
+
 			// frame
-		    this.setContentPane(pane);
+			this.setContentPane(pane);
 		}
 
 		if (arg0.getSource() == btTeacher) {
@@ -92,7 +89,6 @@ public class Windows extends JFrame implements ActionListener {
 			title.setText("E-GLOSSARY AS " + this.user.getUserName());
 			this.setSize(500, 150);
 			this.setLocationRelativeTo(null);
-			
 
 			JPanel conectpan = new JPanel();
 			conectpan.setBackground(Color.orange);
@@ -111,23 +107,30 @@ public class Windows extends JFrame implements ActionListener {
 			conectpan.setLayout(new BorderLayout());
 			conectpan.add(title, BorderLayout.NORTH);
 			// pan.add(new Panel(), BorderLayout.CENTER);
-			
+
 			conectpan.add(password, BorderLayout.CENTER);
 			conect.addActionListener(this);
 			conectpan.add(conect, BorderLayout.SOUTH);
 			this.setContentPane(conectpan);
 		}
-		
+
 		if (arg0.getSource() == conect) {
 			char[] pass = password.getPassword();
 			String passString = new String(pass);
-				if (comparable(passString))
-						System.out.println("Good PassWord");
-				else
-					System.out.println("Try again");
+			if (comparable(passString)) {
+				System.out.println("Good PassWord");
+				this.setSize(1000, 800);
+				this.setLocationRelativeTo(null);
+				JTabbedPane pane = LoadStudentPanel();
+
+				// frame
+				this.setContentPane(pane);
+			} else {
+				System.out.println("Try again");
+			}
+
 		}
-		}
-		
+	}
 
 	private JTabbedPane LoadStudentPanel() {
 		// Pan
@@ -136,17 +139,17 @@ public class Windows extends JFrame implements ActionListener {
 		pane.add(titre, new PanelGlossary());
 		pane.setTabComponentAt(0, new Tabs(titre, pane));
 		// Pan
-		
+
 		String titre2 = "Quiz";
 		pane.add(titre2, new PanelQuiz());
 
 		// Pan
-		
+
 		String titre3 = "proposal";
 		pane.add(titre3, new PanelProposal());
 		return pane;
 	}
-	
+
 	private JTabbedPane LoadTeacherPanel() {
 		// Pan
 		JTabbedPane pane = new JTabbedPane();
@@ -154,58 +157,52 @@ public class Windows extends JFrame implements ActionListener {
 		pane.add(titre, new PanelGlossary());
 		pane.setTabComponentAt(0, new Tabs(titre, pane));
 		// Pan
-		
+
 		String titre2 = "Quiz";
 		pane.add(titre2, new PanelQuiz());
 
 		// Pan
-		
+
 	}
-	private static String toHexa (String source)
-	{
+
+	private static String toHexa(String source) {
 		return toHexaHelp(source.getBytes());
 	}
-	
-	private static String toHexaHelp(byte[] source)
-	{
+
+	private static String toHexaHelp(byte[] source) {
 		StringBuilder sb = new StringBuilder();
-		
-		for(byte b : source)
-		{
-			String toAppend = String.format("%2X", b).replace(" ", "0"); 
+
+		for (byte b : source) {
+			String toAppend = String.format("%2X", b).replace(" ", "0");
 			sb.append(toAppend);
 		}
-		
+
 		return sb.toString();
 	}
-	
-	private static String toMD5Hash(String source)
-	{
+
+	private static String toMD5Hash(String source) {
 		String result = "";
-		
+
 		try {
-		MessageDigest md5 = MessageDigest.getInstance("MD5");
-		byte[] md5HashBytes = md5.digest(source.getBytes());
-		
-		result = toHexaHelp(md5HashBytes);
-		}
-		catch (NoSuchAlgorithmException e) {
+			MessageDigest md5 = MessageDigest.getInstance("MD5");
+			byte[] md5HashBytes = md5.digest(source.getBytes());
+
+			result = toHexaHelp(md5HashBytes);
+		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
 		}
-		
+
 		return result;
 	}
-	
-	public static boolean comparable(String testPassWord)
-	{	
+
+	public static boolean comparable(String testPassWord) {
 		String testPassWordV2 = toHexa(testPassWord);
-		
+
 		String finalTestPassWord = toMD5Hash(testPassWordV2);
-		
-		if (finalTestPassWord.compareTo(finalPassWord)==0) 
+
+		if (finalTestPassWord.compareTo(finalPassWord) == 0)
 			return true;
 		else
 			return false;
 	}
 }
-
