@@ -12,6 +12,7 @@ public class ProposalList {
 		this.proposalList = InterfaceRW.read("proposal.csv");
 	}
 	
+
 	/**
 	 * @return the proposalList
 	 */
@@ -26,7 +27,16 @@ public class ProposalList {
 		this.proposalList = proposalList;
 	}
 	
-    public void addWordGlossary(Word word) {
+    public void addWord(Word word) {
 	this.proposalList.add(word);
+	//this.saveInCSV(); add when it works
+	
+    }
+    
+    public void saveInCSV(){
+    	InterfaceReadWrite interface= new FilesDrivers();
+    	
+    	interface.write(this.proposalList,"proposal.csv");
+    	//TODO write in CSV the list
     }
 }
