@@ -30,6 +30,9 @@ public class Glossary {
 	this.glossary = glossary;
     }
     
+    public Glossary() {
+    }
+    
     /**
      * Sort glossary by lexical order using english words.
      */

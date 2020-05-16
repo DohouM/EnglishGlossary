@@ -8,7 +8,7 @@
  */
 
 public class Main {
-    public static Glossary glossary = new Glossary(SerealizationDriver.deSerealizeGlossary());
+    public static Glossary glossary; 
 
     /**
      * Main function of the program, launches every vital function of it.
@@ -20,10 +20,10 @@ public class Main {
 //		Glossary glossary = new Glossary();
 //		FilesDrivers.readCsv(glossary);
 //		SerealizationDriver.serealizeGlossary(glossary.getGlossary());
+    	InterfaceReadWrite interface= new SerealizationDriver();
 		
 		
-		
-		glossary.setGlossary(SerealizationDriver.deSerealizeGlossary());
+		glossary= interface.read();
 
 		//glossary.addWordStringOnly("Hello*", "bonjour");
 		

@@ -6,14 +6,23 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-public class SerealizationDriver {
+public class SerealizationDriver implements InterfaceReadWrite{
 	
-	public static void serealizeGlossary(ArrayList<Word> words) {
+	/**
+	 * 
+	 */
+	public SerealizationDriver() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public void write(Glossary glossary,String path) { //serealizeGlossary
 		try {
-		FileOutputStream fos = new FileOutputStream("words.ser");
+		FileOutputStream fos = new FileOutputStream(path); //words.ser
 
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		
+		ArrayList<Word> words = glossary.getGlossary();
 		oos.writeObject(words.size());
 		for(Word w: words)
 		{
@@ -29,10 +38,10 @@ public class SerealizationDriver {
 	}
 	}
 	
-	public static ArrayList<Word> deSerealizeGlossary() {
+	public Glossary read(String path) {
 		
 		try {
-			FileInputStream fis = new FileInputStream("words.ser");
+			FileInputStream fis = new FileInputStream(path); //words.ser
 
 			ObjectInputStream ois = new ObjectInputStream(fis);
 			
@@ -43,7 +52,9 @@ public class SerealizationDriver {
 				words.add(word);
 			}
 			ois.close();
-			return words;
+			
+			Glossary glossary = new Glossary(words);
+			return glossary;
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

@@ -1,14 +1,22 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class FilesDrivers {
+public class FilesDrivers implements InterfaceReadWrite{
 	
-	 public static void readCsv(Glossary glossary) {
+	 /**
+	 * 
+	 */
+	public FilesDrivers() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Glossary read(String path) { //reading of csv files
 		  BufferedReader reader = null;
-		  
+		  Glossary glossary = new Glossary();
 		  try {
 		   String line = "";
-		   reader = new BufferedReader(new FileReader("data.csv"));
+		   reader = new BufferedReader(new FileReader(path));  //data.csv
 		   reader.readLine();
 		   
 		   while((line = reader.readLine()) != null) {
@@ -31,5 +39,13 @@ public class FilesDrivers {
 		    e.printStackTrace();
 		   }
 		  }
+	return glossary;
 }
+
+	@Override
+	public void write(Glossary glossary,String path) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
