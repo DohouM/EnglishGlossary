@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.ArrayList;
 
 public class FilesDrivers implements InterfaceReadWrite{
 	
@@ -11,9 +12,9 @@ public class FilesDrivers implements InterfaceReadWrite{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Glossary read(String path) { //reading of csv files
+	public ArrayList<Word> read(String path) { //reading of csv files
 		  BufferedReader reader = null;
-		  Glossary glossary = new Glossary();
+		  ArrayList<Word> list = new ArrayList<Word>();
 		  try {
 		   String line = "";
 		   reader = new BufferedReader(new FileReader(path));  //data.csv
@@ -25,7 +26,7 @@ public class FilesDrivers implements InterfaceReadWrite{
 		    if(fields.length > 0) {
 				// insert in tab //
 				Word word= new Word(fields[0],fields[1]);
-				glossary.addWordGlossary(word);	
+				list.add(word);	
 		    }
 		   }
 		   
@@ -39,11 +40,11 @@ public class FilesDrivers implements InterfaceReadWrite{
 		    e.printStackTrace();
 		   }
 		  }
-	return glossary;
+	return list;
 }
 
 	@Override
-	public void write(Glossary glossary,String path) {
+	public void write(ArrayList<Word> list,String path) {
 		// TODO Auto-generated method stub
 		
 	}

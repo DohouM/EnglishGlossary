@@ -1,5 +1,6 @@
+import java.util.ArrayList;
 
 public interface InterfaceReadWrite {
-	public Glossary read(String path);
-	public void write(Glossary glossary, String path);
+	public ArrayList<Word> read(String path);
+	public void write(ArrayList<Word> list, String path);
 }

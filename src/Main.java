@@ -23,8 +23,7 @@ public class Main {
 
 //    	InterfaceReadWrite interface= new SerealizationDriver();
     	SerealizationDriver ser = new SerealizationDriver();
-		
-		glossary= ser.read("words.ser");
+		glossary= new Glossary(ser.read("words.ser"));
 
 		//glossary.addWordStringOnly("Hello*", "bonjour");
 		

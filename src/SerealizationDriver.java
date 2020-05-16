@@ -16,13 +16,12 @@ public class SerealizationDriver implements InterfaceReadWrite{
 		// TODO Auto-generated constructor stub
 	}
 
-	public void write(Glossary glossary,String path) { //serealizeGlossary
+	public void write(ArrayList<Word> words,String path) { //serealizeGlossary
 		try {
 		FileOutputStream fos = new FileOutputStream(path); //words.ser
 
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		
-		ArrayList<Word> words = glossary.getGlossary();
 		oos.writeObject(words.size());
 		for(Word w: words)
 		{
@@ -38,7 +37,7 @@ public class SerealizationDriver implements InterfaceReadWrite{
 	}
 	}
 	
-	public Glossary read(String path) {
+	public ArrayList<Word> read(String path) {
 		
 		try {
 			FileInputStream fis = new FileInputStream(path); //words.ser
@@ -52,9 +51,8 @@ public class SerealizationDriver implements InterfaceReadWrite{
 				words.add(word);
 			}
 			ois.close();
-			
-			Glossary glossary = new Glossary(words);
-			return glossary;
+		
+			return words;
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

@@ -1,8 +1,17 @@
 import java.util.ArrayList;
 
 public class ProposalList {
-    private ArrayList<Word> proposalList;
 
+
+	private ArrayList<Word> proposalList;
+    /**
+	 * @param proposalList
+	 */
+	public ProposalList() {
+		InterfaceReadWrite InterfaceRW =new FilesDrivers();
+		this.proposalList = InterfaceRW.read("proposal.csv");
+	}
+	
 	/**
 	 * @return the proposalList
 	 */
