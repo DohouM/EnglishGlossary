@@ -3,7 +3,9 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -11,7 +13,6 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
-import java.security.*;
 
 public class Windows extends JFrame implements ActionListener {
 	/**
@@ -121,7 +122,7 @@ public class Windows extends JFrame implements ActionListener {
 				System.out.println("Good PassWord");
 				this.setSize(1000, 800);
 				this.setLocationRelativeTo(null);
-				JTabbedPane pane = LoadStudentPanel();
+				JTabbedPane pane = LoadTeacherPanel();
 
 				// frame
 				this.setContentPane(pane);
@@ -162,7 +163,10 @@ public class Windows extends JFrame implements ActionListener {
 		pane.add(titre2, new PanelQuiz());
 
 		// Pan
-
+		String titre3 = "proposal";
+		pane.add(titre3, new PanelProposal());
+		
+		return pane;
 	}
 
 	private static String toHexa(String source) {
