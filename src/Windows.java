@@ -164,7 +164,11 @@ public class Windows extends JFrame implements ActionListener {
 
 		// Pan
 		String titre3 = "proposal";
-		pane.add(titre3, new PanelProposal());
+		pane.add(titre3, new PanelProposalTeacher());
+		
+		// Pan test generato
+		String titre4 = "Test Generator";
+		pane.add(titre4, new PanelTestGenerator());
 		
 		return pane;
 	}
