@@ -166,7 +166,7 @@ public class Windows extends JFrame implements ActionListener {
 		String titre3 = "proposal";
 		pane.add(titre3, new PanelProposalTeacher());
 		
-		// Pan test generato
+		// Pan test generator
 		String titre4 = "Test Generator";
 		pane.add(titre4, new PanelTestGenerator());
 		

@@ -34,8 +34,8 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 	JSpinner spinnerEnd = new JSpinner(endPages);
 
 	// buttons
-	JButton btPlay = new JButton("Play");
-	JButton btConfirm = new JButton("confirm");
+	JButton btGen = new JButton("Generate");
+	JButton btExport = new JButton("Export");
 
 	// labels
 	JLabel fromP = new JLabel("From page");
@@ -60,13 +60,13 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 		this.add(spinnerStart);
 		this.add(to);
 		this.add(spinnerEnd);
-		this.add(btPlay);
+		this.add(btGen);
 		// add to a container
 		this.add(checkbox);
 		// set state
 		checkbox.setSelected(true);
 
-		btPlay.addActionListener(this);
+		btGen.addActionListener(this);
 
 	}
 
@@ -86,7 +86,7 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 //		EnWords.setText(EnWordList);
 //		
 //		this.add(EnWords);
-		if (arg0.getSource() == btPlay) {
+		if (arg0.getSource() == btGen) {
 			
 			this.remove(tab);
 			this.remove(points);
@@ -122,28 +122,19 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 
 			this.add(tab);
 
-			this.add(btConfirm);
-			btConfirm.addActionListener(this);
+			this.add(btExport);
+			btExport.addActionListener(this);
+			
+			btGen = new JButton("Generate Again");
 			
 			this.updateUI();
 
 		}
 		
-		if (arg0.getSource() == btConfirm) {
-			int point=0;
-			this.remove(points);
+		if (arg0.getSource() == btExport) {
 			
-			for(int i=0; i<wordPerQuiz;i++) {
-				if(QuizResults[i].equals(tableau.getValueAt(i,1))) {
-					tableau.setValueAt(tableau.getValueAt(i,1)+"  ✓",i,1);
-					point++;
-				} else if(tableau.getValueAt(i, 1) == "") {
-					tableau.setValueAt(tableau.getValueAt(i,1)+" // "+QuizResults[i]+ "  ❌",i,1);
-				}
-			}
-		
-			points = new JLabel(Integer.toString(point)+"/"+Integer.toString(wordPerQuiz));
-			this.add(points);
+			//TODO export text to an html doc
+			
 			this.updateUI();
 
 		}
