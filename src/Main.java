@@ -20,10 +20,11 @@ public class Main {
 //		Glossary glossary = new Glossary();
 //		FilesDrivers.readCsv(glossary);
 //		SerealizationDriver.serealizeGlossary(glossary.getGlossary());
-    	InterfaceReadWrite interface= new SerealizationDriver();
+
+//    	InterfaceReadWrite interface= new SerealizationDriver();
+    	SerealizationDriver ser = new SerealizationDriver();
 		
-		
-		glossary= interface.read();
+		glossary= ser.read("words.ser");
 
 		//glossary.addWordStringOnly("Hello*", "bonjour");
 		
