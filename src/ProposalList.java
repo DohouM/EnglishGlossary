@@ -34,8 +34,7 @@ public class ProposalList {
     }
     
     public void saveInCSV(){
-    	FilesDrivers FD= new FilesDrivers();
-    	
-    	FD.write(this.proposalList,"proposal.csv");
+    	InterfaceReadWrite InterfaceRW =new FilesDrivers();
+		InterfaceRW.write(this.proposalList,"proposal.csv");
     }
 }
