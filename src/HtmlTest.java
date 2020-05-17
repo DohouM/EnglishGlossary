@@ -27,9 +27,9 @@ public class HtmlTest {
      */
     String subject;
     /**
-     * The marking scheme (is it worth 5 points on maybe 6, 10... etc
+     * The points value (is it worth 5 points on maybe 6, 10... etc)
      */
-    String markingScheme;
+    int pointsValue;
     
     /**
      * All the words in french that must be translated in english in the test.
@@ -44,8 +44,9 @@ public class HtmlTest {
      * Constructor of HtmlTest.
      * @param glos : the glossary to pick words from.
      */
-    public HtmlTest(Glossary glos) {
+    public HtmlTest(Glossary glos, int pv) {
 	this.glossary = glos;
+	
     }
     /**
      * Generate a random HashMap with words in french and english.
