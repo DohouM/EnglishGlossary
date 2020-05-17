@@ -132,9 +132,11 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 		}
 		
 		if (arg0.getSource() == btExport) {
-			
+		    ArrayList<Word> wordList = ApplicationContext.getGlossary().pages((int) spinnerStart.getValue(),
+				(int) spinnerEnd.getValue());
 			//TODO export text to an html doc
-			
+			HtmlTest testToExport = new HtmlTest(wordList, 5, 20);
+			testToExport.generateTestFile();
 			this.updateUI();
 
 		}
