@@ -1,19 +1,23 @@
+import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 
 /**
  * A class to describe an HTML page, used for the tests.
- * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE, Gabrtiel SAPONARA
- * @version 1.0
+ * 
+ * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE,
+ *         Gabriel SAPONARA
+ * @version 1.3
  */
 public class HtmlTest {
-    
+
     /**
-     * The glossary to pick words from.
+     * The list of Word to pick words from.
      */
-    Glossary glossary;
-    
+    ArrayList<Word> wordsToPickFrom;
+
     /**
      * Number of words in test.
      */
@@ -30,7 +34,7 @@ public class HtmlTest {
      * The points value (is it worth 5 points on maybe 6, 10... etc)
      */
     int pointsValue;
-    
+
     /**
      * All the words in french that must be translated in english in the test.
      */
@@ -39,31 +43,39 @@ public class HtmlTest {
      * All the words in english that must be translated in french in the test.
      */
     List<String> wordsInEnglish;
-    
+
     /**
      * Constructor of HtmlTest.
+     * 
      * @param glos : the glossary to pick words from.
      */
-    public HtmlTest(Glossary glos, int pv) {
-	this.glossary = glos;
-	
+    public HtmlTest(ArrayList<Word> al, int pv) {
+	this.wordsToPickFrom = al;
+
     }
+
     /**
      * Generate a random HashMap with words in french and english.
      */
-    private void generateRandomWordsArrangement() {
+    private HashMap<String, Integer> generateRandomWordsArrangement() {
 	HashMap<String, Integer> wordsToPutInTest = new HashMap<String, Integer>();
 	Random r = new Random();
 	int currentRandom = r.nextInt(2);
-	for(Word w: glossary.getGlossary()) {
-	    if(currentRandom==1) {
-		wordsToPutInTest.put(w.getEnglishWord(), new Integer(currentRandom));
-	    }
-	    else {
-		wordsToPutInTest.put(w.getFrenchWord(), new Integer(currentRandom));
+	int loopTurn = 1;
+	for (Word w : this.wordsToPickFrom) {
+	    if (loopTurn != this.numberOfWords) { 
+		if (currentRandom == 1) {
+		    wordsToPutInTest.put(w.getEnglishWord(), new Integer(currentRandom));
+		} else {
+		    wordsToPutInTest.put(w.getFrenchWord(), new Integer(currentRandom));
+		}
+	    } else {
+		break;
 	    }
 	    currentRandom = r.nextInt(2);
+	    loopTurn++;
 	}
+	return wordsToPutInTest;
     }
-    
+
 }
