@@ -66,7 +66,7 @@ public class HtmlTest {
 	HashMap<String, Integer> wordsToPutInTest = new HashMap<String, Integer>();
 	Random r = new Random();
 	int currentRandom = r.nextInt(2);
-	int loopTurn = 1;
+	int loopTurn = 0;
 	for (Word w : this.wordsToPickFrom) {
 	    if (loopTurn != this.numberOfWords) {
 		if (currentRandom == 1) {
@@ -87,9 +87,9 @@ public class HtmlTest {
      */
     public void generateTestFile() {
 	HashMap<String, Integer> wordsInTest = this.generateRandomWordsArrangement();
-	File fileOut = new File("tests/test" + this.subject + ".html");
+	File fileOut = new File("test" + this.subject + ".html");
 	String htmlOut = null;
-	htmlOut = "<html style=\"margin-left: auto; margin-right: auto;\"><head><meta charset=\"utf-8\"></head><body><h1>Subject " + this.subject + "</h1><br/><h3>Note :   /" + this.pointsValue + "</h3><br/><table>";
+	htmlOut = "<html style=\"text-align: center;\"><head><meta charset=\"utf-16\"></head><body><h1>Subject " + this.subject + "</h1><br/><h3>Note :   /" + this.pointsValue + "</h3><br/><table>";
 	for (Entry<String, Integer> entry : wordsInTest.entrySet()) {
 	    String key = entry.getKey();
 	    Integer value = entry.getValue();
@@ -99,7 +99,8 @@ public class HtmlTest {
 		htmlOut += "<tr><td></td><td>" + key + "</td></tr>";
 	    }
 	}
-	htmlOut += "</table></body></html>";
+	htmlOut += "</table></body>";
+	htmlOut += "<style>table, th, td {border: 1px solid black; border-collapse: collapse; margin-left: auto; margin-right: auto;}</style></html>";
 	if(fileOut.exists()) {
 	    fileOut.delete();
 	}
@@ -114,6 +115,6 @@ public class HtmlTest {
 	    e.printStackTrace();
 	    System.out.println("Issue while generating file... Aborting operation.");
 	}
-	
+	System.out.println("file generated !");
     }
 }
