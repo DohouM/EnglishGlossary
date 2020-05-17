@@ -1,7 +1,10 @@
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map.Entry;
 import java.util.Random;
 
 /**
@@ -9,7 +12,7 @@ import java.util.Random;
  * 
  * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE,
  *         Gabriel SAPONARA
- * @version 1.3
+ * @version 1.4
  */
 public class HtmlTest {
 
@@ -49,8 +52,10 @@ public class HtmlTest {
      * 
      * @param glos : the glossary to pick words from.
      */
-    public HtmlTest(ArrayList<Word> al, int pv) {
+    public HtmlTest(ArrayList<Word> al, int pv, int nw) {
 	this.wordsToPickFrom = al;
+	this.pointsValue = pv;
+	this.numberOfWords = nw;
 
     }
 
@@ -63,7 +68,7 @@ public class HtmlTest {
 	int currentRandom = r.nextInt(2);
 	int loopTurn = 1;
 	for (Word w : this.wordsToPickFrom) {
-	    if (loopTurn != this.numberOfWords) { 
+	    if (loopTurn != this.numberOfWords) {
 		if (currentRandom == 1) {
 		    wordsToPutInTest.put(w.getEnglishWord(), new Integer(currentRandom));
 		} else {
@@ -77,5 +82,38 @@ public class HtmlTest {
 	}
 	return wordsToPutInTest;
     }
-
+    /**
+     * Generate an english glossary test  in html format, so that it can be printed.
+     */
+    public void generateTestFile() {
+	HashMap<String, Integer> wordsInTest = this.generateRandomWordsArrangement();
+	File fileOut = new File("tests/test" + this.subject + ".html");
+	String htmlOut = null;
+	htmlOut = "<html style=\"margin-left: auto; margin-right: auto;\"><head><meta charset=\"utf-8\"></head><body><h1>Subject " + this.subject + "</h1><br/><h3>Note :   /" + this.pointsValue + "</h3><br/><table>";
+	for (Entry<String, Integer> entry : wordsInTest.entrySet()) {
+	    String key = entry.getKey();
+	    Integer value = entry.getValue();
+	    if (value == 1) {
+		htmlOut += "<tr><td>" + key + "</td><td></td></tr>";
+	    } else {
+		htmlOut += "<tr><td></td><td>" + key + "</td></tr>";
+	    }
+	}
+	htmlOut += "</table></body></html>";
+	if(fileOut.exists()) {
+	    fileOut.delete();
+	}
+	try {
+	    fileOut.createNewFile();
+	    FileOutputStream fos = new FileOutputStream(fileOut);
+	    for(char c: htmlOut.toCharArray()) {
+		fos.write(c);
+	    }
+	    fos.close();
+	} catch (IOException e) {
+	    e.printStackTrace();
+	    System.out.println("Issue while generating file... Aborting operation.");
+	}
+	
+    }
 }
