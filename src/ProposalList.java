@@ -29,14 +29,13 @@ public class ProposalList {
 	
     public void addWord(Word word) {
 	this.proposalList.add(word);
-	//this.saveInCSV(); add when it works
+	this.saveInCSV(); 
 	
     }
     
     public void saveInCSV(){
-    	InterfaceReadWrite interface= new FilesDrivers();
+    	FilesDrivers FD= new FilesDrivers();
     	
-    	interface.write(this.proposalList,"proposal.csv");
-    	//TODO write in CSV the list
+    	FD.write(this.proposalList,"proposal.csv");
     }
 }
