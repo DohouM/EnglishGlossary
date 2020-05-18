@@ -32,7 +32,7 @@ public class HtmlTest {
     /**
      * The subject of the html page (can be either subject A or subject B)
      */
-    String subject;
+    int subject;
     /**
      * The points value (is it worth 5 points on maybe 6, 10... etc)
      */
@@ -52,11 +52,11 @@ public class HtmlTest {
      * 
      * @param glos : the glossary to pick words from.
      */
-    public HtmlTest(ArrayList<Word> al, int pv, int nw) {
+    public HtmlTest(ArrayList<Word> al, int pv, int nw, int subjectNumber) {
 	this.wordsToPickFrom = al;
 	this.pointsValue = pv;
 	this.numberOfWords = nw;
-
+	this.subject = subjectNumber;
     }
 
     /**
@@ -89,7 +89,7 @@ public class HtmlTest {
 	HashMap<String, Integer> wordsInTest = this.generateRandomWordsArrangement();
 	File fileOut = new File("test" + this.subject + ".html");
 	String htmlOut = null;
-	htmlOut = "<html style=\"text-align: center;\"><head><meta charset=\"utf-16\"></head><body><h1>Subject " + this.subject + "</h1><br/><h3>Note :   /" + this.pointsValue + "</h3><br/><table>";
+	htmlOut = "<html style=\"text-align: center;\"><head><meta charset=\"ISO-8859-1\"></head><body><h1>Subject " + this.subject + "</h1><br/><h3>Note :   /" + this.pointsValue + "</h3><br/><table>";
 	for (Entry<String, Integer> entry : wordsInTest.entrySet()) {
 	    String key = entry.getKey();
 	    Integer value = entry.getValue();
