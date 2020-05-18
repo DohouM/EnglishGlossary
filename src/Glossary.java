@@ -83,19 +83,19 @@ public class Glossary {
      * @param keyWord : The word to search (can be either french or english).
      * @return The word that matches, else returns <tt>keyWord not found</tt>.
      */
-    public String search(String keyWord) {
+    public Word search(String keyWord) {
 //ArrayList � faire pour le return ->ajouter les mots ->plusieurs mots m�me traduction
 	for (Word w : this.glossary) {
 	    if (w.getEnglishWord().contains(keyWord)) {
-		return w.toString();
+		return w;
 	    }
 	}
 	for (Word w : this.glossary) {
 	    if (w.getFrenchWord().contains(keyWord)) {
-		return w.toString();
+		return w;
 	    }
 	}
-	return keyWord + " not found";
+	return null;
     }
 
 //	public ArrayList<Word> page(int page) {

@@ -6,22 +6,24 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class PanelModifyGlossary extends JPanel implements ActionListener{
+public class PanelModifyGlossary extends JPanel implements ActionListener {
 
 	private JLabel fr = new JLabel("French Word");
-	private JTextField frenchWord = new JTextField("",30);
+	private JTextField frenchWord = new JTextField("", 30);
 
 	private JLabel en = new JLabel("English Word");
-	private JTextField englishWord = new JTextField("",30);
-	
+	private JTextField englishWord = new JTextField("", 30);
+
 	private JLabel search = new JLabel("Type the word to delete or modify");
-	private JTextField searchBar = new JTextField("",30);
+	private JTextField searchBar = new JTextField("", 30);
 	
-	//Jbutton
-	private JButton btAdd= new JButton("Add to Glossary");
-	private JButton btDelete= new JButton("Delete this Word");
-	private JButton btSearch= new JButton("Search");
-	
+	private JLabel result=  new JLabel();;
+
+	// Jbutton
+	private JButton btAdd = new JButton("Add to Glossary");
+	private JButton btDelete = new JButton("Delete this Word");
+	private JButton btSearch = new JButton("Search");
+
 	/**
 	 * 
 	 */
@@ -29,15 +31,14 @@ public class PanelModifyGlossary extends JPanel implements ActionListener{
 
 	public PanelModifyGlossary() {
 		super();
-		
+
 		// search for a word part
 		this.add(search);
 		this.add(searchBar);
 		this.add(btSearch);
 		btSearch.addActionListener(this);
-		
-		
-		//adding a word part
+
+		// adding a word part
 		this.add(en);
 		this.add(englishWord);
 		this.add(fr);
@@ -46,11 +47,30 @@ public class PanelModifyGlossary extends JPanel implements ActionListener{
 		btAdd.addActionListener(this);
 
 	}
-	
+
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
 
+		if (arg0.getSource() == btSearch) {
+			
+			this.remove(result);
+			
+			Word w = ApplicationContext.getGlossary().search(searchBar.getText());
+			
+			result = new JLabel(w.toString());
+			this.add(result);
+			
+			
+			
+			this.updateUI();
+		}
+		
+		if (arg0.getSource() == btAdd) {
+
+			
+			this.updateUI();
+		}
+
+
+	}
 }
