@@ -170,8 +170,19 @@ public class Windows extends JFrame implements ActionListener {
 		String titre4 = "Test Generator";
 		pane.add(titre4, new PanelTestGenerator());
 		
+		// Pan Modify
+		String titre5 = "Modify Glossary";
+		pane.add(titre5, new PanelModifyGlossary());
+		
+		
 		return pane;
 	}
+	
+	
+	
+	
+	
+	
 
 	private static String toHexa(String source) {
 		return toHexaHelp(source.getBytes());
