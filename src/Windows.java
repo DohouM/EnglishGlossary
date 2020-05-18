@@ -30,12 +30,9 @@ public class Windows extends JFrame implements ActionListener {
 	private User user;
 	private JPasswordField password = new JPasswordField("");
 
-	private static final String passWordV1 = "admin";
+	private static final String finalPassWord = "938227684C1200009DF4A4E2067D934E";
 
-	private static final String passWordV2 = toHexa(passWordV1);
-
-	private static final String finalPassWord = toMD5Hash(passWordV2);
-
+	
 	public Windows() {
 		this.setTitle("interactive Glossary");
 		this.setSize(400, 200);
