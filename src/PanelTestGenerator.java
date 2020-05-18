@@ -53,7 +53,7 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
     // Jlabel
     JLabel numOfWordsL = new JLabel("Number of words:");
     // JSpinner
-    SpinnerModel numOfWordsSpinner = new SpinnerNumberModel(1, // initial value
+    SpinnerModel numOfWordsSpinner = new SpinnerNumberModel(10, // initial value
 	    1, // minimum value
 	    (ApplicationContext.getGlossary().numberOfPages()) * 51, // maximum value
 	    1); // step;
