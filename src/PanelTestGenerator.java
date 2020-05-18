@@ -5,7 +5,9 @@ import java.util.Collections;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
@@ -13,69 +15,92 @@ import javax.swing.JTable;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 
-
 public class PanelTestGenerator extends JPanel implements ActionListener {
-	
-	private int wordPerQuiz=20;
 
+    private static final long serialVersionUID = 1L;
+    // Spinners
+    SpinnerModel startPages = new SpinnerNumberModel(1, // initial value
+	    1, // minimum value
+	    ApplicationContext.getGlossary().numberOfPages(), // maximum value
+	    1); // step
+    JSpinner spinnerStart = new JSpinner(startPages);
+    SpinnerModel endPages = new SpinnerNumberModel(1, // initial value
+	    1, // minimum value
+	    ApplicationContext.getGlossary().numberOfPages(), // maximum value
+	    1); // step
+    JSpinner spinnerEnd = new JSpinner(endPages);
 
+    // buttons
+    JButton btGen = new JButton("Generate");
+    JButton btExport = new JButton("Export");
 
-	private static final long serialVersionUID = 1L;
-	// Spinners
-	SpinnerModel startPages = new SpinnerNumberModel(1, // initial value
-			1, // minimum value
-			ApplicationContext.getGlossary().numberOfPages(), // maximum value
-			1); // step
-	JSpinner spinnerStart = new JSpinner(startPages);
-	SpinnerModel endPages = new SpinnerNumberModel(1, // initial value
-			1, // minimum value
-			ApplicationContext.getGlossary().numberOfPages(), // maximum value
-			1); // step
-	JSpinner spinnerEnd = new JSpinner(endPages);
+    // labels
+    JLabel fromP = new JLabel("From page");
+    JLabel to = new JLabel("to");
+    JLabel points = new JLabel("");
 
-	// buttons
-	JButton btGen = new JButton("Generate");
-	JButton btExport = new JButton("Export");
+    // JScrollPane
+    JScrollPane tab = new JScrollPane();
 
-	// labels
-	JLabel fromP = new JLabel("From page");
-	JLabel to = new JLabel("to");
-	JLabel points=new JLabel("");
+    // JTable
+    JTable tableau;
 
-	// JScrollPane
-	JScrollPane tab = new JScrollPane();
+    // JCheckBox
+    JCheckBox checkbox = new JCheckBox("only mandatory words(*)");
 
-	// JTable
-	JTable tableau;
+    // keep results
+    Object[] QuizResults;
+    // Jlabel
+    JLabel numOfWordsL = new JLabel("Number of words:");
+    // JSpinner
+    SpinnerModel numOfWordsSpinner = new SpinnerNumberModel(1, // initial value
+	    1, // minimum value
+	    (ApplicationContext.getGlossary().numberOfPages()) * 51, // maximum value
+	    1); // step;
+    JSpinner wordsNumber = new JSpinner(numOfWordsSpinner);
 
-	// JCheckBox
-	JCheckBox checkbox = new JCheckBox("only mandatory words(*)");
-	
-	//keep results
-	Object[] QuizResults;
+    // Jlabel
+    JLabel pointsValueL = new JLabel("Value of test (points) :");
+    // JSpinner
+    SpinnerModel pointValueSpinner = new SpinnerNumberModel(1, // initial value
+	    1, // minimum value
+	    20, // maximum value
+	    1); // step;
+    JSpinner pointValue = new JSpinner(pointValueSpinner);
+    // Jlabel
+    JLabel testSubject = new JLabel("Subject number:");
+    // JSpinner
+    SpinnerModel subject = new SpinnerNumberModel();
+    JSpinner subjectNum = new JSpinner(subject);
 
-	public PanelTestGenerator() {
-		super();
-		this.add(fromP);
-		this.add(spinnerStart);
-		this.add(to);
-		this.add(spinnerEnd);
-		this.add(btGen);
-		// add to a container
-		this.add(checkbox);
-		// set state
-		checkbox.setSelected(true);
+    public PanelTestGenerator() {
+	super();
+	this.add(fromP);
+	this.add(spinnerStart);
+	this.add(to);
+	this.add(spinnerEnd);
+	this.add(btGen);
+	// add to a container
+	this.add(checkbox);
 
-		btGen.addActionListener(this);
+	this.add(numOfWordsL);
+	this.add(wordsNumber);
+	// set state
+	checkbox.setSelected(true);
+	this.add(testSubject);
+	this.add(subjectNum);
+	this.add(pointsValueL);
+	this.add(pointValue);
+	btGen.addActionListener(this);
 
-	}
+    }
 
-	/**
-	 * 
-	 */
+    /**
+     * 
+     */
 
-	@Override
-	public void actionPerformed(ActionEvent arg0) {
+    @Override
+    public void actionPerformed(ActionEvent arg0) {
 
 //		JTextArea EnWords= new JTextArea();
 //		String EnWordList="";
@@ -86,60 +111,56 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 //		EnWords.setText(EnWordList);
 //		
 //		this.add(EnWords);
-		if (arg0.getSource() == btGen) {
-			
-			this.remove(tab);
-			this.remove(points);
+	ArrayList<Word> wordList = ApplicationContext.getGlossary().pages((int) spinnerStart.getValue(),
+		(int) spinnerEnd.getValue());
+	if (arg0.getSource() == btGen) {
 
-			ArrayList<Word> WordList = ApplicationContext.getGlossary().pages((int) spinnerStart.getValue(),
-					(int) spinnerEnd.getValue());
+	    this.remove(tab);
+	    this.remove(points);
 
-			if (checkbox.isSelected()) {
+	    if (checkbox.isSelected()) {
 
-				WordList = ApplicationContext.getGlossary().pagesMandatory((int) spinnerStart.getValue(),
-						(int) spinnerEnd.getValue());
-			}
-			
-			Collections.shuffle(WordList); //randomize word list
-			
-			Object[][] data = new Object[wordPerQuiz][2];
-			QuizResults= new Object[wordPerQuiz];
-			
-			int i = 0;
-			while (i < wordPerQuiz) {
-				data[i][0] = WordList.get(i).getFrenchWord();
-				data[i][1] = "";
-				QuizResults[i]= WordList.get(i).getEnglishWordWithoutMark();
-				i = i + 1;
+		wordList = ApplicationContext.getGlossary().pagesMandatory((int) spinnerStart.getValue(),
+			(int) spinnerEnd.getValue());
+	    }
 
+	    Collections.shuffle(wordList); // randomize word list
 
-			}
+	    Object[][] data = new Object[(int) wordsNumber.getValue()][2];
+	    QuizResults = new Object[(int) wordsNumber.getValue()];
 
-			String title[] = { "French Words", "English Words" };
-			tableau = new JTable(data, title);
+	    int i = 0;
+	    while (i < (int) wordsNumber.getValue()) {
+		data[i][0] = wordList.get(i).getFrenchWord();
+		data[i][1] = "";
+		QuizResults[i] = wordList.get(i).getEnglishWordWithoutMark();
+		i = i + 1;
 
-			tab = new JScrollPane(tableau);
+	    }
 
-			this.add(tab);
+	    String title[] = { "French Words", "English Words" };
+	    tableau = new JTable(data, title);
 
-			this.add(btExport);
-			btExport.addActionListener(this);
-			
-			btGen = new JButton("Generate Again");
-			
-			this.updateUI();
+	    tab = new JScrollPane(tableau);
 
-		}
-		
-		if (arg0.getSource() == btExport) {
-		    ArrayList<Word> wordList = ApplicationContext.getGlossary().pages((int) spinnerStart.getValue(),
-				(int) spinnerEnd.getValue());
-			//TODO export text to an html doc
-			HtmlTest testToExport = new HtmlTest(wordList, 5, 20);
-			testToExport.generateTestFile();
-			this.updateUI();
+	    this.add(tab);
 
-		}
+	    this.add(btExport);
+	    btExport.addActionListener(this);
+
+	    btGen = new JButton("Generate Again");
+
+	    this.updateUI();
+
 	}
+
+	if (arg0.getSource() == btExport) {
+	    // TODO export text to an html doc
+	    HtmlTest testToExport = new HtmlTest(wordList, (int) pointValue.getValue(), (int) wordsNumber.getValue(),
+		    (int) subjectNum.getValue());
+	    testToExport.generateTestFile();
+	    this.updateUI();
+	}
+    }
 
 }
