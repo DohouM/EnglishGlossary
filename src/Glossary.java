@@ -169,4 +169,9 @@ public class Glossary {
     public int numberOfPages() {
 	return (int) Math.ceil(glossary.size() / (double) numberOfWordPerPage);
     }
+
+	public void removeWord(Word word) {
+		glossary.remove(word);
+		
+	}
 }
