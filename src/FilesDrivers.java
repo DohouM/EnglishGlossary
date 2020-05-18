@@ -53,7 +53,7 @@ public class FilesDrivers implements InterfaceReadWrite {
 			fileWriter.append("EN, FR\n");
 			for (Word w : list) {
 				fileWriter.append(w.getEnglishWord());
-				fileWriter.append(",");
+				fileWriter.append(";");
 				fileWriter.append(w.getFrenchWord());
 				fileWriter.append("\n");
 			}
