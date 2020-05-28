@@ -91,6 +91,13 @@ public class Word implements Serializable, Comparable<Word>{
 		} 
 		return false;
 	}
+
+	public static Word parseFromCSV(String readLine) {
+	    Word wordRead = null;
+	    String[] parsedData = readLine.split(";");
+	    wordRead = new Word(parsedData[0], parsedData[1]);
+	    return wordRead;
+	}
 	
 }
 
