@@ -14,34 +14,66 @@ import javax.swing.JPasswordField;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 
+/**
+ * A class that describe a Window of the application, with Swing
+ * attributes.
+ * 
+ * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE,
+ *         Gabriel SAPONARA
+ *
+ */
 public class Windows extends JFrame implements ActionListener {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	// all buttons
+	/**
+	 * A JButton object used to enter the app as a teacher.
+	 */
 	private JButton btTeacher = new JButton("I am a teacher");
+	/**
+	 * A JButton object used to enter the app as a student.
+	 */
 	private JButton btStudent = new JButton("I am a student");
-	private JButton conect = new JButton("Conect as teacher");
+	/**
+	 * A JButton object used to connect as a teacher, after entering the password.
+	 */
+	private JButton connect = new JButton("Connect as teacher");
 
+	/**
+	 * A JLabel object used for the title of the window.
+	 */
 	private JLabel title = new JLabel("E-GLOSSARY");
+	/**
+	 * A JTextField used for the user to input it's username.
+	 */
 	private JTextField id = new JTextField("Your User Name");
+	/**
+	 * The currently logged user.
+	 */
 	private User user;
+	/**
+	 * The JPasswordField used for the input for teacher password.
+	 */
 	private JPasswordField password = new JPasswordField("");
-
+	/**
+	 * The MD5 hash of the current teacher password.
+	 */
 	private static final String finalPassWord = "938227684C1200009DF4A4E2067D934E";
 
-	
+	/**
+	 * The constructor of the Windows class. Create a JFrame and set it to visible, with current object attributes.
+	 */
 	public Windows() {
-		this.setTitle("interactive Glossary");
+		this.setTitle("Interactive Glossary");
 		this.setSize(400, 200);
 		this.setLocationRelativeTo(null);
 
 		// New object JPanel
 		JPanel pan = new JPanel();
 		// background color
-		pan.setBackground(Color.ORANGE);
+		pan.setBackground(Color.WHITE);
 		// We warn our JFrame that our JPanel will be her JPanel pane
 
 		Font police = new Font("impact", Font.ITALIC, 30);
@@ -89,7 +121,7 @@ public class Windows extends JFrame implements ActionListener {
 			this.setLocationRelativeTo(null);
 
 			JPanel conectpan = new JPanel();
-			conectpan.setBackground(Color.orange);
+			conectpan.setBackground(Color.white);
 			Font police = new Font("impact", Font.ITALIC, 30);
 			// It is applied to the JLabel
 			title.setFont(police);
@@ -107,12 +139,12 @@ public class Windows extends JFrame implements ActionListener {
 			// pan.add(new Panel(), BorderLayout.CENTER);
 
 			conectpan.add(password, BorderLayout.CENTER);
-			conect.addActionListener(this);
-			conectpan.add(conect, BorderLayout.SOUTH);
+			connect.addActionListener(this);
+			conectpan.add(connect, BorderLayout.SOUTH);
 			this.setContentPane(conectpan);
 		}
 
-		if (arg0.getSource() == conect) {
+		if (arg0.getSource() == connect) {
 			char[] pass = password.getPassword();
 			String passString = new String(pass);
 			if (comparable(passString)) {
@@ -129,7 +161,10 @@ public class Windows extends JFrame implements ActionListener {
 
 		}
 	}
-
+	/**
+	 * Load the student window.
+	 * @return The student JTabbedPane object, which contains the tabs accessible to students.
+	 */
 	private JTabbedPane LoadStudentPanel() {
 		// Pan
 		JTabbedPane pane = new JTabbedPane();
@@ -143,11 +178,14 @@ public class Windows extends JFrame implements ActionListener {
 
 		// Pan
 
-		String titre3 = "proposal";
+		String titre3 = "Proposal";
 		pane.add(titre3, new PanelProposal());
 		return pane;
 	}
-
+	/**
+	 * Load the teacher window.
+	 * @return The student JTabbedPane object, which contains the tabs accessible to teacher.
+	 */
 	private JTabbedPane LoadTeacherPanel() {
 		// Pan
 		JTabbedPane pane = new JTabbedPane();
@@ -160,7 +198,7 @@ public class Windows extends JFrame implements ActionListener {
 		pane.add(titre2, new PanelQuiz());
 
 		// Pan
-		String titre3 = "proposal";
+		String titre3 = "Proposal";
 		pane.add(titre3, new PanelProposalTeacher());
 		
 		// Pan test generator
@@ -174,13 +212,11 @@ public class Windows extends JFrame implements ActionListener {
 		
 		return pane;
 	}
-	
-	
-	
-	
-	
-	
-
+	/**
+	 * A method to convert a String into hexadecimal.
+	 * @param source The string to convert
+	 * @return The converted String object.
+	 */
 	private static String toHexa(String source) {
 		return toHexaHelp(source.getBytes());
 	}
@@ -196,6 +232,11 @@ public class Windows extends JFrame implements ActionListener {
 		return sb.toString();
 	}
 
+	/**
+	 * A method to get the MD5 hash of a string.
+	 * @param source The String object to get the MD5 hash from.
+	 * @return The MD5 hash of the string.
+	 */
 	private static String toMD5Hash(String source) {
 		String result = "";
 
@@ -210,7 +251,11 @@ public class Windows extends JFrame implements ActionListener {
 
 		return result;
 	}
-
+	/**
+	 * A method to compare the hashed password to the hard coded <code>finalPassword</code> hash.
+	 * @param testPassWord The password to compare
+	 * @return <code>true</code> if the hashes are equals, <code>false</code> otherwise.
+	 */
 	public static boolean comparable(String testPassWord) {
 		String testPassWordV2 = toHexa(testPassWord);
 

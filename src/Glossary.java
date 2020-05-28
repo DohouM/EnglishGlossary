@@ -23,7 +23,7 @@ public class Glossary {
     private ArrayList<Word> glossary;
 
     /**
-     * Create a new Glossary object, with the <tt>glossary</tt>
+     * Create a new Glossary object, with the <code>glossary</code>
      * @param glossary : The glossary to contain.
      */
     public Glossary(ArrayList<Word> glossary) {
@@ -58,7 +58,7 @@ public class Glossary {
     }
     
     /** 
-     * Add a word to the glossary, and sort it again using the method <tt>sortByEn</tt>
+     * Add a word to the glossary, and sort it again using the method <code>sortByEn</code>
      * @param word : The word to add into the glossary.
      */
 
@@ -68,9 +68,9 @@ public class Glossary {
     }
 
     /**
-     * Same method as <tt>addWordGlossary</tt>, except it takes strings as an input rather than a <tt>Word</tt> object.
-     * @param EnglishWord :  The English word to add (must be a <tt>String</tt>).
-     * @param FrenchWord :  The french translation of the word (must be a <tt>String</tt>).
+     * Same method as <code>addWordGlossary</code>, except it takes strings as an input rather than a <code>Word</code> object.
+     * @param EnglishWord :  The English word to add (must be a <code>String</code>).
+     * @param FrenchWord :  The french translation of the word (must be a <code>String</code>).
      */
     public void addWordStringOnly(String englishWord, String frenchWord) {
 	Word word = new Word(englishWord, frenchWord);
@@ -81,7 +81,7 @@ public class Glossary {
     /**
      * Search through the glossary for the string passed as a parameter, and return all the results.
      * @param keyWord : The word to search (can be either french or english).
-     * @return The word that matches, else returns <tt>keyWord not found</tt>.
+     * @return The word that matches, else returns <code>keyWord not found</code>.
      */
     public Word search(String keyWord) {
 //ArrayList � faire pour le return ->ajouter les mots ->plusieurs mots m�me traduction
@@ -112,7 +112,7 @@ public class Glossary {
 //	}
 
     /**
-     * Returns all the words of the glossary between <tt>startPage</tt> (included) and <tt>endPage</tt> (included) parameters.
+     * Returns all the words of the glossary between <code>startPage</code> (included) and <code>endPage</code> (included) parameters.
      * @param startPage : First page to return.
      * @param endPage : Last page to return.
      * @return Content of pages between startPage (included) and endPage (included).
@@ -137,7 +137,7 @@ public class Glossary {
     }
 
     /**
-     * Returns only the mandatory words of the glossary between <tt>startPage</tt> (included) and <tt>endPage</tt> (included) parameters.
+     * Returns only the mandatory words of the glossary between <code>startPage</code> (included) and <code>endPage</code> (included) parameters.
      * @param startPage : First page to return.
      * @param endPage : Last page to return.
      * @return Content of pages between startPage (included) and endPage (included).

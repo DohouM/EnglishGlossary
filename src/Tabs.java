@@ -5,26 +5,44 @@ import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
- 
+
+/**
+ * A class that describes a tab of the application.
+ * 
+ * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE,
+ *         Gabriel SAPONARA
+ *
+ */
+
 class Tabs extends JPanel implements ActionListener {
-  /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-private JTabbedPane pane;
- 
 
+    private static final long serialVersionUID = 1L;
+    /**
+     * The JTabbedPane wrapped by the object.
+     */
+    private JTabbedPane pane;
 
-public Tabs(String titre, JTabbedPane pane) {
-    this.pane = pane;
-    setOpaque(false);
-    JLabel label = new JLabel(titre);
-    add(label);
-  }
- 
-  public void actionPerformed(ActionEvent e) {
-    int i = pane.indexOfTabComponent(this);
-    if (i != -1)
-      pane.remove(i);
-  }
+    /**
+     * Construtor for the Tabs class.
+     * 
+     * @param titre The title of the tab.
+     * @param pane  The JTabbedPane object to wrap.
+     */
+    public Tabs(String titre, JTabbedPane pane) {
+	this.pane = pane;
+	setOpaque(false);
+	JLabel label = new JLabel(titre);
+	add(label);
+    }
+
+    /**
+     * Method that describes what to do if an action is performed.
+     * 
+     * @param arg0 The action performed by the user
+     */
+    public void actionPerformed(ActionEvent e) {
+	int i = pane.indexOfTabComponent(this);
+	if (i != -1)
+	    pane.remove(i);
+    }
 }

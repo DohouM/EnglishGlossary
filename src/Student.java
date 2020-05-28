@@ -1,30 +1,36 @@
-/**
- * 
- */
 
 /**
- * @author jcl
- *
+ * A class that describes a student.
+ * 
+ * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE,
+ *         Gabriel SAPONARA
  */
 public class Student extends User {
-	public Student(String userName) {
-		super(userName);
-		// TODO Auto-generated constructor stub
-	}
+    /**
+     * Constructor of the Student class.
+     * 
+     * @param userName The username of the created student.
+     */
+    public Student(String userName) {
+	super(userName);
+    }
 
-	private String group;
+    /**
+     * The group of the student.
+     */
+    private String group;
 
-	/**
-	 * @return the group
-	 */
-	public String getGroup() {
-		return group;
-	}
+    /**
+     * @return The group of the student.
+     */
+    public String getGroup() {
+	return group;
+    }
 
-	/**
-	 * @param group the group to set
-	 */
-	public void setGroup(String group) {
-		this.group = group;
-	}
+    /**
+     * @param group The group to set for the student.
+     */
+    public void setGroup(String group) {
+	this.group = group;
+    }
 }

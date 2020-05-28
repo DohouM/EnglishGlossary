@@ -50,7 +50,10 @@ public class HtmlTest {
     /**
      * Constructor of HtmlTest.
      * 
-     * @param glos : the glossary to pick words from.
+     * @param al The list of Words to put in the generated test.
+     * @param pv The value in points of the test.
+     * @param nw The number of words in the test.
+     * @param subjectNumber The subject number of the test.
      */
     public HtmlTest(ArrayList<Word> al, int pv, int nw, int subjectNumber) {
 	this.wordsToPickFrom = al;

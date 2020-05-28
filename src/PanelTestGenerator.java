@@ -15,64 +15,132 @@ import javax.swing.JTable;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 
+/**
+ * A class that describe the Test Generator panel of the application, with Swing
+ * attributes.
+ * 
+ * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE,
+ *         Gabriel SAPONARA
+ */
+
 public class PanelTestGenerator extends JPanel implements ActionListener {
 
     private static final long serialVersionUID = 1L;
-    // Spinners
+    /**
+     * The SpinnerModel for starting page selection.
+     */
     SpinnerModel startPages = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
 	    ApplicationContext.getGlossary().numberOfPages(), // maximum value
 	    1); // step
+    /**
+     * The JSpinner created from the previously created SpinnerModel
+     * <code>startPages</code>.
+     */
     JSpinner spinnerStart = new JSpinner(startPages);
+    /**
+     * The SpinnerModel for ending page selection.
+     */
     SpinnerModel endPages = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
 	    ApplicationContext.getGlossary().numberOfPages(), // maximum value
 	    1); // step
+    /**
+     * The JSpinner created from the previously created SpinnerModel
+     * <code>endPages</code>.
+     */
     JSpinner spinnerEnd = new JSpinner(endPages);
 
     // buttons
     JButton btGen = new JButton("Generate");
     JButton btExport = new JButton("Export");
 
-    // labels
+    /**
+     * The JLabel placed before the <code>spinnerStart</code> JSpinner object.
+     */
     JLabel fromP = new JLabel("From page");
+    /**
+     * The JLabel placed between the <code>spinnerStart</code> and <code>spinnerEnd</code>
+     * JSpinner objects.
+     */
     JLabel to = new JLabel("to");
+    /**
+     * The JLabel that'll hold the points earned by the student.
+     */
     JLabel points = new JLabel("");
 
-    // JScrollPane
+    /**
+     * The JScrollPane that'll hold the JTable that'll store the quiz.
+     */
     JScrollPane tab = new JScrollPane();
 
-    // JTable
+    /**
+     * The JTable that'll hold the quiz.
+     */
     JTable tableau;
 
-    // JCheckBox
-    JCheckBox checkbox = new JCheckBox("only mandatory words(*)");
+    /**
+     * A JCheckBox to only have mandatory words in the generated test.
+     */
+    JCheckBox checkbox = new JCheckBox("Only mandatory words(*)");
 
-    // keep results
+    /**
+     * An array that'll hold the quiz results.
+     */
     Object[] QuizResults;
-    // Jlabel
+    
+    
+    /**
+     * The JLabel placed before the JSpinner <code>wordNumber</code>
+     */
     JLabel numOfWordsL = new JLabel("Number of words:");
-    // JSpinner
+    
+    /**
+     * The SpinnerModel object for the <code>wordsNumber</code> JSpinner.
+     */
     SpinnerModel numOfWordsSpinner = new SpinnerNumberModel(10, // initial value
 	    1, // minimum value
 	    (ApplicationContext.getGlossary().numberOfPages()) * 51, // maximum value
 	    1); // step;
+    /**
+     * The JSpinner objects to select the number of words in the generated test.
+     */
     JSpinner wordsNumber = new JSpinner(numOfWordsSpinner);
 
-    // Jlabel
+    /**
+     * The JLabel placed before the JSpinner <code>pointValue</code>.
+     */
     JLabel pointsValueL = new JLabel("Value of test (points) :");
-    // JSpinner
+    /**
+     * The SpinnerModel object for the <code>pointValue</code> JSpinner.
+     */
     SpinnerModel pointValueSpinner = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
 	    20, // maximum value
 	    1); // step;
+    
+    /**
+     * The JSpinner objects to select the points value of the test to generate.
+     */
     JSpinner pointValue = new JSpinner(pointValueSpinner);
-    // Jlabel
+    
+    /**
+     * The JLabel placed before the JSpinner <code>subjectNum</code>.
+     */
     JLabel testSubject = new JLabel("Subject number:");
-    // JSpinner
+    
+    /**
+     * The SpinnerModel object for the <code>subjectNum</code> JSpinner.
+     */
     SpinnerModel subject = new SpinnerNumberModel();
+    /**
+     * The JSpinner objects that selects the number of the current test to generate.
+     */
     JSpinner subjectNum = new JSpinner(subject);
 
+    /**
+     * The constructor of the PanelTestGenerator class.
+     */
     public PanelTestGenerator() {
 	super();
 	this.add(fromP);
@@ -96,10 +164,10 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
     }
 
     /**
+     * Method that describes what to do if an action is performed.
      * 
+     * @param arg0 The action performed by the user
      */
-
-    @Override
     public void actionPerformed(ActionEvent arg0) {
 
 //		JTextArea EnWords= new JTextArea();

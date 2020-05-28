@@ -1,11 +1,10 @@
 import java.io.Serializable;
 
-/**
- * 
- */
 
 /**
- * @author jcl
+ * An class that describes a word in the glossary.
+ * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE,
+ *         Gabriel SAPONARA
  *
  */
 public class Word implements Serializable, Comparable<Word>{
@@ -14,15 +13,21 @@ public class Word implements Serializable, Comparable<Word>{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * The english translation of the word.
+	 */
 	private String englishWord;
+	/**
+	 * The french translation of the word.
+	 */
 	private String frenchWord;
 	
 	
 	
 	/**
-	 * @param englishWord
-	 * @param frenchWord
-	 * @param difficulty
+	 * The constructor of the Word class.
+	 * @param englishWord The english translation of the word.
+	 * @param frenchWord The french translation of the word.
 	 */
 	public Word(String englishWord, String frenchWord) {
 		super();
@@ -31,12 +36,16 @@ public class Word implements Serializable, Comparable<Word>{
 	}
 	
 	/**
-	 * @return the englishWord
+	 * A getter for the <code>englishWord</code> attribute of the current object.
+	 * @return the <code>englishWord</code> attribute of the current object.
 	 */
 	public String getEnglishWord() {
 		return englishWord;
 	}
-	
+	/**
+	 * A getter for the <code>englishWord</code> attribute of the current object, but without the mandatory asterisk.
+	 * @return the <code>englishWord</code> attribute of the current object without the mandatory asterisk.
+	 */
 	public String getEnglishWordWithoutMark() {
 		if (this.isMandatory()) {
 			return englishWord.replaceAll("\\*","");
@@ -44,18 +53,21 @@ public class Word implements Serializable, Comparable<Word>{
 		return englishWord;
 	}
 	/**
+	 * A setter for the <code>englishWord</code> attribute.
 	 * @param englishWord the englishWord to set
 	 */
 	public void setEnglishWord(String englishWord) {
 		this.englishWord = englishWord;
 	}
 	/**
+	 * A getter for the <code>frenchWord</code> attribute of the current object.
 	 * @return the frenchWord
 	 */
 	public String getFrenchWord() {
 		return frenchWord;
 	}
 	/**
+	 * * A setter for the <code>frenchWord</code> attribute.
 	 * @param frenchWord the frenchWord to set
 	 */
 	public void setFrenchWord(String frenchWord) {
@@ -91,7 +103,11 @@ public class Word implements Serializable, Comparable<Word>{
 		} 
 		return false;
 	}
-
+	/**
+	 * A method to parse a word object from a String object <code>readLine</code>, which is a line of a CSV file.
+	 * @param readLine The line read from the CSV.
+	 * @return The Word object created from parsed line <code>readLine</code>.
+	 */
 	public static Word parseFromCSV(String readLine) {
 	    Word wordRead = null;
 	    String[] parsedData = readLine.split(";");

@@ -3,6 +3,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
 
+/**
+ * A serialized file reader
+ * @author Medhy DOHOU
+ *
+ */
+
 public class FilesDrivers implements InterfaceReadWrite {
 
 	/**
