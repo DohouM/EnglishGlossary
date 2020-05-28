@@ -16,6 +16,11 @@ public class Main {
      * @author Jean-Camille LAPIERRE, Dorian MOUNIER, Gabriel SAPONARA, Cyril
      *         PIGEYRE, Medhy DOHOU
      */
+    /**
+     * Main function of the program, holds all the vital functionalities.
+     * 
+     * @param args useless here.
+     */
     public static void main(String[] args) {
 //		Glossary glossary = new Glossary();
 //		FilesDrivers.readCsv(glossary);
@@ -36,7 +41,7 @@ public class Main {
 		}
 		System.out.println(glossary.getGlossary().size());
 		System.out.println(glossary.numberOfPages());
-		System.out.println(glossary.search("clé USB"));
+		System.out.println(glossary.search("clï¿½ USB"));
 		new ApplicationContext(glossary);
 
     }

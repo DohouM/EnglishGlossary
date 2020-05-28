@@ -69,8 +69,8 @@ public class Glossary {
 
     /**
      * Same method as <code>addWordGlossary</code>, except it takes strings as an input rather than a <code>Word</code> object.
-     * @param EnglishWord :  The English word to add (must be a <code>String</code>).
-     * @param FrenchWord :  The french translation of the word (must be a <code>String</code>).
+     * @param englishWord :  The English word to add (must be a <code>String</code>).
+     * @param frenchWord :  The french translation of the word (must be a <code>String</code>).
      */
     public void addWordStringOnly(String englishWord, String frenchWord) {
 	Word word = new Word(englishWord, frenchWord);
