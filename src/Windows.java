@@ -217,7 +217,7 @@ public class Windows extends JFrame implements ActionListener {
 	 * @param source The string to convert
 	 * @return The converted String object.
 	 */
-	private static String toHexa(String source) {
+	static String toHexa(String source) {
 		return toHexaHelp(source.getBytes());
 	}
 
@@ -237,7 +237,7 @@ public class Windows extends JFrame implements ActionListener {
 	 * @param source The String object to get the MD5 hash from.
 	 * @return The MD5 hash of the string.
 	 */
-	private static String toMD5Hash(String source) {
+	static String toMD5Hash(String source) {
 		String result = "";
 
 		try {
