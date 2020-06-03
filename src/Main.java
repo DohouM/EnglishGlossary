@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 /**
  * Main class of the program, contains Main function, which is the core of the
  * app.
@@ -26,8 +28,16 @@ public class Main {
 //		FilesDrivers.readCsv(glossary);
 //		SerealizationDriver.serealizeGlossary(glossary.getGlossary());
 
-    	InterfaceReadWrite readWrite = new SerealizationDriver();
-		glossary= new Glossary(readWrite.read("words.ser"));
+    	CsvFileSerializationDriver readWrite = new CsvFileSerializationDriver("words.ser");
+		try
+		{
+			glossary= new Glossary(readWrite.importWords());
+		}
+		catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		//glossary.addWordStringOnly("Hello*", "bonjour");
 		
