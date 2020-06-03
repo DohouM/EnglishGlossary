@@ -42,27 +42,26 @@ public class PanelProposalTeacher extends JPanel implements ActionListener {
      * The constructor for the PanelProposalTeacher class.
      */
     public PanelProposalTeacher() {
-	JLabel addAWord = new JLabel("Add a Word");
-	this.add(addAWord);
+    	
+    	proposals = new ProposalList();
+    	int numberOfProposal = proposals.getProposalList().size();
 
-	proposals = new ProposalList();
-	int numberOfProposal = proposals.getProposalList().size();
+    	Object[][] data = new Object[numberOfProposal][2];
 
-	Object[][] data = new Object[numberOfProposal][2];
+    	int i = 0;
+    	while (i < numberOfProposal) {
+    	    data[i][0] = proposals.getProposalList().get(i).getFrenchWord();
+    	    data[i][1] = proposals.getProposalList().get(i).getEnglishWord();
+    	    i = i + 1;
 
-	int i = 0;
-	while (i < numberOfProposal) {
-	    data[i][0] = proposals.getProposalList().get(i).getFrenchWord();
-	    data[i][1] = proposals.getProposalList().get(i).getEnglishWord();
-	    i = i + 1;
+    	}
+    	String title[] = { "French Words", "English Words" };
+    	tableau = new JTable(data, title);
 
-	}
-	String title[] = { "French Words", "English Words" };
-	tableau = new JTable(data, title);
+    	tab = new JScrollPane(tableau);
 
-	tab = new JScrollPane(tableau);
+    	this.add(tab);
 
-	this.add(tab);
 	
 	this.add(btDump);
 	btDump.addActionListener(this);
@@ -71,7 +70,30 @@ public class PanelProposalTeacher extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent arg0) {// Method that will be called when clicking on the button
     	if (arg0.getSource() == btDump) {
     		proposals.fileDump();
+    		this.loadAndDispayTab();
     		this.updateUI();
     	}
+    }
+    
+    public void loadAndDispayTab(){
+    	this.remove(tab);
+    	proposals = new ProposalList();
+    	int numberOfProposal = proposals.getProposalList().size();
+
+    	Object[][] data = new Object[numberOfProposal][2];
+
+    	int i = 0;
+    	while (i < numberOfProposal) {
+    	    data[i][0] = proposals.getProposalList().get(i).getFrenchWord();
+    	    data[i][1] = proposals.getProposalList().get(i).getEnglishWord();
+    	    i = i + 1;
+
+    	}
+    	String title[] = { "French Words", "English Words" };
+    	tableau = new JTable(data, title);
+
+    	tab = new JScrollPane(tableau);
+
+    	this.add(tab);
     }
 }

@@ -64,6 +64,7 @@ public class PanelProposal extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent arg0) {// Method that will be called when clicking on the button
 
 	if (arg0.getSource() == btCreate) {
+		
 	    Word proposalWord = new Word(englishWord.getText(), frenchWord.getText());
 	    ProposalList proposal = new ProposalList();
 	    proposal.addWord(proposalWord);
@@ -72,7 +73,7 @@ public class PanelProposal extends JPanel implements ActionListener {
 	    frenchWord.setText("");
 	    englishWord.setText("");
 
-	    this.updateUI();
+	    this.updateUI(); //Refresh
 	}
 
     }
