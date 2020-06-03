@@ -71,6 +71,7 @@ public class PanelProposalTeacher extends JPanel implements ActionListener {
     	if (arg0.getSource() == btDump) {
     		proposals.fileDump();
     		this.loadAndDispayTab();
+    		this.remove(btDump);
     		this.updateUI();
     	}
     }
