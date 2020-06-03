@@ -55,4 +55,15 @@ public class ProposalList {
     	InterfaceReadWrite InterfaceRW =new FilesDrivers();
 		InterfaceRW.write(this.proposalList,"proposal.csv");
     }
+    
+    /**
+	 * A method to get the dump list of propositions.
+	 */
+    
+    public void fileDump() {
+    	ArrayList<Word> empty= new ArrayList<Word>(); 
+    	this.proposalList=empty;
+    	InterfaceReadWrite InterfaceRW =new FilesDrivers();
+		InterfaceRW.write(this.proposalList,"proposal.csv");
+    }
 }
