@@ -13,6 +13,8 @@ import java.util.List;
  */
 public class CsvWordReader implements WordReaderInterface {
 
+
+	//TODO javadoc
     private final BufferedReader in;
 
     public CsvWordReader(BufferedReader theIn) {
