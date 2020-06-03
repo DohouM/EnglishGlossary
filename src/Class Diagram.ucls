@@ -1,470 +1,589 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
-  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="Admin" project="ProjetS2" file="/ProjetS2/src/Admin.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1554" y="649"/>    
+<class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="ApplicationContext" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/ApplicationContext.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1427" y="1256"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="Glossary" project="ProjetS2" file="/ProjetS2/src/Glossary.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="655" y="524"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="3" language="java" name="SerealizationDriver" project="ProjetS2" 
-    file="/ProjetS2/src/SerealizationDriver.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-490" y="363"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="4" language="java" name="Student" project="ProjetS2" file="/ProjetS2/src/Student.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1553" y="496"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="5" language="java" name="User" project="ProjetS2" file="/ProjetS2/src/User.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1324" y="552"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="6" language="java" name="Windows" project="ProjetS2" file="/ProjetS2/src/Windows.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1598" y="889"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="7" language="java" name="ApplicationContext" project="ProjetS2" 
-    file="/ProjetS2/src/ApplicationContext.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1178" y="752"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="8" language="java" name="CsvWordReader" project="ProjetS2" file="/ProjetS2/src/CsvWordReader.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-493" y="511"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="9" language="java" name="FilesDrivers" project="ProjetS2" file="/ProjetS2/src/FilesDrivers.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-497" y="685"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="10" language="java" name="HtmlTest" project="ProjetS2" file="/ProjetS2/src/HtmlTest.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="155" y="1077"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="11" language="java" name="InterfaceReadWrite" project="ProjetS2" 
-    file="/ProjetS2/src/InterfaceReadWrite.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-177" y="519"/>    
+  <interface id="2" language="java" name="WordWriterInterface" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/WordWriterInterface.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="405" y="1716"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="12" language="java" name="PanelGlossary" project="ProjetS2" file="/ProjetS2/src/PanelGlossary.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="852" y="1298"/>    
+  <class id="3" language="java" name="ObjectInputStreamWordReader" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/ObjectInputStreamWordReader.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="371" y="1265"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="PanelModifyGlossary" project="ProjetS2" 
-    file="/ProjetS2/src/PanelModifyGlossary.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1738" y="1308"/>    
+  <class id="4" language="java" name="PanelProposalTeacher" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/PanelProposalTeacher.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="834" y="488"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="PanelProposal" project="ProjetS2" file="/ProjetS2/src/PanelProposal.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1059" y="1257"/>    
+  <class id="5" language="java" name="PassWordTest" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/PassWordTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1303" y="-91"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="PanelProposalTeacher" project="ProjetS2" 
-    file="/ProjetS2/src/PanelProposalTeacher.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1294" y="1228"/>    
+  <class id="6" language="java" name="ProposalList" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/ProposalList.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="743" y="728"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="PanelQuiz" project="ProjetS2" file="/ProjetS2/src/PanelQuiz.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="641" y="1347"/>    
+  <class id="7" language="java" name="PassWordInvalide" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/PassWordInvalide.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1340" y="41"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="17" language="java" name="PanelTestGenerator" project="ProjetS2" 
-    file="/ProjetS2/src/PanelTestGenerator.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1498" y="1408"/>    
+  <class id="8" language="java" name="Word" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/Word.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1197" y="1952"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="18" language="java" name="ProposalList" project="ProjetS2" file="/ProjetS2/src/ProposalList.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="33" y="853"/>    
+  <class id="9" language="java" name="PanelGlossary" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/PanelGlossary.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1715" y="782"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="19" language="java" name="Tabs" project="ProjetS2" file="/ProjetS2/src/Tabs.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1770" y="619"/>    
+  <class id="10" language="java" name="Windows" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/Windows.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1023" y="126"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="20" language="java" name="WordReaderInterface" project="ProjetS2" 
-    file="/ProjetS2/src/WordReaderInterface.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-171" y="415"/>    
+  <class id="11" language="java" name="TestSerialization" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/TestSerialization.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="475" y="692"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="User" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/User.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="353" y="461"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="Student" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/Student.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="160" y="710"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="CsvWordReader" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/CsvWordReader.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="481" y="1430"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="SerealizationDriver" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/SerealizationDriver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1022" y="1256"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="Glossary" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/Glossary.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1416" y="1613"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="Tabs" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/Tabs.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="581" y="488"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="Main" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="961" y="692"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="PanelTestGenerator" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/PanelTestGenerator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1970" y="899"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="20" language="java" name="WordReaderInterface" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/WordReaderInterface.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="354" y="1557"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="21" language="java" name="WordWriterInterface" project="ProjetS2" 
-    file="/ProjetS2/src/WordWriterInterface.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-166" y="306"/>    
+  <class id="21" language="java" name="HtmlTest" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/HtmlTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1807" y="1310"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="PanelProposal" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/PanelProposal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1150" y="497"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="FilesDrivers" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/FilesDrivers.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="730" y="1256"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="24" language="java" name="InterfaceReadWrite" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/InterfaceReadWrite.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="961" y="1514"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="22" language="java" name="Main" project="ProjetS2" file="/ProjetS2/src/Main.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="639" y="231"/>    
+  <class id="25" language="java" name="PanelModifyGlossary" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/PanelModifyGlossary.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1442" y="791"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="23" language="java" name="Word" project="ProjetS2" file="/ProjetS2/src/Word.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="181" y="497"/>    
+  <class id="26" language="java" name="PanelQuiz" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/PanelQuiz.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1190" y="827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <dependency id="24">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="6"/>  
-  </dependency>  
-  <dependency id="25">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <dependency id="26">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <realization id="27">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="11"/>  
-  </realization>  
-  <realization id="28">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="11"/>  
-  </realization>  
-  <generalization id="29">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <dependency id="30">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="11"/>  
-  </dependency>  
-  <association id="31">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="32" name="user">        
-        <position height="18" width="30" x="1205" y="530"/>      
-      </attribute>      
-      <multiplicity id="33" minimum="0" maximum="1">        
-        <position height="0" width="0" x="590" y="-206"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="34">    
-    <end type="SOURCE" refId="22" navigable="false">      
-      <attribute id="35" name="glossary"/>      
-      <multiplicity id="36" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="37">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="18"/>  
-  </dependency>  
-  <dependency id="38">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="18"/>  
-  </dependency>  
-  <dependency id="39">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="2"/>  
-  </dependency>  
-  <dependency id="40">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="15"/>  
-  </dependency>  
-  <dependency id="41">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="13"/>  
-  </dependency>  
-  <dependency id="42">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
-  <dependency id="43">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="15"/>  
-  </dependency>  
-  <dependency id="44">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="2"/>  
-  </dependency>  
-  <dependency id="45">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="12"/>  
-  </dependency>  
-  <dependency id="46">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="19"/>  
-  </dependency>  
-  <dependency id="47">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="15"/>  
-  </dependency>  
-  <dependency id="48">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="11"/>  
-  </dependency>  
-  <dependency id="49">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="19"/>  
-  </dependency>  
-  <association id="50">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="51" name="wordFound"/>      
-      <multiplicity id="52" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="53">    
-    <end type="SOURCE" refId="21"/>    
-    <end type="TARGET" refId="23"/>  
-  </dependency>  
-  <dependency id="54">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="11"/>  
-  </dependency>  
-  <dependency id="55">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="17"/>  
-  </dependency>  
-  <association id="56">    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="57" name="proposalList"/>      
-      <multiplicity id="58" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="59">    
-    <end type="SOURCE" refId="17"/>    
+  <class id="27" language="java" name="Admin" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/Admin.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="319" y="683"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="CsvFileSerializationDriver" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/CsvFileSerializationDriver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="117" y="1332"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="ObjectOutputStreamWordWriter" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/ObjectOutputStreamWordWriter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="159" y="1885"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="CsvWordWriter" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/CsvWordWriter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="105" y="1500"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="AbstractWordWriter" project="M2107-P3.1-EnglishGlossary" 
+    file="/M2107-P3.1-EnglishGlossary/src/AbstractWordWriter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="101" width="181" x="40" y="1637"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="32">    
+    <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="10"/>  
   </dependency>  
-  <dependency id="60">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="2"/>  
+  <dependency id="33">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="8"/>  
   </dependency>  
-  <dependency id="61">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="7"/>  
+  <dependency id="34">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="1"/>  
   </dependency>  
-  <dependency id="62">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="7"/>  
+  <dependency id="35">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="1"/>  
   </dependency>  
-  <dependency id="63">    
-    <end type="SOURCE" refId="6"/>    
+  <association id="36">    
+    <bendpoint x="1590" y="1464"/>    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="37" name="wordsToPickFrom"/>      
+      <multiplicity id="38" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="39">    
+    <bendpoint x="1157" y="1197"/>    
+    <bendpoint x="1157" y="1464"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="40">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <association id="41">    
+    <bendpoint x="594" y="1197"/>    
+    <bendpoint x="594" y="1464"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="42" name="proposalList"/>      
+      <multiplicity id="43" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="44">    
+    <bendpoint x="1262" y="1197"/>    
+    <bendpoint x="1262" y="1464"/>    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="45" name="wordFound"/>      
+      <multiplicity id="46" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="47">    
+    <bendpoint x="1599" y="393"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="48">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="49">    
+    <end type="SOURCE" refId="28"/>    
     <end type="TARGET" refId="14"/>  
   </dependency>  
-  <dependency id="64">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="13"/>  
-  </dependency>  
-  <dependency id="65">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="11"/>  
-  </dependency>  
-  <dependency id="66">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="15"/>  
-  </dependency>  
-  <dependency id="67">    
+  <dependency id="50">    
+    <bendpoint x="1096" y="1464"/>    
     <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="18"/>  
+    <end type="TARGET" refId="8"/>  
   </dependency>  
-  <dependency id="68">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="2"/>  
-  </dependency>  
-  <association id="69">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="70" name="glossary"/>      
-      <multiplicity id="71" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="72">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="18"/>  
-  </dependency>  
-  <dependency id="73">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="13"/>  
-  </dependency>  
-  <dependency id="74">    
+  <dependency id="51">    
+    <bendpoint x="304" y="1464"/>    
     <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="18"/>  
+    <end type="TARGET" refId="8"/>  
   </dependency>  
-  <dependency id="75">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <dependency id="76">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="23"/>  
-  </dependency>  
-  <association id="77">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="78" name="wordsToPickFrom">        
-        <position height="18" width="96" x="180" y="682"/>      
-      </attribute>      
-      <multiplicity id="79" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="80">    
-    <end type="SOURCE" refId="6"/>    
+  <dependency id="52">    
+    <bendpoint x="1590" y="1197"/>    
+    <end type="SOURCE" refId="19"/>    
     <end type="TARGET" refId="16"/>  
   </dependency>  
-  <dependency id="81">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="2"/>  
+  <dependency id="53">    
+    <bendpoint x="1220" y="1197"/>    
+    <bendpoint x="1220" y="1464"/>    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="8"/>  
   </dependency>  
-  <dependency id="82">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="2"/>  
+  <dependency id="54">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="22"/>  
   </dependency>  
-  <dependency id="83">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <generalization id="84">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="5"/>  
+  <generalization id="55">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="12"/>  
   </generalization>  
-  <association id="85">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="86" name="glossary"/>      
-      <multiplicity id="87" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="88">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="19"/>  
+  <dependency id="56">    
+    <bendpoint x="1578" y="642"/>    
+    <bendpoint x="1578" y="393"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="10"/>  
   </dependency>  
-  <dependency id="89">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="7"/>  
+  <dependency id="57">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="8"/>  
   </dependency>  
-  <realization id="90">    
-    <end type="SOURCE" refId="8"/>    
+  <realization id="58">    
+    <end type="SOURCE" refId="14"/>    
     <end type="TARGET" refId="20"/>  
   </realization>  
-  <dependency id="91">    
-    <end type="SOURCE" refId="6"/>    
+  <dependency id="59">    
+    <bendpoint x="1286" y="393"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="60">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="61">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="17"/>  
+  </dependency>  
+  <dependency id="62">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <association id="63">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="64" name="user"/>      
+      <multiplicity id="65" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="66">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="67">    
+    <bendpoint x="552" y="1197"/>    
+    <bendpoint x="552" y="1464"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="68">    
+    <bendpoint x="1241" y="1197"/>    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <realization id="69">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <dependency id="70">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <realization id="71">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="24"/>  
+  </realization>  
+  <association id="72">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="73" name="proposals"/>      
+      <multiplicity id="74" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="75">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="31"/>  
+  </generalization>  
+  <dependency id="76">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <generalization id="77">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="31"/>  
+  </generalization>  
+  <dependency id="78">    
+    <bendpoint x="2023" y="1197"/>    
+    <bendpoint x="2023" y="1464"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="79">    
+    <bendpoint x="1305" y="1197"/>    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <realization id="80">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="24"/>  
+  </realization>  
+  <dependency id="81">    
+    <bendpoint x="531" y="1464"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <association id="82">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="83" name="glossary"/>      
+      <multiplicity id="84" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="85">    
+    <bendpoint x="573" y="642"/>    
+    <bendpoint x="573" y="1197"/>    
+    <bendpoint x="573" y="1464"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="86">    
+    <bendpoint x="1620" y="393"/>    
+    <end type="SOURCE" refId="10"/>    
     <end type="TARGET" refId="19"/>  
   </dependency>  
+  <dependency id="87">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="88">    
+    <bendpoint x="1548" y="1197"/>    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <association id="89">    
+    <bendpoint x="1199" y="1197"/>    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="90" name="glossary"/>      
+      <multiplicity id="91" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <dependency id="92">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="13"/>  
+    <bendpoint x="1569" y="1197"/>    
+    <bendpoint x="1569" y="1464"/>    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="8"/>  
   </dependency>  
   <dependency id="93">    
+    <bendpoint x="1053" y="642"/>    
+    <bendpoint x="1178" y="1197"/>    
+    <bendpoint x="1178" y="1464"/>    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <association id="94">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="95" name="glossary"/>      
+      <multiplicity id="96" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="97">    
     <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="2"/>  
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <dependency id="98">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="99">    
+    <bendpoint x="825" y="1464"/>    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <realization id="100">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="20"/>  
+  </realization>  
+  <dependency id="101">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="21"/>  
+  </dependency>  
+  <dependency id="102">    
+    <bendpoint x="865" y="1197"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="24"/>  
+  </dependency>  
+  <dependency id="103">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="104">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <dependency id="105">    
+    <bendpoint x="1345" y="393"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <dependency id="106">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="3"/>  
   </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
