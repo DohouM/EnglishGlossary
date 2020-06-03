@@ -114,6 +114,11 @@ public class Word implements Serializable, Comparable<Word>{
 	    wordRead = new Word(parsedData[0], parsedData[1]);
 	    return wordRead;
 	}
+
+	public String toCSVString()
+	{
+		return this.englishWord+";"+this.frenchWord;
+	}
 	
 }
 
