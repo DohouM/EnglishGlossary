@@ -100,16 +100,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="12" language="java" name="ObjectInputStreamWordReader" project="ProjetS2" 
-    file="/ProjetS2/src/ObjectInputStreamWordReader.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="152" y="210"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="13" language="java" name="PanelGlossary" project="ProjetS2" file="/ProjetS2/src/PanelGlossary.java" 
+  <class id="12" language="java" name="PanelGlossary" project="ProjetS2" file="/ProjetS2/src/PanelGlossary.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="852" y="1298"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -118,7 +109,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="PanelModifyGlossary" project="ProjetS2" 
+  <class id="13" language="java" name="PanelModifyGlossary" project="ProjetS2" 
     file="/ProjetS2/src/PanelModifyGlossary.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1738" y="1308"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -127,7 +118,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="PanelProposal" project="ProjetS2" file="/ProjetS2/src/PanelProposal.java" 
+  <class id="14" language="java" name="PanelProposal" project="ProjetS2" file="/ProjetS2/src/PanelProposal.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1059" y="1257"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -136,7 +127,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="PanelProposalTeacher" project="ProjetS2" 
+  <class id="15" language="java" name="PanelProposalTeacher" project="ProjetS2" 
     file="/ProjetS2/src/PanelProposalTeacher.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1294" y="1228"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -145,7 +136,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="17" language="java" name="PanelQuiz" project="ProjetS2" file="/ProjetS2/src/PanelQuiz.java" binary="false" 
+  <class id="16" language="java" name="PanelQuiz" project="ProjetS2" file="/ProjetS2/src/PanelQuiz.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="641" y="1347"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -154,7 +145,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="18" language="java" name="PanelTestGenerator" project="ProjetS2" 
+  <class id="17" language="java" name="PanelTestGenerator" project="ProjetS2" 
     file="/ProjetS2/src/PanelTestGenerator.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1498" y="1408"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -163,7 +154,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="19" language="java" name="ProposalList" project="ProjetS2" file="/ProjetS2/src/ProposalList.java" 
+  <class id="18" language="java" name="ProposalList" project="ProjetS2" file="/ProjetS2/src/ProposalList.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="33" y="853"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -172,7 +163,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="20" language="java" name="Tabs" project="ProjetS2" file="/ProjetS2/src/Tabs.java" binary="false" 
+  <class id="19" language="java" name="Tabs" project="ProjetS2" file="/ProjetS2/src/Tabs.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1770" y="619"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -181,25 +172,25 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="21" language="java" name="WordReaderInterface" project="ProjetS2" 
+  <interface id="20" language="java" name="WordReaderInterface" project="ProjetS2" 
     file="/ProjetS2/src/WordReaderInterface.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-174" y="392"/>    
+    <position height="-1" width="-1" x="-171" y="415"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="22" language="java" name="WordWriterInterface" project="ProjetS2" 
+  <interface id="21" language="java" name="WordWriterInterface" project="ProjetS2" 
     file="/ProjetS2/src/WordWriterInterface.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-171" y="265"/>    
+    <position height="-1" width="-1" x="-166" y="306"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="23" language="java" name="Main" project="ProjetS2" file="/ProjetS2/src/Main.java" binary="false" 
+  <class id="22" language="java" name="Main" project="ProjetS2" file="/ProjetS2/src/Main.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="639" y="231"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -208,7 +199,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="24" language="java" name="Word" project="ProjetS2" file="/ProjetS2/src/Word.java" binary="false" 
+  <class id="23" language="java" name="Word" project="ProjetS2" file="/ProjetS2/src/Word.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="181" y="497"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -217,266 +208,262 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <dependency id="25">    
+  <dependency id="24">    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="6"/>  
   </dependency>  
+  <dependency id="25">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
   <dependency id="26">    
-    <end type="SOURCE" refId="19"/>    
+    <end type="SOURCE" refId="18"/>    
     <end type="TARGET" refId="9"/>  
   </dependency>  
-  <dependency id="27">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <realization id="28">    
+  <realization id="27">    
     <end type="SOURCE" refId="9"/>    
     <end type="TARGET" refId="11"/>  
   </realization>  
-  <realization id="29">    
+  <realization id="28">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="11"/>  
   </realization>  
-  <generalization id="30">    
+  <generalization id="29">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="5"/>  
   </generalization>  
-  <dependency id="31">    
-    <end type="SOURCE" refId="19"/>    
+  <dependency id="30">    
+    <end type="SOURCE" refId="18"/>    
     <end type="TARGET" refId="11"/>  
   </dependency>  
-  <association id="32">    
+  <association id="31">    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="33" name="user">        
+      <attribute id="32" name="user">        
         <position height="18" width="30" x="1205" y="530"/>      
       </attribute>      
-      <multiplicity id="34" minimum="0" maximum="1">        
+      <multiplicity id="33" minimum="0" maximum="1">        
         <position height="0" width="0" x="590" y="-206"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="35">    
-    <end type="SOURCE" refId="23" navigable="false">      
-      <attribute id="36" name="glossary"/>      
-      <multiplicity id="37" minimum="0" maximum="1"/>    
+  <association id="34">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="35" name="glossary"/>      
+      <multiplicity id="36" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="38">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="19"/>  
-  </dependency>  
-  <dependency id="39">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="19"/>  
-  </dependency>  
-  <dependency id="40">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="2"/>  
-  </dependency>  
-  <dependency id="41">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="16"/>  
-  </dependency>  
-  <dependency id="42">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="14"/>  
-  </dependency>  
-  <dependency id="43">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
-  <dependency id="44">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="16"/>  
-  </dependency>  
-  <dependency id="45">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="2"/>  
-  </dependency>  
-  <dependency id="46">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="13"/>  
-  </dependency>  
-  <dependency id="47">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="20"/>  
-  </dependency>  
-  <dependency id="48">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="16"/>  
-  </dependency>  
-  <dependency id="49">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="11"/>  
-  </dependency>  
-  <dependency id="50">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="20"/>  
-  </dependency>  
-  <association id="51">    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="52" name="wordFound"/>      
-      <multiplicity id="53" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="24" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="54">    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="24"/>  
-  </dependency>  
-  <dependency id="55">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="11"/>  
-  </dependency>  
-  <dependency id="56">    
-    <end type="SOURCE" refId="6"/>    
+  <dependency id="37">    
+    <end type="SOURCE" refId="15"/>    
     <end type="TARGET" refId="18"/>  
   </dependency>  
-  <association id="57">    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="58" name="proposalList"/>      
-      <multiplicity id="59" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="24" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="60">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="10"/>  
+  <dependency id="38">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="18"/>  
   </dependency>  
-  <dependency id="61">    
-    <end type="SOURCE" refId="14"/>    
+  <dependency id="39">    
+    <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="2"/>  
   </dependency>  
-  <dependency id="62">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
-  <dependency id="63">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
-  <dependency id="64">    
+  <dependency id="40">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="15"/>  
   </dependency>  
-  <dependency id="65">    
+  <dependency id="41">    
     <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="14"/>  
+    <end type="TARGET" refId="13"/>  
   </dependency>  
-  <dependency id="66">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="11"/>  
+  <dependency id="42">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="7"/>  
   </dependency>  
-  <dependency id="67">    
+  <dependency id="43">    
     <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="16"/>  
+    <end type="TARGET" refId="15"/>  
   </dependency>  
-  <dependency id="68">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="19"/>  
-  </dependency>  
-  <dependency id="69">    
+  <dependency id="44">    
     <end type="SOURCE" refId="17"/>    
     <end type="TARGET" refId="2"/>  
   </dependency>  
-  <association id="70">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="71" name="glossary"/>      
-      <multiplicity id="72" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="24" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="73">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="19"/>  
-  </dependency>  
-  <dependency id="74">    
+  <dependency id="45">    
     <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="14"/>  
+    <end type="TARGET" refId="12"/>  
   </dependency>  
-  <dependency id="75">    
-    <end type="SOURCE" refId="15"/>    
+  <dependency id="46">    
+    <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="19"/>  
   </dependency>  
-  <dependency id="76">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="9"/>  
+  <dependency id="47">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="15"/>  
   </dependency>  
-  <dependency id="77">    
-    <end type="SOURCE" refId="21"/>    
-    <end type="TARGET" refId="24"/>  
+  <dependency id="48">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="11"/>  
   </dependency>  
-  <association id="78">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="79" name="wordsToPickFrom">        
-        <position height="18" width="96" x="180" y="682"/>      
-      </attribute>      
-      <multiplicity id="80" minimum="0" maximum="2147483647"/>    
+  <dependency id="49">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="19"/>  
+  </dependency>  
+  <association id="50">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="51" name="wordFound"/>      
+      <multiplicity id="52" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="24" navigable="true"/>    
+    <end type="TARGET" refId="23" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="81">    
+  <dependency id="53">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <dependency id="54">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="55">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="17"/>  
   </dependency>  
-  <dependency id="82">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="2"/>  
+  <association id="56">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="57" name="proposalList"/>      
+      <multiplicity id="58" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="59">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="10"/>  
   </dependency>  
-  <dependency id="83">    
+  <dependency id="60">    
     <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="2"/>  
   </dependency>  
-  <dependency id="84">    
-    <end type="SOURCE" refId="19"/>    
+  <dependency id="61">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="62">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="63">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="64">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="65">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="66">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <dependency id="67">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="18"/>  
+  </dependency>  
+  <dependency id="68">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <association id="69">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="70" name="glossary"/>      
+      <multiplicity id="71" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="72">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="18"/>  
+  </dependency>  
+  <dependency id="73">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="74">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="18"/>  
+  </dependency>  
+  <dependency id="75">    
+    <end type="SOURCE" refId="18"/>    
     <end type="TARGET" refId="9"/>  
   </dependency>  
-  <generalization id="85">    
+  <dependency id="76">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <association id="77">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="78" name="wordsToPickFrom">        
+        <position height="18" width="96" x="180" y="682"/>      
+      </attribute>      
+      <multiplicity id="79" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="80">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <dependency id="81">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="82">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="83">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <generalization id="84">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="5"/>  
   </generalization>  
-  <association id="86">    
+  <association id="85">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="87" name="glossary"/>      
-      <multiplicity id="88" minimum="0" maximum="1"/>    
+      <attribute id="86" name="glossary"/>      
+      <multiplicity id="87" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="89">    
+  <dependency id="88">    
     <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="20"/>  
+    <end type="TARGET" refId="19"/>  
   </dependency>  
-  <realization id="90">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="21"/>  
-  </realization>  
-  <dependency id="91">    
-    <end type="SOURCE" refId="14"/>    
+  <dependency id="89">    
+    <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="7"/>  
   </dependency>  
-  <realization id="92">    
+  <realization id="90">    
     <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="21"/>  
-  </realization>  
-  <dependency id="93">    
-    <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="20"/>  
-  </dependency>  
-  <dependency id="94">    
+  </realization>  
+  <dependency id="91">    
     <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="14"/>  
+    <end type="TARGET" refId="19"/>  
   </dependency>  
-  <dependency id="95">    
-    <end type="SOURCE" refId="14"/>    
+  <dependency id="92">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="93">    
+    <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="2"/>  
   </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

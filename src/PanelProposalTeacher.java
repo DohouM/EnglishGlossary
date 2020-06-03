@@ -1,3 +1,7 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -11,7 +15,7 @@ import javax.swing.JTable;
  *         Gabriel SAPONARA
  */
 
-public class PanelProposalTeacher extends JPanel {
+public class PanelProposalTeacher extends JPanel implements ActionListener {
 
     /**
      * The JScrollPane that'll show the JTable that holds the proposals.
@@ -22,10 +26,16 @@ public class PanelProposalTeacher extends JPanel {
      * The JTable object containing all the proposals.
      */
     JTable tableau;
+    /**
+     * A JButton object used to dump the file of proposal.
+     */
+    private JButton btDump = new JButton("Dump proposal List");
 
     /**
-     * 
+     * The proposal list
      */
+    private ProposalList proposals;
+    
     private static final long serialVersionUID = 1L;
 
     /**
@@ -35,7 +45,7 @@ public class PanelProposalTeacher extends JPanel {
 	JLabel addAWord = new JLabel("Add a Word");
 	this.add(addAWord);
 
-	ProposalList proposals = new ProposalList();
+	proposals = new ProposalList();
 	int numberOfProposal = proposals.getProposalList().size();
 
 	Object[][] data = new Object[numberOfProposal][2];
@@ -53,6 +63,15 @@ public class PanelProposalTeacher extends JPanel {
 	tab = new JScrollPane(tableau);
 
 	this.add(tab);
+	
+	this.add(btDump);
+	btDump.addActionListener(this);
 
+    }
+    public void actionPerformed(ActionEvent arg0) {// Method that will be called when clicking on the button
+    	if (arg0.getSource() == btDump) {
+    		proposals.fileDump();
+    		this.updateUI();
+    	}
     }
 }
