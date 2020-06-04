@@ -16,6 +16,7 @@ public class CsvWordReader implements WordReaderInterface {
 
 	//TODO javadoc
     private final BufferedReader in;
+    private String stringRead;
 
     public CsvWordReader(BufferedReader theIn) {
 	this.in = theIn;
@@ -24,7 +25,7 @@ public class CsvWordReader implements WordReaderInterface {
     @Override
     public Word readWord() throws IOException {
 	try {
-	    return Word.parseFromCSV(this.in.readLine());
+	    return Word.parseFromCSV(stringRead);
 	} catch (Exception e) {
 	    throw new IOException();
 	}
@@ -35,9 +36,11 @@ public class CsvWordReader implements WordReaderInterface {
 	List<Word> result = new ArrayList<Word>();
 
 	while (true) {
-	    Word wordRead = this.readWord();
-	    if (wordRead == null)
+	    stringRead = this.in.readLine();
+	    if(stringRead==null)
 		return result;
+	    Word wordRead = this.readWord();
+	    
 	    result.add(wordRead);
 	}
     }
