@@ -2,6 +2,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -132,7 +133,7 @@ public class PanelQuiz extends JPanel implements ActionListener {
 	    this.remove(tab);
 	    this.remove(points);
 
-	    ArrayList<Word> WordList = ApplicationContext.getGlossary().pages((int) spinnerStart.getValue(),
+	    List <Word> WordList = ApplicationContext.getGlossary().pages((int) spinnerStart.getValue(),
 		    (int) spinnerEnd.getValue());
 
 	    if (checkbox.isSelected()) {

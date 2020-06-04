@@ -2,6 +2,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -179,7 +180,7 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 //		EnWords.setText(EnWordList);
 //		
 //		this.add(EnWords);
-	ArrayList<Word> wordList = ApplicationContext.getGlossary().pages((int) spinnerStart.getValue(),
+	List<Word> wordList = ApplicationContext.getGlossary().pages((int) spinnerStart.getValue(),
 		(int) spinnerEnd.getValue());
 	if (arg0.getSource() == btGen) {
 
@@ -224,8 +225,7 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 
 	if (arg0.getSource() == btExport) {
 	    // TODO export text to an html doc
-	    HtmlTest testToExport = new HtmlTest(wordList, (int) pointValue.getValue(), (int) wordsNumber.getValue(),
-		    (int) subjectNum.getValue());
+	    HtmlTest testToExport = new HtmlTest(wordList, (int) pointValue.getValue(), (int) wordsNumber.getValue(), (int) subjectNum.getValue());
 	    testToExport.generateTestFile();
 	    this.updateUI();
 	}

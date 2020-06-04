@@ -19,7 +19,7 @@ public class HtmlTest {
     /**
      * The list of Word to pick words from.
      */
-    ArrayList<Word> wordsToPickFrom;
+    List<Word> wordsToPickFrom;
 
     /**
      * Number of words in test.
@@ -50,13 +50,13 @@ public class HtmlTest {
     /**
      * Constructor of HtmlTest.
      * 
-     * @param al The list of Words to put in the generated test.
+     * @param wordList The list of Words to put in the generated test.
      * @param pv The value in points of the test.
      * @param nw The number of words in the test.
      * @param subjectNumber The subject number of the test.
      */
-    public HtmlTest(ArrayList<Word> al, int pv, int nw, int subjectNumber) {
-	this.wordsToPickFrom = al;
+    public HtmlTest(List<Word> wordList, int pv, int nw, int subjectNumber) {
+	this.wordsToPickFrom = wordList;
 	this.pointsValue = pv;
 	this.numberOfWords = nw;
 	this.subject = subjectNumber;

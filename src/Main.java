@@ -28,13 +28,11 @@ public class Main {
 //		FilesDrivers.readCsv(glossary);
 //		SerealizationDriver.serealizeGlossary(glossary.getGlossary());
 
-    	CsvFileSerializationDriver readWrite = new CsvFileSerializationDriver("words.ser");
-		try
-		{
+    	CsvFileSerializationDriver readWrite = new CsvFileSerializationDriver("data.csv");
+    	
+		try {
 			glossary= new Glossary(readWrite.importWords());
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -52,7 +50,13 @@ public class Main {
 		System.out.println(glossary.numberOfPages());
 		System.out.println(glossary.search("cl� USB"));
 		new ApplicationContext(glossary);
-
+		
+		try {
+			readWrite.exportWords(glossary.getGlossary());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
 }

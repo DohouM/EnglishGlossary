@@ -1,6 +1,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -109,7 +110,7 @@ public class PanelGlossary extends JPanel implements ActionListener {
 //		this.add(EnWords);
 	this.remove(tab);
 
-	ArrayList<Word> WordList = ApplicationContext.getGlossary().pages((int) spinnerStart.getValue(),
+	List<Word> WordList = ApplicationContext.getGlossary().pages((int) spinnerStart.getValue(),
 		(int) spinnerEnd.getValue());
 
 	Object[][] data = new Object[WordList.size()][2];
