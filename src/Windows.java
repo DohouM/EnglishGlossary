@@ -3,12 +3,16 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTabbedPane;
@@ -98,6 +102,26 @@ public class Windows extends JFrame implements ActionListener {
 
 		this.setContentPane(pan);
 		this.setVisible(true);
+		
+		CsvFileSerializationDriver readWrite = new CsvFileSerializationDriver("data.csv");
+		
+		this.addWindowListener(new WindowAdapter(){
+            public void windowClosing(WindowEvent e){
+                int i=JOptionPane.showConfirmDialog(null, "Are you shure you want to exit E-Glossary?");
+                if(i==0)
+                	
+                	
+            		try {													                     //saving glossary before clossing
+            			readWrite.exportWords( ApplicationContext.getGlossary().getGlossary());
+            			System.out.println("Glossary saved");
+            		} catch (IOException e1) {
+            			// TODO Auto-generated catch block
+            			e1.printStackTrace();
+            		}
+                	
+                    System.exit(0);//close the windows
+            }
+        });
 
 	}
 

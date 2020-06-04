@@ -17,7 +17,7 @@ public class CsvFileSerializationDriver
 	
 	public void exportWords(List<Word> theWords) throws IOException
 	{
-		PrintStream outStream = new PrintStream(this.path, "UTF-8");
+		PrintStream outStream = new PrintStream(this.path, "ISO-8859-1");
 		CsvWordWriter wordWriter = new CsvWordWriter(outStream);
 		wordWriter.writeWords(theWords);
 		outStream.close();
@@ -25,7 +25,7 @@ public class CsvFileSerializationDriver
 	
 	public List<Word> importWords() throws IOException
 	{
-		BufferedReader inReader = new BufferedReader(new InputStreamReader(new FileInputStream(this.path), "UTF-8"));
+		BufferedReader inReader = new BufferedReader(new InputStreamReader(new FileInputStream(this.path), "ISO-8859-1"));
 		CsvWordReader worReader = new CsvWordReader(inReader);
 		List<Word> theWords = worReader.readWords();
 		inReader.close();

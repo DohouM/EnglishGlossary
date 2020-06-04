@@ -51,12 +51,7 @@ public class Main {
 		System.out.println(glossary.search("cl� USB"));
 		new ApplicationContext(glossary);
 		
-		try {
-			readWrite.exportWords(glossary.getGlossary());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
     }
 
 }
