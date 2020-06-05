@@ -1,5 +1,6 @@
 import java.io.IOException;
 
+
 /**
  * Main class of the program, contains Main function, which is the core of the
  * app.
@@ -11,6 +12,7 @@ import java.io.IOException;
 
 public class Main {
     public static Glossary glossary; 
+   
 
     /**
      * Main function of the program, launches every vital function of it.

@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -27,6 +28,8 @@ import javax.swing.JTextField;
  *
  */
 public class Windows extends JFrame implements ActionListener {
+	
+    private ImageIcon img = new ImageIcon("E-glossaryIcone.png");  //load the icon image
 	/**
 	 * 
 	 */
@@ -73,6 +76,7 @@ public class Windows extends JFrame implements ActionListener {
 		this.setTitle("Interactive Glossary");
 		this.setSize(400, 200);
 		this.setLocationRelativeTo(null);
+		this.setIconImage(img.getImage());  //load the icon image
 
 		// New object JPanel
 		JPanel pan = new JPanel();
