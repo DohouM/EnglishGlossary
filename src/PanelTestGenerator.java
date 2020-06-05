@@ -137,6 +137,8 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
     List<Word> wordList;
     
     String[][] data;
+    
+    List<Word> newWordList;
 
     /**
      * The constructor of the PanelTestGenerator class.
@@ -217,6 +219,13 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 	    btExport.addActionListener(this);
 
 	    btGen = new JButton("Generate Again");
+	    newWordList = new ArrayList<Word>();
+	    for(i=0; i < (int) wordsNumber.getValue();i++) {
+		newWordList.add(new Word(data[i][0],data[i][1]));
+	    }
+	    for(Word w: newWordList) {
+		System.out.println(w.getEnglishWord() + ";" +w.getFrenchWord());
+	    }
 
 	    this.updateUI();
 
@@ -224,13 +233,8 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 
 	if (arg0.getSource() == btExport) {
 	    // TODO export text to an html doc
-	    List<Word> newWordList = new ArrayList<Word>();
-	    for(int i=0; i < (int) wordsNumber.getValue();i++) {
-		newWordList.add(new Word(data[i][0],data[i][1]));
-	    }
-	    for(Word w: newWordList) {
-		System.out.println(w.getEnglishWord() + ";" +w.getFrenchWord());
-	    }
+	    
+	    
 	    SaveFileDialog savefile = new SaveFileDialog();
 
 	    HtmlTest testToExport = new HtmlTest(newWordList, (int) pointValue.getValue(), (int) wordsNumber.getValue(), (int) subjectNum.getValue(), savefile.getFile());
