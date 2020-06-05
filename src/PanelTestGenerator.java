@@ -61,8 +61,8 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
      */
     JLabel fromP = new JLabel("From page");
     /**
-     * The JLabel placed between the <code>spinnerStart</code> and <code>spinnerEnd</code>
-     * JSpinner objects.
+     * The JLabel placed between the <code>spinnerStart</code> and
+     * <code>spinnerEnd</code> JSpinner objects.
      */
     JLabel to = new JLabel("to");
     /**
@@ -85,17 +85,12 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
      */
     JCheckBox checkbox = new JCheckBox("Only mandatory words(*)");
 
-    /**
-     * An array that'll hold the quiz results.
-     */
-    Object[] QuizResults;
-    
-    
+
     /**
      * The JLabel placed before the JSpinner <code>wordNumber</code>
      */
     JLabel numOfWordsL = new JLabel("Number of words:");
-    
+
     /**
      * The SpinnerModel object for the <code>wordsNumber</code> JSpinner.
      */
@@ -119,17 +114,17 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 	    1, // minimum value
 	    20, // maximum value
 	    1); // step;
-    
+
     /**
      * The JSpinner objects to select the points value of the test to generate.
      */
     JSpinner pointValue = new JSpinner(pointValueSpinner);
-    
+
     /**
      * The JLabel placed before the JSpinner <code>subjectNum</code>.
      */
     JLabel testSubject = new JLabel("Subject number:");
-    
+
     /**
      * The SpinnerModel object for the <code>subjectNum</code> JSpinner.
      */
@@ -138,6 +133,10 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
      * The JSpinner objects that selects the number of the current test to generate.
      */
     JSpinner subjectNum = new JSpinner(subject);
+    
+    List<Word> wordList;
+    
+    String[][] data;
 
     /**
      * The constructor of the PanelTestGenerator class.
@@ -180,10 +179,12 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 //		EnWords.setText(EnWordList);
 //		
 //		this.add(EnWords);
-	List<Word> wordList = ApplicationContext.getGlossary().pages((int) spinnerStart.getValue(),
+	wordList = ApplicationContext.getGlossary().pages((int) spinnerStart.getValue(),
 		(int) spinnerEnd.getValue());
+	
+	
 	if (arg0.getSource() == btGen) {
-
+	    data = new String[(int) wordsNumber.getValue()][2];
 	    this.remove(tab);
 	    this.remove(points);
 
@@ -195,14 +196,12 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 
 	    Collections.shuffle(wordList); // randomize word list
 
-	    Object[][] data = new Object[(int) wordsNumber.getValue()][2];
-	    QuizResults = new Object[(int) wordsNumber.getValue()];
+	    
 
 	    int i = 0;
 	    while (i < (int) wordsNumber.getValue()) {
 		data[i][0] = wordList.get(i).getFrenchWord();
-		data[i][1] = "";
-		QuizResults[i] = wordList.get(i).getEnglishWordWithoutMark();
+		data[i][1] = wordList.get(i).getEnglishWordWithoutMark();
 		i = i + 1;
 
 	    }
@@ -225,10 +224,16 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 
 	if (arg0.getSource() == btExport) {
 	    // TODO export text to an html doc
-		
-		SaveFileDialog savefile=new SaveFileDialog();
-		
-	    HtmlTest testToExport = new HtmlTest(wordList, (int) pointValue.getValue(), (int) wordsNumber.getValue(), (int) subjectNum.getValue(), savefile.getFile());
+	    List<Word> newWordList = new ArrayList<Word>();
+	    for(int i=0; i < (int) wordsNumber.getValue();i++) {
+		newWordList.add(new Word(data[i][0],data[i][1]));
+	    }
+	    for(Word w: newWordList) {
+		System.out.println(w.getEnglishWord() + ";" +w.getFrenchWord());
+	    }
+	    SaveFileDialog savefile = new SaveFileDialog();
+
+	    HtmlTest testToExport = new HtmlTest(newWordList, (int) pointValue.getValue(), (int) wordsNumber.getValue(), (int) subjectNum.getValue(), savefile.getFile());
 	    testToExport.generateTestFile();
 	    this.updateUI();
 	}

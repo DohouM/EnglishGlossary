@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.Random;
 
+import javax.swing.JOptionPane;
+
 /**
  * A class to describe an HTML page, used for the tests.
  * 
@@ -98,7 +100,7 @@ public class HtmlTest {
 	htmlOut = "<html style=\"text-align: center;\"><head><meta charset=\"ISO-8859-1\"></head><body><h1>Subject " + this.subject + "</h1><br/><h3>Note :   /" + this.pointsValue + "</h3><br/><table>";
 	for (Entry<String, Integer> entry : wordsInTest.entrySet()) {
 	    String key = entry.getKey();
-	    Integer value = entry.getValue();
+	    Integer value = entry.getValue().intValue();
 	    if (value == 1) {
 		htmlOut += "<tr><td>" + key + "</td><td></td></tr>";
 	    } else {
@@ -119,9 +121,9 @@ public class HtmlTest {
 	    fos.close();
 	} catch (IOException e) {
 	    e.printStackTrace();
-	    System.out.println("Issue while generating file... Aborting operation.");
+	    JOptionPane.showMessageDialog(null, "Issue while generating file... Aborting operation.", "Warning", JOptionPane.WARNING_MESSAGE);
 	}
-	System.out.println("file generated !");
+	JOptionPane.showMessageDialog(null, "file generated !");
 	//TODO Message Boite de dialogue
     }
 }
