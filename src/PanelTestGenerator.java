@@ -225,6 +225,9 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 
 	if (arg0.getSource() == btExport) {
 	    // TODO export text to an html doc
+		
+		SaveFileDialog savefile=new SaveFileDialog();
+		
 	    HtmlTest testToExport = new HtmlTest(wordList, (int) pointValue.getValue(), (int) wordsNumber.getValue(), (int) subjectNum.getValue());
 	    testToExport.generateTestFile();
 	    this.updateUI();

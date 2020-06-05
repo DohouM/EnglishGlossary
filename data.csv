@@ -1,3 +1,4 @@
+(data) recovery;la récupération de données
 abort*;arrêter, abandonner
 to access something*;accéder à qqch
 according to*;selon, en fonction de
@@ -11,8 +12,8 @@ actual*;réel
 to actuate;faire marcher, commander
 actuator;mécanisme de commande
 adaptative routing;acheminement adaptatif
-add-on*;une extension
 to add;ajouter
+add-on*;une extension
 addressing;adressage
 to adjust;règler, mettre au point
 to aim at*;viser, avoir pour but
@@ -30,8 +31,8 @@ appliance*;appareil
 to apply power*;mettre sous tension
 to apply*;appliquer, mettre en application
 architecture;architecture
-array;un ensemble
 area*;zone, endroit
+array;un ensemble
 as result of;à la suite de (conséquence)
 to assess*;estimer, évaluer
 to assign*;affecter, assigner
@@ -40,8 +41,8 @@ attachment* / attached file;une fichier attaché
 available*;disponible
 average*;moyenne (nom), moyen (adj.)
 to avoid doing something*;éviter
-backbone;colonne vertébrale, réseau principal
 to back up*;faire une sauvegarde de sécurité
+backbone;colonne vertébrale, réseau principal
 bandwidth*;bande passante, largeur de bande
 batch*;série d'opérations, un lot
 battery;pile, batterie
@@ -60,9 +61,9 @@ both*;tous les deux (sans exception)
 both-way communication;bidirectionnel simultané (mode)
 bounce;rebond
 bps = bits per second;bits par seconde
+to break down*;tomber en panne
 to break/broke/broken*;interrompre/ casser
 breakdown*;panne, claquage
-to break down*;tomber en panne
 breaker;disjoncteur
 broadband*;à large bande, à haut débit
 to broadcast*;émettre, diffuser
@@ -70,8 +71,8 @@ to browse*;parcourir, naviguer
 browser*;logiciel de navigation, navigateur
 buffer storage / memory;mémoire tampon
 bug*;erreur
-bundle*;paquet, lot, bouquet
 built-in*;incorporé
+bundle*;paquet, lot, bouquet
 to burn*;graver
 business intelligence;veille économique
 busy*;occupé
@@ -92,8 +93,8 @@ character;un caractère
 to check*;vérifier
 checkbox;une case à cocher
 checksum;total de contrôle
-chip*;puce
 chip socket;support de circuit intégré
+chip*;puce
 chunk;un morceau
 circuit switched connection;liaison commutée
 circuit switching;commutation de circuit
@@ -108,18 +109,18 @@ to complete;terminer
 complete;fini, achevé
 compliant*;conforme, compatible, accommodant
 component*;composant
+computer science*;informatique
 computer*;ordinateur, calculateur
 computer-assisted design, CAD;conception assistée par ordinateur, CAO
-computer science*;informatique
 condenser;condensateur
 conducting;à l'état passant
 to configure*;configurer
 to connect*;brancher
-connection*;une connexion
 connection diagram;schémde câblage
+connection*;une connexion
 consumer electronics;électronique grand public
-consumption*;consommation
 consumer*;consommateur
+consumption*;consommation
 contents*;contenu
 control;commande, contrôle
 control mode;mode de fonctionnement
@@ -137,7 +138,6 @@ customer*;client
 cut and paste;couper-coller
 cutoff;coupure
 to damage*;endommager
-data*;données
 data capture;saisie de données (en masse)
 data carrier;support de données
 data entry*;saisie de données
@@ -146,6 +146,7 @@ data network;réseau de données
 data sheet*;feuille de spécifications
 data sink;collecteur de données
 data transfer rate;cadence de transfert (de données)
+data*;données
 datagram;datagramme
 deadline*;date limite
 deadlock;un blocage, une impasse, étreinte fatale
@@ -176,7 +177,6 @@ to display*;afficher
 display*;affichage
 dotcom*;une entreprise en ligne
 to download*;télécharger
-To downsize;"Réduire les effectifs
 to drag and drop*;cliquer pour déplacer (= trainer et lâcher)
 to drain;vider, évacuer
 drawback*;inconvénient
@@ -233,13 +233,13 @@ feature*;caractéristique
 feed (RSS feed or news feed)*;fil d'actualités
 to fetch *;aller chercher
 file*;fichier/ dossier
-to fill*;remplir
 to fill in/out form;remplir un formulaire
+to fill*;remplir
 to fit*;adapter, placer
 fitted with*;être équipé de, doté de
 to fix*;réparer
-flag*;indicateur, fanion, drapeau
 to flag sth up/ put flag up on sth;attirer l' attention sur qqch
+flag*;indicateur, fanion, drapeau
 flash drive*;une clé USB
 floppy disk;disquette
 to flow;passer, circuler
@@ -251,12 +251,12 @@ to follow*;suivre
 font*;police de caractère
 to format*;formater, réinitialiser un système.
 to frame;concevoir, organiser/ délimiter, encadrer
-frame*;cadre, structure, schéma/ trame
 frame rate;taux d'images (fluidité)
+frame*;cadre, structure, schéma/ trame
 free*;libre/ gratuit
 freeware*;logiciel gratuit
-frequency modulation;modulation de fréquence
 frequency;fréquence
+frequency modulation;modulation de fréquence
 to function;(faire) fonctionner
 fuse;fusible
 gate*;opérateur logique, porte
@@ -267,10 +267,10 @@ glitch*;un problème technique, un pépin
 to go high;passer à l'état haut
 to go low;se remettre à zéro
 goods*;marchandises
-grid*;grille
 graphical card;une carte graphique
 graphics;le graphisme, les graphismes
 graphics standards*;charte graphique
+grid*;grille
 to ground;relier à lterre
 ground*;terre, masse
 GUI (graphical user interface)*;interface graphique
@@ -334,8 +334,8 @@ latch;bascule logique,verrou, loquet
 to lay*;poser
 lay-out*;disposition, agencement
 layer*;couche
-lead*;fil (élec.)
 to lead s.b. to do sth.*;conduire (à), provoquer
+lead*;fil (élec.)
 leakage current;courant de fuite
 to lengthen;allonger
 level*;niveau, seuil
@@ -349,9 +349,9 @@ local mode;mode local
 to locate*;situer
 location*;emplacement
 to lock*;verrouiller
-logic;logique
 to log in/on*;se brancher/connecter, ouvrir une session
 to log out;se déconnecter
+logic;logique
 to loosen;desserrer
 loss*;perte
 loud speaker;haut-parleur
@@ -382,9 +382,9 @@ motherboard*;carte mère
 to mount;monter, faire le montage de
 multilayer;multicouche
 multipoint connection;liaison multipoint
-netiquette*;les conventions sur internet
 neither..., nor...*;ni..., ni...
 net list;description d'un schéma (composants+liaisons)
+netiquette*;les conventions sur internet
 network*;réseau
 networking;mise en réseau
 newbie* (noob);un novice (new in business)
@@ -396,8 +396,8 @@ nut;écrou
 to occur*;se produire
 odd*;impair/ étrange
 off-line*;autonome/ non connecté
-offset;décalage
 off-the-shelf*;du commerce, tout fait
+offset;décalage
 one-way communication;mode de communication unidirectionnelle/unilatérale
 to operate*;( faire) fonctionner
 operating system (OS)*;un système d'exploitation 
@@ -430,14 +430,14 @@ pointer;pointeur
 polling;invitation à émettre,appel sélectif
 pop-up (menu or window)*;menu déroulant, ou fenêtre 'auto-ouvrante'
 port*;port,accès, connecteur, point d'accès
-power*;électricité, énergie/ puissance
-to power*;alimenter
-power-cut*;coupure de courant
 power electronics;électronique de puissance
 power meter;wattmètre
 power on;mise sous tension
 power plant;centrale électrique
 power supply*;alimentation électrique
+power*;électricité, énergie/ puissance
+to power*;alimenter
+power-cut*;coupure de courant
 to press a key*;appuyer sur une touche
 to prevent s.b. from doing sth.*;empêcher
 previous*;précédent
@@ -478,7 +478,6 @@ to recognize;reconnaître
 record;enregistrement
 to record;enregistrer
 to recover*;récupérer
-(data) recovery;la récupération de données
 rectifier;redresseur
 recurrent*;périodique
 refresh;rafraîchissement
@@ -490,9 +489,9 @@ relevant*;pertinent, approprié, utile
 reliability*;fiabilité
 reliable*;fiable
 to remain*;rester, demeurer
-remote*;à distance
 remote control*;télécommande
 remote maintenance;télémaintenance
+remote*;à distance
 to remove*;retirer, enlever
 to repair;réparer
 repeater;répéteur
@@ -503,11 +502,11 @@ requirement*;besoin, exigence
 reservation;réservation
 to reset*;mettre à zéro
 resistor;résistance
-to resume;reprendre (attention faux ami!)
 response time;temps de réponse
 to restore*;remettre à l'état initial (info.)
 to result from*;provenir de
 to result in*;provoquer
+to resume;reprendre (attention faux ami!)
 to rewind;rembobiner
 ripple;ondulation 
 to rise/rose/risen*;monter
@@ -540,8 +539,8 @@ serial;en série
 to serialize;mettre en série
 to service a power cut;traiter une interruption
 servomechanism;système asservi
-to set*;mettre à un/ mettre
 to set up*;installer, configurer
+to set*;mettre à un/ mettre
 set-up*;montage, installation, configuration
 several*;plusieurs
 shape*;forme
@@ -572,8 +571,8 @@ software*;logiciel
 to solder;souder (élec.)
 solid-state;à semi-conducteur, transistorisé
 to sort*;trier
-specifications*;cahier des charges
 spare parts*;pièces de rechange
+specifications*;cahier des charges
 splash screen*;écran d'accueil
 spooling;stockage en vue d'un traitement différé
 spreadsheet*;tableur
@@ -581,8 +580,8 @@ to stack;empiler
 stack*;pile
 staff manager;directeur du personnel
 start-stop (or asynchronous);asynchrone
-state of the art*;ce qui se fait de mieux
 state;état
+state of the art*;ce qui se fait de mieux
 static allocation;allocation statique
 station*;poste, péripherique, terminal
 status*;statut, état
@@ -630,6 +629,7 @@ to tilt;basculer, incliner
 time frame;base de temps, calendrier
 time-out;temporisation, délai d'attente
 time-sharing;partage de temps/traitement en temps partagé
+To downsize;"Réduire les effectifs
 to toggle;basculer, changer d'état
 token*;jeton
 tool*;outil
@@ -673,8 +673,8 @@ voltage drop;chute de tension
 voltage surge;surtension
 voltage*;tension
 wait*;attente
-to waste*;gaspiller
 waste;déchets
+to waste*;gaspiller
 wave*;onde
 web;toile
 wide;large
@@ -689,6 +689,6 @@ word processor*;traitement de texte
 workshop*;atelier
 workstation*;poste de travail
 wrapping;connexion par enroulement
+WYSIWYG (= what you see is what you get);tel ecran-tel écrit (interface intuitive)
 Xtal;cristal, quartz
 to yield*;rapporter (rendement), produire/ céder
-WYSIWYG (= what you see is what you get);tel ecran-tel écrit (interface intuitive)

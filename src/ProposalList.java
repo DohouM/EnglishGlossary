@@ -20,9 +20,14 @@ public class ProposalList {
 	 * Constructor for the ProposalList class.
 	 */
 	public ProposalList() {
-		InterfaceReadWrite InterfaceRW =new FilesDrivers();
-		this.proposalList = InterfaceRW.read("proposal.csv");
-	}
+		CsvFileSerializationDriver readWrite = new CsvFileSerializationDriver("proposal.csv");
+		try {
+			this.proposalList=readWrite.importWords();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
 	
 
 	/**
