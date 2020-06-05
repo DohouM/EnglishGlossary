@@ -46,6 +46,9 @@ public class HtmlTest {
      * All the words in english that must be translated in french in the test.
      */
     List<String> wordsInEnglish;
+    
+    
+    File fileToSave;
 
     /**
      * Constructor of HtmlTest.
@@ -55,11 +58,12 @@ public class HtmlTest {
      * @param nw The number of words in the test.
      * @param subjectNumber The subject number of the test.
      */
-    public HtmlTest(List<Word> wordList, int pv, int nw, int subjectNumber) {
+    public HtmlTest(List<Word> wordList, int pv, int nw, int subjectNumber, File fileToSave) {
 	this.wordsToPickFrom = wordList;
 	this.pointsValue = pv;
 	this.numberOfWords = nw;
 	this.subject = subjectNumber;
+	this.fileToSave=fileToSave;
     }
 
     /**
@@ -90,7 +94,7 @@ public class HtmlTest {
      */
     public void generateTestFile() {
 	HashMap<String, Integer> wordsInTest = this.generateRandomWordsArrangement();
-	File fileOut = new File("test" + this.subject + ".html");
+	File fileOut = new File(this.fileToSave.getAbsoluteFile()+".html");
 	String htmlOut = null;
 	htmlOut = "<html style=\"text-align: center;\"><head><meta charset=\"ISO-8859-1\"></head><body><h1>Subject " + this.subject + "</h1><br/><h3>Note :   /" + this.pointsValue + "</h3><br/><table>";
 	for (Entry<String, Integer> entry : wordsInTest.entrySet()) {
@@ -119,5 +123,6 @@ public class HtmlTest {
 	    System.out.println("Issue while generating file... Aborting operation.");
 	}
 	System.out.println("file generated !");
+	//TODO Message Boite de dialogue
     }
 }

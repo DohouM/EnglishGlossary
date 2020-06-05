@@ -228,7 +228,7 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 		
 		SaveFileDialog savefile=new SaveFileDialog();
 		
-	    HtmlTest testToExport = new HtmlTest(wordList, (int) pointValue.getValue(), (int) wordsNumber.getValue(), (int) subjectNum.getValue());
+	    HtmlTest testToExport = new HtmlTest(wordList, (int) pointValue.getValue(), (int) wordsNumber.getValue(), (int) subjectNum.getValue(), savefile.getFile());
 	    testToExport.generateTestFile();
 	    this.updateUI();
 	}
