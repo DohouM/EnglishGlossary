@@ -1,4 +1,6 @@
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -12,7 +14,7 @@ public class ProposalList {
     	/**
     	 * The proposalList wrapped by the class.
     	 */
-	private ArrayList<Word> proposalList;
+	private List<Word> proposalList;
   
 	/**
 	 * Constructor for the ProposalList class.
@@ -27,7 +29,7 @@ public class ProposalList {
 	 * A method to get the wrapped list of propositions.
 	 * @return the proposalList
 	 */
-	public ArrayList<Word> getProposalList() {
+	public List<Word> getProposalList() {
 		return proposalList;
 	}
 
@@ -52,8 +54,13 @@ public class ProposalList {
      * Add the <code>proposalList</code> into the csv of proposal.
      */
     public void saveInCSV(){
-    	InterfaceReadWrite InterfaceRW =new FilesDrivers();
-		InterfaceRW.write(this.proposalList,"proposal.csv");
+    	CsvFileSerializationDriver readWrite = new CsvFileSerializationDriver("proposal.csv");
+		try {
+			readWrite.exportWords(this.proposalList);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     
     /**
@@ -61,9 +68,14 @@ public class ProposalList {
 	 */
     
     public void fileDump() {
-    	ArrayList<Word> empty= new ArrayList<Word>(); 
+    	List<Word> empty= new ArrayList<Word>(); 
     	this.proposalList=empty;
-    	InterfaceReadWrite InterfaceRW =new FilesDrivers();
-		InterfaceRW.write(this.proposalList,"proposal.csv");
+    	CsvFileSerializationDriver readWrite = new CsvFileSerializationDriver("proposal.csv");
+    	try {
+			readWrite.exportWords(this.proposalList);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 }

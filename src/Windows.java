@@ -103,6 +103,10 @@ public class Windows extends JFrame implements ActionListener {
 		this.setContentPane(pan);
 		this.setVisible(true);
 		
+		
+		
+								//Save the Glossary in a file when the windows is closed by the user//
+		
 		CsvFileSerializationDriver readWrite = new CsvFileSerializationDriver("data.csv");
 		
 		this.addWindowListener(new WindowAdapter(){
@@ -111,7 +115,7 @@ public class Windows extends JFrame implements ActionListener {
                 if(i==0)
                 	
                 	
-            		try {													                     //saving glossary before clossing
+            		try {													                     //saving glossary before closing
             			readWrite.exportWords( ApplicationContext.getGlossary().getGlossary());
             			System.out.println("Glossary saved");
             		} catch (IOException e1) {
