@@ -26,9 +26,7 @@ public class Main {
      * @param args useless here.
      */
     public static void main(String[] args) {
-//		Glossary glossary = new Glossary();
-//		FilesDrivers.readCsv(glossary);
-//		SerealizationDriver.serealizeGlossary(glossary.getGlossary());
+
 
     	CsvFileSerializationDriver readWrite = new CsvFileSerializationDriver("data.csv");
     	
@@ -39,18 +37,6 @@ public class Main {
 			e.printStackTrace();
 		}
 
-		//glossary.addWordStringOnly("Hello*", "bonjour");
-		
-		 
-		for(Word w: glossary.pages(1,6))
-		{
-		if (w.isMandatory()) {
-		  System.out.println( w.toString());
-		}
-		}
-		System.out.println(glossary.getGlossary().size());
-		System.out.println(glossary.numberOfPages());
-		System.out.println(glossary.search("cl� USB"));
 		new ApplicationContext(glossary);
 		
 
