@@ -37,6 +37,9 @@ public class Glossary
 
 	public Glossary()
 	{
+		List<Word> gloss = new ArrayList<Word>();
+		this.glossary= gloss;
+		
 	}
 
 	/**
