@@ -31,7 +31,7 @@ public class CsvFileSerializationDriver
 	/**
 	 * A method to write a <code>List&lt;Word&gt;</code> into the serialized file stored at {@link #path}.
 	 * @param theWords The <code>List&lt;Word&gt;</code> to write.
-	 * @throws IOException
+	 * @throws IOException If there's an issue with the file.
 	 */
 	public void exportWords(List<Word> theWords) throws IOException
 	{
@@ -44,7 +44,7 @@ public class CsvFileSerializationDriver
 	/**
 	 * A method to get a <code>List&lt;Word&gt;</code> from the serialized file stored at {@link #path}.
 	 * @return The <code>List&lt;Word&gt;</code> read from the serialized file stored at {@link #path}.
-	 * @throws IOException
+	 * @throws IOException If there's an issue with the file.
 	 */
 	public List<Word> importWords() throws IOException
 	{

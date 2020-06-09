@@ -48,7 +48,9 @@ public class HtmlTest {
      */
     List<String> wordsInEnglish;
     
-    
+    /**
+     * The file to save.
+     */
     File fileToSave;
 
     /**
@@ -58,6 +60,7 @@ public class HtmlTest {
      * @param pv The value in points of the test.
      * @param nw The number of words in the test.
      * @param subjectNumber The subject number of the test.
+     * @param fileToSave The file to save the test in.
      */
     public HtmlTest(List<Word> wordList, int pv, int nw, int subjectNumber, File fileToSave) {
 	this.wordsToPickFrom = wordList;
