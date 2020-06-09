@@ -13,14 +13,23 @@ import java.util.List;
 public class CsvWordWriter extends AbstractWordWriter {
 
 
-	//TODO javadoc
+    /**
+     * The stream to store the CSV formatted word(s).
+     */
     private final PrintStream out;
-
+    
+    /**
+     * Constructor of the class.
+     * @param theOut The <code>PrintStream</code> to store the CSV formatted word(s).
+     */
     public CsvWordWriter(PrintStream theOut) {
 	this.out = theOut;
     }
 
-    @Override
+    /**
+     * {@inheritDoc}
+     * In this case, write a <code>Word</code> object into the <code>out</code> attribute, in CSV format. (frenchWord;englishWord)
+     */
     public void writeWord(Word theWord) throws IOException {	
 	    this.out.println(theWord.toCSVString());	
     }
