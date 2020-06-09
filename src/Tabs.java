@@ -23,7 +23,7 @@ class Tabs extends JPanel implements ActionListener {
     private JTabbedPane pane;
 
     /**
-     * Construtor for the Tabs class.
+     * Constructor for the Tabs class.
      * 
      * @param titre The title of the tab.
      * @param pane  The JTabbedPane object to wrap.

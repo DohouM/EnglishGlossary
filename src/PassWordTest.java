@@ -8,7 +8,10 @@ import junit.framework.TestCase;
  *
  */
 public class PassWordTest extends TestCase {
-	
+	/**
+	 * The method of test for the password checking method.
+	 * @throws PassWordInvalide If the password is invalide.
+	 */
 	public void testMDP() throws PassWordInvalide {
 		String Test1 = "admin";
 		Test1 = Windows.toHexa(Test1);
