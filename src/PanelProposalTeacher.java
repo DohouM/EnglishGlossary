@@ -12,6 +12,7 @@ import javax.swing.JTable;
  * 
  * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE,
  *         Gabriel SAPONARA
+ * @version 1.3
  */
 
 public class PanelProposalTeacher extends JPanel implements ActionListener {

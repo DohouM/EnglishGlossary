@@ -13,9 +13,7 @@ import java.util.List;
 public abstract class AbstractWordWriter implements WordWriterInterface {
    
     /**
-     * A method to read all Word objects from <code>in</code>.
-     * @return The List of Word objects read by the <code>in</code> attribute.
-     * @throws IOException The stream is closed/doesn't read a Word object.
+     * {@inheritDoc}
      */
     public void writeWords(List<Word> theWords) throws IOException {
     	for (Word theWord: theWords)

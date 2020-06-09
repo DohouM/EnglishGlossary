@@ -13,6 +13,7 @@ import javax.swing.JTextField;
  * 
  * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE,
  *         Gabriel SAPONARA
+ * @version 1.0
  */
 
 public class PanelProposal extends JPanel implements ActionListener {

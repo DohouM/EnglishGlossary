@@ -2,7 +2,7 @@
  * A class that describe the context of the app, meaning it's core objects/parameters.
  * @author Jean-Camille LAPIERRE, Dorian MOUNIER, Gabriel SAPONARA, Cyril
  *         PIGEYRE, Medhy DOHOU
- *
+ * @version 1.2
  */
 public class ApplicationContext{
 	/**

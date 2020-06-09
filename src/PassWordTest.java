@@ -1,6 +1,12 @@
 
 import junit.framework.TestCase;
-
+/**
+ * A set of test to try out the password checking function.
+ * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE,
+ *         Gabriel SAPONARA
+ * @version 1.0
+ *
+ */
 public class PassWordTest extends TestCase {
 	
 	public void testMDP() throws PassWordInvalide {

@@ -17,7 +17,7 @@ import javax.swing.SpinnerNumberModel;
  * 
  * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE,
  *         Gabriel SAPONARA
- *
+ * @version 1.2
  */
 public class PanelGlossary extends JPanel implements ActionListener {
     /**

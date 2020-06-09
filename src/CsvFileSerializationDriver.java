@@ -5,16 +5,34 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.List;
 
-//TODO javadoc
+//DONE javadoc
+/**
+ * A class to export and import words form a serialized file.
+ *  @author Jean-Camille LAPIERRE, Dorian MOUNIER, Gabriel SAPONARA, Cyril
+ *         PIGEYRE, Medhy DOHOU
+ * @version 1.2
+ */
 public class CsvFileSerializationDriver 
 {
+    /**
+     * The path to the serialized file (relative).
+     */
 	private String path;
 	
+	/**
+	 * Constructor of the class.
+	 * @param thePath See {@link #path}.
+	 */
 	public CsvFileSerializationDriver(String thePath)
 	{
 		this.path = thePath;
 	}
 	
+	/**
+	 * A method to write a <code>List&lt;Word&gt;</code> into the serialized file stored at {@link #path}.
+	 * @param theWords The <code>List&lt;Word&gt;</code> to write.
+	 * @throws IOException
+	 */
 	public void exportWords(List<Word> theWords) throws IOException
 	{
 		PrintStream outStream = new PrintStream(this.path, "ISO-8859-1");
@@ -23,6 +41,11 @@ public class CsvFileSerializationDriver
 		outStream.close();
 	}
 	
+	/**
+	 * A method to get a <code>List&lt;Word&gt;</code> from the serialized file stored at {@link #path}.
+	 * @return The <code>List&lt;Word&gt;</code> read from the serialized file stored at {@link #path}.
+	 * @throws IOException
+	 */
 	public List<Word> importWords() throws IOException
 	{
 		BufferedReader inReader = new BufferedReader(new InputStreamReader(new FileInputStream(this.path), "ISO-8859-1"));

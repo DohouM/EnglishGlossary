@@ -15,7 +15,7 @@ public interface WordReaderInterface {
     public Word readWord() throws IOException;
 
     /**
-     * A method to read multiple Word.
+     * A method to read multiple words.
      * @return the List of read Word objects.
      * @throws IOException An error occurred while reading/trying to read the objects.
      */
