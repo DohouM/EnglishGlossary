@@ -36,7 +36,7 @@ public class Main {
 			e.printStackTrace();
 		}
 
-		new ApplicationContext(glossary);
+		new EnglishGlossaryGUI();
 		
 
     }

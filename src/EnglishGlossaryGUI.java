@@ -109,7 +109,7 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 		if (userChoice == 0)
 
 		    try { // saving glossary before closing
-			readWrite.exportWords(ApplicationContext.getGlossary().getGlossary());
+			readWrite.exportWords(Main.glossary.getGlossary());
 			System.out.println("Glossary saved");
 		    } catch (IOException e1) {
 			e1.printStackTrace();

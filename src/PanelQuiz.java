@@ -34,7 +34,7 @@ public class PanelQuiz extends JPanel implements ActionListener {
      */
     SpinnerModel startPages = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
-	    ApplicationContext.getGlossary().numberOfPages(), // maximum value
+	    Main.glossary.numberOfPages(), // maximum value
 	    1); // step
     /**
      * The JSpinner created from the previously created SpinnerModel
@@ -46,7 +46,7 @@ public class PanelQuiz extends JPanel implements ActionListener {
      */
     SpinnerModel endPages = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
-	    ApplicationContext.getGlossary().numberOfPages(), // maximum value
+	    Main.glossary.numberOfPages(), // maximum value
 	    1); // step
     /**
      * The JSpinner created from the previously created SpinnerModel
@@ -125,12 +125,12 @@ public class PanelQuiz extends JPanel implements ActionListener {
 	    this.remove(tab);
 	    this.remove(points);
 
-	    List <Word> WordList = ApplicationContext.getGlossary().pages((int) spinnerStart.getValue(),
+	    List <Word> WordList = Main.glossary.pages((int) spinnerStart.getValue(),
 		    (int) spinnerEnd.getValue());
 
 	    if (checkbox.isSelected()) {
 
-		WordList = ApplicationContext.getGlossary().pagesMandatory((int) spinnerStart.getValue(),
+		WordList = Main.glossary.pagesMandatory((int) spinnerStart.getValue(),
 			(int) spinnerEnd.getValue());
 	    }
 

@@ -109,7 +109,7 @@ public class PanelModifyGlossary extends JPanel implements ActionListener {
 
 	    this.remove(this.result);
 
-	    this.wordFound = ApplicationContext.getGlossary().search(searchBar.getText());
+	    this.wordFound = Main.glossary.search(searchBar.getText());
 
 	    this.result = new JLabel(this.wordFound.toString());
 	    this.add(this.result);
@@ -121,7 +121,7 @@ public class PanelModifyGlossary extends JPanel implements ActionListener {
 
 	if (arg0.getSource() == this.btAdd) {
 
-	    ApplicationContext.getGlossary().addWordStringOnly(this.englishWord.getText(), this.frenchWord.getText());
+		Main.glossary.addWordStringOnly(this.englishWord.getText(), this.frenchWord.getText());
 
 	    JOptionPane.showMessageDialog(null, "Word Saved");
 
@@ -133,7 +133,7 @@ public class PanelModifyGlossary extends JPanel implements ActionListener {
 
 	if (arg0.getSource() == this.btDelete) {
 
-	    ApplicationContext.getGlossary().removeWord(this.wordFound);
+		Main.glossary.removeWord(this.wordFound);
 
 	    JOptionPane.showMessageDialog(null, "Word Deleted");
 
