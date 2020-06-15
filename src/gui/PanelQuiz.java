@@ -16,6 +16,7 @@ import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 
 import core.Main;
+import core.QuizGenerator;
 import core.Word;
 
 /**
@@ -128,17 +129,10 @@ public class PanelQuiz extends JPanel implements ActionListener {
 
 	    this.remove(tab);
 	    this.remove(points);
-
-	    List <Word> WordList = Main.glossary.pages((int) spinnerStart.getValue(),
-		    (int) spinnerEnd.getValue());
-
-	    if (checkbox.isSelected()) {
-
-		WordList = Main.glossary.pagesMandatory((int) spinnerStart.getValue(),
-			(int) spinnerEnd.getValue());
-	    }
-
-	    Collections.shuffle(WordList); // randomize word list
+	    
+	    QuizGenerator Qgen= new QuizGenerator();
+	    List <Word> WordList=Qgen.generate((int)spinnerStart.getValue(),(int) spinnerEnd.getValue(), checkbox.isSelected());
+	    
 
 	    Object[][] data = new Object[wordPerQuiz][2];
 	    QuizResults = new Object[wordPerQuiz];
