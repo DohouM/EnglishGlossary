@@ -1,7 +1,11 @@
+package io;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import core.Word;
+import core.WordReaderInterface;
 
 /**
  * A class made to read Words object from CSV file, with a specific format. (frenchWord;englishWord)

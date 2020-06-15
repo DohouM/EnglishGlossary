@@ -1,3 +1,4 @@
+package gui;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -13,6 +14,9 @@ import javax.swing.JSpinner;
 import javax.swing.JTable;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
+
+import core.Main;
+import core.Word;
 
 /**
  * A class that describe the Quiz panel of the application, with Swing

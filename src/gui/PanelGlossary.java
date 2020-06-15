@@ -1,3 +1,4 @@
+package gui;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -10,6 +11,9 @@ import javax.swing.JSpinner;
 import javax.swing.JTable;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
+
+import core.Main;
+import core.Word;
 
 /**
  * A class that describe the Glossary panel of the application, with Swing

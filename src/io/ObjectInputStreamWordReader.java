@@ -1,8 +1,12 @@
+package io;
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.List;
+
+import core.Word;
+import core.WordReaderInterface;
 
 /**
  * An object that'll read <code>Word</code> objects from ObjectInputStream

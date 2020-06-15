@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-encoding//src/PanelQuiz.java=UTF-8
-encoding//src/PanelTestGenerator.java=UTF-8
-encoding//src/Tabs.java=UTF-8
+encoding//src/gui/PanelQuiz.java=UTF-8
+encoding//src/gui/PanelTestGenerator.java=UTF-8
+encoding//src/gui/Tabs.java=UTF-8

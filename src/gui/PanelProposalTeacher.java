@@ -1,3 +1,4 @@
+package gui;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -5,6 +6,8 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+
+import core.ProposalList;
 
 /**
  * A class that describe the Proposal panel from teacher view of the

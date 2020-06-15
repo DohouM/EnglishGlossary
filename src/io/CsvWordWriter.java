@@ -1,6 +1,9 @@
+package io;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.List;
+
+import core.Word;
 
 /**
  * A class made to write Word objects to CSV file, with a specific format.

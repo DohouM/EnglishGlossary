@@ -1,3 +1,4 @@
+package gui;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -6,8 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -18,6 +18,10 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
+
+import core.StringUtils;
+import io.CsvFileSerializationDriver;
+import core.Main;
 
 /**
  * A class that describe a Window of the application, with Swing attributes.
@@ -162,11 +166,10 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 	    System.out.println("Glossary lunched");
 	}
 
-	if (arg0.getSource() == this.connect) {
-	    StringUtils sUtils = new StringUtils();
+	if (arg0.getSource() == this.connect) {;
 	    char[] pass = this.password.getPassword();
 	    String passString = new String(pass);
-	    if (sUtils.comparable(passString,finalPassWord)) {
+	    if (StringUtils.comparable(passString,finalPassWord)) {
 		System.out.println("Good PassWord");
 		this.setSize(1000, 800);
 		this.setLocationRelativeTo(null);

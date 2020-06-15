@@ -1,3 +1,7 @@
+package misc;
+import core.Glossary;
+import core.Word;
+import exceptions.GlossaryError;
 import junit.framework.TestCase;
 
 /**

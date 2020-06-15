@@ -1,23 +1,21 @@
+package core;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class StringUtils {
 
-	public StringUtils() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	  /**
+
+    /**
      * A method to convert a String into hexadecimal.
      * 
      * @param source The string to convert
      * @return The converted String object.
      */
-    public String toHexa(String source) {
+    public static String toHexa(String source) {
 	return toHexaHelp(source.getBytes());
     }
 
-    public String toHexaHelp(byte[] source) {
+    public static String toHexaHelp(byte[] source) {
 	StringBuilder sb = new StringBuilder();
 
 	for (byte b : source) {
@@ -34,7 +32,7 @@ public class StringUtils {
      * @param source The String object to get the MD5 hash from.
      * @return The MD5 hash of the string.
      */
-    public String toMD5Hash(String source) {
+    public static String toMD5Hash(String source) {
 	String result = "";
 
 	try {
@@ -54,10 +52,11 @@ public class StringUtils {
      * <code>finalPassword</code> hash.
      * 
      * @param testPassWord The password to compare
+     * @param finalPassWord The password that testPassword must be equal to.
      * @return <code>true</code> if the hashes are equals, <code>false</code>
      *         otherwise.
      */
-    public boolean comparable(String testPassWord, String finalPassWord) {
+    public static boolean comparable(String testPassWord, String finalPassWord) {
 	String testPassWordV2 = toHexa(testPassWord);
 
 	String finalTestPassWord = toMD5Hash(testPassWordV2);

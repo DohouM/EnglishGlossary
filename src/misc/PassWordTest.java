@@ -1,5 +1,8 @@
+package misc;
 
+import exceptions.PassWordInvalide;
 import junit.framework.TestCase;
+import core.StringUtils;
 /**
  * A set of test to try out the password checking function.
  * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE,
@@ -14,16 +17,17 @@ public class PassWordTest extends TestCase {
 	 */
 	public void testMDP() throws PassWordInvalide {
 		String Test1 = "admin";
-		Test1 = EnglishGlossaryGUI.toHexa(Test1);
-		assertEquals(EnglishGlossaryGUI.toMD5Hash(Test1), "938227684C1200009DF4A4E2067D934E");
+		Test1 = StringUtils.toHexa(Test1);
+		assertEquals(StringUtils.toMD5Hash(Test1), "938227684C1200009DF4A4E2067D934E");
 		String Test2 = "Admin";
-		Test2 = EnglishGlossaryGUI.toHexa(Test2);
-		assertNotSame(EnglishGlossaryGUI.toMD5Hash(Test2), "938227684C1200009DF4A4E2067D934E");
+		Test2 = StringUtils.toHexa(Test2);
+		assertNotSame(StringUtils.toMD5Hash(Test2), "938227684C1200009DF4A4E2067D934E");
 		String Test3 = "dfqhudjk";
-		Test3 = EnglishGlossaryGUI.toHexa(Test3);
-		assertNotSame(EnglishGlossaryGUI.toMD5Hash(Test3), "938227684C1200009DF4A4E2067D934E");
+		Test3 = StringUtils.toHexa(Test3);
+		assertNotSame(StringUtils.toMD5Hash(Test3), "938227684C1200009DF4A4E2067D934E");
 		
 		
 	}
 
 }
+

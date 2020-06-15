@@ -1,5 +1,9 @@
+package core;
 import java.io.IOException;
 
+import gui.EnglishGlossaryGUI;
+import io.CsvFileSerializationDriver;
+import io.*;
 
 /**
  * Main class of the program, contains Main function, which is the core of the

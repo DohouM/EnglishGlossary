@@ -1,3 +1,4 @@
+package exceptions;
 /**
  * An exception thrown when the password is invalid.
  * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE,

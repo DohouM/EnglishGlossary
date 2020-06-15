@@ -1,5 +1,9 @@
+package io;
 import java.io.IOException;
 import java.util.List;
+
+import core.Word;
+import core.WordWriterInterface;
 
 /**
  * An object that'll write <code>Word</code> objects to ObjectOutputStream
