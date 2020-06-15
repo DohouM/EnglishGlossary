@@ -48,11 +48,11 @@ public class PanelProposalTeacher extends JPanel implements ActionListener {
 
 	Object[][] data = new Object[numberOfProposal][2];
 
-	int i = 0;
-	while (i < numberOfProposal) {
-	    data[i][0] = this.proposals.getProposalList().get(i).getFrenchWord();
-	    data[i][1] = this.proposals.getProposalList().get(i).getEnglishWord();
-	    i = i + 1;
+	int loopCounter = 0;
+	while (loopCounter < numberOfProposal) {
+	    data[loopCounter][0] = this.proposals.getProposalList().get(loopCounter).getFrenchWord();
+	    data[loopCounter][1] = this.proposals.getProposalList().get(loopCounter).getEnglishWord();
+	    loopCounter = loopCounter + 1;
 
 	}
 	String title[] = { "French Words", "English Words" };

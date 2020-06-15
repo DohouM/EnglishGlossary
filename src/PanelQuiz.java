@@ -120,15 +120,6 @@ public class PanelQuiz extends JPanel implements ActionListener {
      */
     public void actionPerformed(ActionEvent arg0) {
 
-//		JTextArea EnWords= new JTextArea();
-//		String EnWordList="";
-//		for(Word w: ApplicationContext.getGlossary().pages((int)spinnerStart.getValue(),(int) spinnerEnd.getValue()))
-//		{
-//			EnWordList = EnWordList + w.getFrenchWord()+"\n";
-//		}
-//		EnWords.setText(EnWordList);
-//		
-//		this.add(EnWords);
 	if (arg0.getSource() == btPlay) {
 
 	    this.remove(tab);
@@ -148,12 +139,12 @@ public class PanelQuiz extends JPanel implements ActionListener {
 	    Object[][] data = new Object[wordPerQuiz][2];
 	    QuizResults = new Object[wordPerQuiz];
 
-	    int i = 0;
-	    while (i < wordPerQuiz) {
-		data[i][0] = WordList.get(i).getFrenchWord();
-		data[i][1] = "";
-		QuizResults[i] = WordList.get(i).getEnglishWordWithoutMark();
-		i = i + 1;
+	    int loopCounter = 0;
+	    while (loopCounter < wordPerQuiz) {
+		data[loopCounter][0] = WordList.get(loopCounter).getFrenchWord();
+		data[loopCounter][1] = "";
+		QuizResults[loopCounter] = WordList.get(loopCounter).getEnglishWordWithoutMark();
+		loopCounter = loopCounter + 1;
 
 	    }
 
@@ -175,12 +166,12 @@ public class PanelQuiz extends JPanel implements ActionListener {
 	    int point = 0;
 	    this.remove(points);
 
-	    for (int i = 0; i < wordPerQuiz; i++) {
-		if (QuizResults[i].equals(tableau.getValueAt(i, 1))) {
-		    tableau.setValueAt(tableau.getValueAt(i, 1) + "  ✓", i, 1);
+	    for (int loopCounter = 0; loopCounter < wordPerQuiz; loopCounter++) {
+		if (QuizResults[loopCounter].equals(tableau.getValueAt(loopCounter, 1))) {
+		    tableau.setValueAt(tableau.getValueAt(loopCounter, 1) + "  ✓", loopCounter, 1);
 		    point++;
-		} else if (tableau.getValueAt(i, 1) == "") {
-		    tableau.setValueAt(tableau.getValueAt(i, 1) + " // " + QuizResults[i] + "  X", i, 1);
+		} else if (tableau.getValueAt(loopCounter, 1) == "") {
+		    tableau.setValueAt(tableau.getValueAt(loopCounter, 1) + " // " + QuizResults[loopCounter] + "  X", loopCounter, 1);
 		}
 	    }
 

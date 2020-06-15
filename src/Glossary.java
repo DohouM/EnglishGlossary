@@ -139,9 +139,9 @@ public class Glossary
 			endWord = numberOfWordPerPage * endPage + numberOfWordPerPage - 1;
 		}
 
-		for (int i = startWord; i <= endWord; i++)
+		for (int loopCounter = startWord; loopCounter <= endWord; loopCounter++)
 		{
-			list.add(this.glossary.get(i));
+			list.add(this.glossary.get(loopCounter));
 		}
 
 		return list;
@@ -172,11 +172,11 @@ public class Glossary
 			endWord = numberOfWordPerPage * endPage + numberOfWordPerPage - 1;
 		}
 
-		for (int i = startWord; i <= endWord; i++)
+		for (int loopCounter = startWord; loopCounter <= endWord; loopCounter++)
 		{
-			if (this.glossary.get(i).isMandatory())
+			if (this.glossary.get(loopCounter).isMandatory())
 			{
-				list.add(this.glossary.get(i));
+				list.add(this.glossary.get(loopCounter));
 			}
 		}
 		return list;

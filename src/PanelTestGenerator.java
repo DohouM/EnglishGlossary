@@ -200,11 +200,11 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 
 	    
 
-	    int i = 0;
-	    while (i < (int) this.wordsNumber.getValue()) {
-		this.data[i][0] = this.wordList.get(i).getFrenchWord();
-		this.data[i][1] = this.wordList.get(i).getEnglishWordWithoutMark();
-		i = i + 1;
+	    int loopCounter = 0;
+	    while (loopCounter < (int) this.wordsNumber.getValue()) {
+		this.data[loopCounter][0] = this.wordList.get(loopCounter).getFrenchWord();
+		this.data[loopCounter][1] = this.wordList.get(loopCounter).getEnglishWordWithoutMark();
+		loopCounter = loopCounter + 1;
 
 	    }
 
@@ -220,8 +220,8 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 
 	    this.btGen = new JButton("Generate Again");
 	    this.newWordList = new ArrayList<Word>();
-	    for(i=0; i < (int) this.wordsNumber.getValue();i++) {
-		this.newWordList.add(new Word(this.data[i][0],this.data[i][1]));
+	    for(loopCounter=0; loopCounter < (int) this.wordsNumber.getValue();loopCounter++) {
+		this.newWordList.add(new Word(this.data[loopCounter][0],this.data[loopCounter][1]));
 	    }
 	    for(Word w: this.newWordList) {
 		System.out.println(w.getEnglishWord() + ";" +w.getFrenchWord());

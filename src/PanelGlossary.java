@@ -114,11 +114,11 @@ public class PanelGlossary extends JPanel implements ActionListener {
 
 	Object[][] data = new Object[WordList.size()][2];
 
-	int i = 0;
-	while (i < WordList.size()) {
-	    data[i][0] = WordList.get(i).getEnglishWord();
-	    data[i][1] = WordList.get(i).getFrenchWord();
-	    i = i + 1;
+	int loopCounter = 0;
+	while (loopCounter < WordList.size()) {
+	    data[loopCounter][0] = WordList.get(loopCounter).getEnglishWord();
+	    data[loopCounter][1] = WordList.get(loopCounter).getFrenchWord();
+	    loopCounter = loopCounter + 1;
 
 	}
 

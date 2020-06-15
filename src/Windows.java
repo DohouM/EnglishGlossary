@@ -105,8 +105,8 @@ public class Windows extends JFrame implements ActionListener {
 
 	this.addWindowListener(new WindowAdapter() {
 	    public void windowClosing(WindowEvent e) {
-		int i = JOptionPane.showConfirmDialog(null, "Do you want to save the glossary?");
-		if (i == 0)
+		int userChoice = JOptionPane.showConfirmDialog(null, "Do you want to save the glossary?");
+		if (userChoice == 0)
 
 		    try { // saving glossary before closing
 			readWrite.exportWords(ApplicationContext.getGlossary().getGlossary());
