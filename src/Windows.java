@@ -54,7 +54,7 @@ public class Windows extends JFrame implements ActionListener {
     /**
      * The currently logged user.
      */
-    private User user;
+    private String user;
     /**
      * The JPasswordField used for the input for teacher password.
      */
@@ -124,8 +124,8 @@ public class Windows extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent arg0) { // Method that will be called when clicking on the button
 	if (arg0.getSource() == enterGlossary) {
 	    if (this.id.getText().equals("metgec")) {
-		this.user = new User(this.id.getText());
-		title.setText("E-GLOSSARY AS " + this.user.getUserName());
+		this.user = new String(this.id.getText());
+		title.setText("E-GLOSSARY AS " + this.user);
 		this.setSize(500, 150);
 		this.setLocationRelativeTo(null);
 
@@ -151,15 +151,15 @@ public class Windows extends JFrame implements ActionListener {
 		conectpan.add(this.connect, BorderLayout.SOUTH);
 		this.setContentPane(conectpan);
 	    } else {
-		this.user = new User(id.getText());
-		this.title.setText("E-GLOSSARY AS " + this.user.getUserName());
+			this.user = new String(this.id.getText());
+			title.setText("E-GLOSSARY AS " + this.user);
 		this.setSize(1000, 800);
 		this.setLocationRelativeTo(null);
 		JTabbedPane pane = LoadStudentPanel();
 		// frame
 		this.setContentPane(pane);
 	    }
-	    System.out.println("Test");
+	    System.out.println("Glossary lunched");
 	}
 
 	if (arg0.getSource() == this.connect) {
