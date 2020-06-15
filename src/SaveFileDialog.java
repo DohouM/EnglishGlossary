@@ -28,8 +28,8 @@ public class SaveFileDialog extends JFrame {
 
 	int userSelection = fileChooser.showSaveDialog(this);
 	if (userSelection == JFileChooser.APPROVE_OPTION) {
-	    fileToSave = fileChooser.getSelectedFile();
-	    System.out.println("Save as file: " + fileToSave.getAbsolutePath());
+	    this.fileToSave = fileChooser.getSelectedFile();
+	    System.out.println("Save as file: " + this.fileToSave.getAbsolutePath());
 	}
     }
     /**
@@ -38,7 +38,7 @@ public class SaveFileDialog extends JFrame {
      */
     public File getFile() {
 
-	return fileToSave;
+	return this.fileToSave;
 
     }
 }

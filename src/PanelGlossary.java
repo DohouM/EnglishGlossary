@@ -83,12 +83,12 @@ public class PanelGlossary extends JPanel implements ActionListener {
      */
     public PanelGlossary() {
 	super();
-	this.add(fromP);
-	this.add(spinnerStart);
-	this.add(to);
-	this.add(spinnerEnd);
+	this.add(this.fromP);
+	this.add(this.spinnerStart);
+	this.add(this.to);
+	this.add(this.spinnerEnd);
 	btRun.addActionListener(this);
-	this.add(btRun);
+	this.add(this.btRun);
 
     }
 

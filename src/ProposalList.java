@@ -35,7 +35,7 @@ public class ProposalList {
 	 * @return the proposalList
 	 */
 	public List<Word> getProposalList() {
-		return proposalList;
+		return this.proposalList;
 	}
 
 	/**

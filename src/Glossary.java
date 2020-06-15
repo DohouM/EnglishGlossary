@@ -57,7 +57,7 @@ public class Glossary
 	 */
 	public List<Word> getGlossary()
 	{
-		return glossary;
+		return this.glossary;
 	}
 
 	/**
@@ -211,7 +211,7 @@ public class Glossary
 	 */
 	public int numberOfPages()
 	{
-		return (int) Math.ceil(glossary.size() / (double) numberOfWordPerPage);
+		return (int) Math.ceil(glossary.size() / (double) this.numberOfWordPerPage);
 	}
 
 	public void removeWord(Word word)

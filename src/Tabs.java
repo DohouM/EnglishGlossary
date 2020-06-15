@@ -41,8 +41,8 @@ class Tabs extends JPanel implements ActionListener {
      * @param arg0 The action performed by the user
      */
     public void actionPerformed(ActionEvent e) {
-	int i = pane.indexOfTabComponent(this);
+	int i = this.pane.indexOfTabComponent(this);
 	if (i != -1)
-	    pane.remove(i);
+	    this.pane.remove(i);
     }
 }

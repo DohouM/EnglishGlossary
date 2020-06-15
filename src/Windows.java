@@ -34,14 +34,6 @@ public class Windows extends JFrame implements ActionListener {
      */
     private static final long serialVersionUID = 1L;
 
-//	/**
-//	 * A JButton object used to enter the app as a teacher.
-//	 */
-//	private JButton btTeacher = new JButton("I am a teacher");
-//	/**
-//	 * A JButton object used to enter the app as a student.
-//	 */
-//	private JButton btStudent = new JButton("I am a student");
     /**
      * A JButton object used to connect as a teacher, after entering the password.
      */
@@ -80,8 +72,8 @@ public class Windows extends JFrame implements ActionListener {
 	this.setTitle("Interactive Glossary");
 	this.setSize(400, 200);
 	this.setLocationRelativeTo(null);
-	this.setIconImage(img.getImage()); // load the icon image
-	enterGlossary.addActionListener(this);
+	this.setIconImage(this.img.getImage()); // load the icon image
+	this.enterGlossary.addActionListener(this);
 
 	// New object JPanel
 	JPanel pan = new JPanel();
@@ -91,19 +83,19 @@ public class Windows extends JFrame implements ActionListener {
 
 	Font police = new Font("impact", Font.ITALIC, 30);
 	// It is applied to the JLabel
-	title.setFont(police);
+	this.title.setFont(police);
 	// Changing the text color
-	title.setForeground(Color.blue);
+	this.title.setForeground(Color.blue);
 	// The text alignment is modified using static attributes
 	// JLabel class
-	title.setHorizontalAlignment(JLabel.CENTER);
+	this.title.setHorizontalAlignment(JLabel.CENTER);
 
-	id.setHorizontalAlignment(JLabel.CENTER);
+	this.id.setHorizontalAlignment(JLabel.CENTER);
 	pan.setLayout(new BorderLayout());
-	pan.add(title, BorderLayout.NORTH);
+	pan.add(this.title, BorderLayout.NORTH);
 	// pan.add(new Panel(), BorderLayout.CENTER);
-	pan.add(enterGlossary, BorderLayout.SOUTH);
-	pan.add(id, BorderLayout.CENTER);
+	pan.add(this.enterGlossary, BorderLayout.SOUTH);
+	pan.add(this.id, BorderLayout.CENTER);
 	this.setContentPane(pan);
 	this.setVisible(true);
 
@@ -132,8 +124,8 @@ public class Windows extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent arg0) { // Method that will be called when clicking on the button
 	if (arg0.getSource() == enterGlossary) {
-	    if (id.getText().equals("metgec")) {
-		user = new User(id.getText());
+	    if (this.id.getText().equals("metgec")) {
+		this.user = new User(this.id.getText());
 		title.setText("E-GLOSSARY AS " + this.user.getUserName());
 		this.setSize(500, 150);
 		this.setLocationRelativeTo(null);
@@ -142,27 +134,27 @@ public class Windows extends JFrame implements ActionListener {
 		conectpan.setBackground(Color.white);
 		Font police = new Font("impact", Font.ITALIC, 30);
 		// It is applied to the JLabel
-		title.setFont(police);
+		this.title.setFont(police);
 		// Changing the text color
-		title.setForeground(Color.red);
+		this.title.setForeground(Color.red);
 		// The text alignment is modified using static attributes
 		// JLabel class
-		title.setHorizontalAlignment(JLabel.CENTER);
+		this.title.setHorizontalAlignment(JLabel.CENTER);
 
-		id.setHorizontalAlignment(JLabel.CENTER);
-		password.setHorizontalAlignment(JLabel.CENTER);
+		this.id.setHorizontalAlignment(JLabel.CENTER);
+		this.password.setHorizontalAlignment(JLabel.CENTER);
 
 		conectpan.setLayout(new BorderLayout());
-		conectpan.add(title, BorderLayout.NORTH);
+		conectpan.add(this.title, BorderLayout.NORTH);
 		// pan.add(new Panel(), BorderLayout.CENTER);
 
-		conectpan.add(password, BorderLayout.CENTER);
-		connect.addActionListener(this);
-		conectpan.add(connect, BorderLayout.SOUTH);
+		conectpan.add(this.password, BorderLayout.CENTER);
+		this.connect.addActionListener(this);
+		conectpan.add(this.connect, BorderLayout.SOUTH);
 		this.setContentPane(conectpan);
 	    } else {
-		user = new User(id.getText());
-		title.setText("E-GLOSSARY AS " + this.user.getUserName());
+		this.user = new User(id.getText());
+		this.title.setText("E-GLOSSARY AS " + this.user.getUserName());
 		this.setSize(1000, 800);
 		this.setLocationRelativeTo(null);
 		JTabbedPane pane = LoadStudentPanel();
@@ -172,8 +164,8 @@ public class Windows extends JFrame implements ActionListener {
 	    System.out.println("Test");
 	}
 
-	if (arg0.getSource() == connect) {
-	    char[] pass = password.getPassword();
+	if (arg0.getSource() == this.connect) {
+	    char[] pass = this.password.getPassword();
 	    String passString = new String(pass);
 	    if (comparable(passString)) {
 		System.out.println("Good PassWord");

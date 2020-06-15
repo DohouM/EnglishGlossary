@@ -24,7 +24,7 @@ public class Student extends User {
      * @return The group of the student.
      */
     public String getGroup() {
-	return group;
+	return this.group;
     }
 
     /**

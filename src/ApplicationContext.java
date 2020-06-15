@@ -26,7 +26,7 @@ public class ApplicationContext{
 	 * @return glossary The current glossary the app is using.
 	 */
 	public static Glossary getGlossary() {
-		return glossary;
+		return ApplicationContext.glossary;
 	}
 
 	/**

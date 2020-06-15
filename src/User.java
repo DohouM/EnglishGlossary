@@ -24,7 +24,7 @@ public class User {
      * @return The <code>userName</code> of the User. 
      */
     public String getUserName() {
-	return userName;
+	return this.userName;
     }
 
     /**

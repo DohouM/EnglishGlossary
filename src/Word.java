@@ -40,7 +40,7 @@ public class Word implements Serializable, Comparable<Word>{
 	 * @return the <code>englishWord</code> attribute of the current object.
 	 */
 	public String getEnglishWord() {
-		return englishWord;
+		return this.englishWord;
 	}
 	/**
 	 * A getter for the <code>englishWord</code> attribute of the current object, but without the mandatory asterisk.
@@ -50,7 +50,7 @@ public class Word implements Serializable, Comparable<Word>{
 		if (this.isMandatory()) {
 			return englishWord.replaceAll("\\*","");
 		}
-		return englishWord;
+		return this.englishWord;
 	}
 	/**
 	 * A setter for the <code>englishWord</code> attribute.
@@ -64,7 +64,7 @@ public class Word implements Serializable, Comparable<Word>{
 	 * @return the frenchWord
 	 */
 	public String getFrenchWord() {
-		return frenchWord;
+		return this.frenchWord;
 	}
 	/**
 	 * * A setter for the <code>frenchWord</code> attribute.
@@ -76,7 +76,7 @@ public class Word implements Serializable, Comparable<Word>{
 	
 	@Override
 	public String toString() {
-		return "Word [english Word=" + englishWord + ", french Word=" + frenchWord+ "]";
+		return "Word [english Word=" + this.englishWord + ", french Word=" + this.frenchWord+ "]";
 	}
 
 
@@ -98,7 +98,7 @@ public class Word implements Serializable, Comparable<Word>{
 	}
 	
 	public boolean isMandatory(){
-		if (englishWord.contains("*")) {
+		if (this.englishWord.contains("*")) {
 		    return true;
 		} 
 		return false;

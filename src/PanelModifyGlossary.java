@@ -83,17 +83,17 @@ public class PanelModifyGlossary extends JPanel implements ActionListener {
 	super();
 
 	// search for a word part
-	this.add(search);
-	this.add(searchBar);
-	this.add(btSearch);
+	this.add(this.search);
+	this.add(this.searchBar);
+	this.add(this.btSearch);
 	btSearch.addActionListener(this);
 
 	// adding a word part
-	this.add(en);
-	this.add(englishWord);
-	this.add(fr);
-	this.add(frenchWord);
-	this.add(btAdd);
+	this.add(this.en);
+	this.add(this.englishWord);
+	this.add(this.fr);
+	this.add(this.frenchWord);
+	this.add(this.btAdd);
 	btAdd.addActionListener(this);
 
     }
@@ -105,40 +105,40 @@ public class PanelModifyGlossary extends JPanel implements ActionListener {
      */
     public void actionPerformed(ActionEvent arg0) {
 
-	if (arg0.getSource() == btSearch) {
+	if (arg0.getSource() == this.btSearch) {
 
-	    this.remove(result);
+	    this.remove(this.result);
 
-	    wordFound = ApplicationContext.getGlossary().search(searchBar.getText());
+	    this.wordFound = ApplicationContext.getGlossary().search(searchBar.getText());
 
-	    result = new JLabel(wordFound.toString());
-	    this.add(result);
-	    this.add(btDelete);
+	    this.result = new JLabel(this.wordFound.toString());
+	    this.add(this.result);
+	    this.add(this.btDelete);
 	    btDelete.addActionListener(this);
 
 	    this.updateUI();
 	}
 
-	if (arg0.getSource() == btAdd) {
+	if (arg0.getSource() == this.btAdd) {
 
-	    ApplicationContext.getGlossary().addWordStringOnly(englishWord.getText(), frenchWord.getText());
+	    ApplicationContext.getGlossary().addWordStringOnly(this.englishWord.getText(), this.frenchWord.getText());
 
 	    JOptionPane.showMessageDialog(null, "Word Saved");
 
-	    frenchWord.setText("");
-	    englishWord.setText("");
+	    this.frenchWord.setText("");
+	    this.englishWord.setText("");
 
 	    this.updateUI();
 	}
 
-	if (arg0.getSource() == btDelete) {
+	if (arg0.getSource() == this.btDelete) {
 
-	    ApplicationContext.getGlossary().removeWord(wordFound);
+	    ApplicationContext.getGlossary().removeWord(this.wordFound);
 
 	    JOptionPane.showMessageDialog(null, "Word Deleted");
 
-	    this.remove(result);
-	    this.remove(btDelete);
+	    this.remove(this.result);
+	    this.remove(this.btDelete);
 
 	    this.updateUI();
 	}

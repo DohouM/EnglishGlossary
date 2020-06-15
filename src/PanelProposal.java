@@ -49,11 +49,11 @@ public class PanelProposal extends JPanel implements ActionListener {
      */
     public PanelProposal() {
 
-	this.add(en);
-	this.add(englishWord);
-	this.add(fr);
-	this.add(frenchWord);
-	this.add(btCreate);
+	this.add(this.en);
+	this.add(this.englishWord);
+	this.add(this.fr);
+	this.add(this.frenchWord);
+	this.add(this.btCreate);
 	btCreate.addActionListener(this);
     }
 
@@ -64,15 +64,15 @@ public class PanelProposal extends JPanel implements ActionListener {
      */
     public void actionPerformed(ActionEvent arg0) {// Method that will be called when clicking on the button
 
-	if (arg0.getSource() == btCreate) {
+	if (arg0.getSource() == this.btCreate) {
 		
-	    Word proposalWord = new Word(englishWord.getText(), frenchWord.getText());
+	    Word proposalWord = new Word(this.englishWord.getText(), this.frenchWord.getText());
 	    ProposalList proposal = new ProposalList();
 	    proposal.addWord(proposalWord);
 
 	    JOptionPane.showMessageDialog(null, "Proposal Saved");
-	    frenchWord.setText("");
-	    englishWord.setText("");
+	    this.frenchWord.setText("");
+	    this.englishWord.setText("");
 
 	    this.updateUI(); //Refresh
 	}
