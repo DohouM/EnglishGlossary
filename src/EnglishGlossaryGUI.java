@@ -26,7 +26,7 @@ import javax.swing.JTextField;
  *         Gabriel SAPONARA
  *
  */
-public class Windows extends JFrame implements ActionListener {
+public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 
     private ImageIcon img = new ImageIcon("E-glossaryIcone.png"); // load the icon image
     /**
@@ -65,10 +65,10 @@ public class Windows extends JFrame implements ActionListener {
     private static final String finalPassWord = "938227684C1200009DF4A4E2067D934E";
 
     /**
-     * The constructor of the Windows class. Create a JFrame and set it to visible,
+     * The constructor of the EnglishGlossaryGUI class. Create a JFrame and set it to visible,
      * with current object attributes.
      */
-    public Windows() {
+    public EnglishGlossaryGUI() {
 	this.setTitle("Interactive Glossary");
 	this.setSize(400, 200);
 	this.setLocationRelativeTo(null);

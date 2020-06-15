@@ -17,7 +17,7 @@ public class ApplicationContext{
 	public ApplicationContext(Glossary glossary) {
 		super();
 		ApplicationContext.glossary = glossary;
-		new Windows();
+		new EnglishGlossaryGUI();
 	}
 
 
