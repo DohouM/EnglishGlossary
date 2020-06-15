@@ -12,7 +12,6 @@ import java.util.List;
  * 
  * 
  */
-//TODO change ArrayList for List
 public class Glossary
 {
 	/**
@@ -34,7 +33,9 @@ public class Glossary
 	{
 		this.glossary = glossary;
 	}
-
+	/**
+	 * A constructor for the Glossary class, which intialize an empty <code>List&lt;Word&gt;</code>
+	 */
 	public Glossary()
 	{
 		List<Word> gloss = new ArrayList<Word>();
@@ -47,7 +48,7 @@ public class Glossary
 	 */
 	public void sortByEn()
 	{
-		Collections.sort(glossary);
+		Collections.sort(this.glossary);
 	}
 
 	/**
