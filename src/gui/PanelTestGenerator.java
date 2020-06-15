@@ -19,6 +19,7 @@ import javax.swing.SpinnerNumberModel;
 
 import core.HtmlTest;
 import core.Main;
+import core.QuizGenerator;
 import core.Word;
 
 /**
@@ -194,24 +195,14 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 	    this.data = new String[(int) this.wordsNumber.getValue()][2];
 	    this.remove(this.tab);
 	    this.remove(this.points);
-
-	    if (this.checkbox.isSelected()) {
-
-		this.wordList = Main.glossary.pagesMandatory((int) this.spinnerStart.getValue(),
-			(int) this.spinnerEnd.getValue());
-	    }
-
-	    Collections.shuffle(wordList); // randomize word list
-
+	    
+	    this.wordList = QuizGenerator.generate((int) this.spinnerStart.getValue(),
+			(int) this.spinnerEnd.getValue(), this.checkbox.isSelected());
+	    
 	    
 
-	    int loopCounter = 0;
-	    while (loopCounter < (int) this.wordsNumber.getValue()) {
-		this.data[loopCounter][0] = this.wordList.get(loopCounter).getFrenchWord();
-		this.data[loopCounter][1] = this.wordList.get(loopCounter).getEnglishWordWithoutMark();
-		loopCounter = loopCounter + 1;
-
-	    }
+	    this.data = QuizGenerator.randomPick(this.wordList, (int) this.numOfWordsSpinner.getValue());
+	    
 
 	    String title[] = { "French Words", "English Words" };
 	    this.tableau = new JTable(this.data, title);
@@ -225,22 +216,18 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 
 	    this.btGen = new JButton("Generate Again");
 	    this.newWordList = new ArrayList<Word>();
+	    int loopCounter;
 	    for(loopCounter=0; loopCounter < (int) this.wordsNumber.getValue();loopCounter++) {
 		this.newWordList.add(new Word(this.data[loopCounter][0],this.data[loopCounter][1]));
 	    }
-	    for(Word w: this.newWordList) {
-		System.out.println(w.getEnglishWord() + ";" +w.getFrenchWord());
-	    }
+	    
 
 	    this.updateUI();
 
 	}
 
 	if (arg0.getSource() == this.btExport) {
-	    SaveFileDialog savefile = new SaveFileDialog();
-
-	    HtmlTest testToExport = new HtmlTest(this.newWordList, (int) this.pointValue.getValue(), (int) this.wordsNumber.getValue(), (int) this.subjectNum.getValue(), savefile.getFile());
-	    testToExport.generateTestFile();
+	    QuizGenerator.exportTest(this.newWordList, (int) this.pointValue.getValue(), (int) this.numOfWordsSpinner.getValue(), (int) this.subjectNum.getValue());
 	    this.updateUI();
 	}
     }
