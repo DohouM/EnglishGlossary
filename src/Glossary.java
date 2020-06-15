@@ -62,15 +62,6 @@ public class Glossary
 	}
 
 	/**
-	 * @deprecated Take a glossary as a parameter.
-	 * @param glossary : The glossary to contain.
-	 */
-	public void setGlossary(List<Word> glossary)
-	{
-		this.glossary = glossary;
-	}
-
-	/**
 	 * Add a word to the glossary, and sort it again using the method
 	 * <code>sortByEn</code>
 	 * 
