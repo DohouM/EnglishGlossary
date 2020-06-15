@@ -22,6 +22,7 @@ import javax.swing.JTextField;
 import core.StringUtils;
 import io.CsvFileSerializationDriver;
 import core.Main;
+import core.Password_Check;
 
 /**
  * A class that describe a Window of the application, with Swing attributes.
@@ -66,7 +67,7 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
     /**
      * The MD5 hash of the current teacher password.
      */
-    private static final String finalPassWord = "938227684C1200009DF4A4E2067D934E";
+   
 
     /**
      * The constructor of the EnglishGlossaryGUI class. Create a JFrame and set it to visible,
@@ -169,7 +170,7 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 	if (arg0.getSource() == this.connect) {;
 	    char[] pass = this.password.getPassword();
 	    String passString = new String(pass);
-	    if (StringUtils.comparable(passString,finalPassWord)) {
+	    if (Password_Check.comparable(passString)) {
 		System.out.println("Good PassWord");
 		this.setSize(1000, 800);
 		this.setLocationRelativeTo(null);
