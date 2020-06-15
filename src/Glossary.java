@@ -98,7 +98,6 @@ public class Glossary
 	 */
 	public Word search(String keyWord)
 	{
-//ArrayList � faire pour le return ->ajouter les mots ->plusieurs mots m�me traduction
 		for (Word w : this.glossary)
 		{
 			if (w.getEnglishWord().contains(keyWord))
@@ -115,19 +114,6 @@ public class Glossary
 		}
 		return null;
 	}
-
-//	public ArrayList<Word> page(int page) {
-//		ArrayList<Word> list = new ArrayList<Word>();
-//		page = page - 1;
-//		int startWord = numberOfWordPerPage * page;
-//		int endWord = startWord + numberOfWordPerPage;
-//
-//		for (int i = startWord; i < endWord; i++) {
-//			list.add(this.glossary.get(i));
-//		}
-//
-//		return list;
-//	}
 
 	/**
 	 * Returns all the words of the glossary between <code>startPage</code>
@@ -205,7 +191,11 @@ public class Glossary
 	{
 		return (int) Math.ceil(glossary.size() / (double) this.numberOfWordPerPage);
 	}
-
+	
+	/**
+	 * Remove the word in the glossary.
+	 * @param word The Word to remove from the glossary.
+	 */
 	public void removeWord(Word word)
 	{
 		glossary.remove(word);
