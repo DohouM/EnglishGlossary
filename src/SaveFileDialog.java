@@ -17,7 +17,7 @@ public class SaveFileDialog extends JFrame {
     /**
      * The file to save.
      */
-    File fileToSave;
+    private File fileToSave;
     
     /**
      * A constructor for this class.

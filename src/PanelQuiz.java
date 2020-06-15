@@ -32,7 +32,7 @@ public class PanelQuiz extends JPanel implements ActionListener {
     /**
      * The SpinnerModel for starting page selection.
      */
-    SpinnerModel startPages = new SpinnerNumberModel(1, // initial value
+    private SpinnerModel startPages = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
 	    Main.glossary.numberOfPages(), // maximum value
 	    1); // step
@@ -40,11 +40,11 @@ public class PanelQuiz extends JPanel implements ActionListener {
      * The JSpinner created from the previously created SpinnerModel
      * <code>startPages</code>.
      */
-    JSpinner spinnerStart = new JSpinner(startPages);
+    private JSpinner spinnerStart = new JSpinner(startPages);
     /**
      * The SpinnerModel for ending page selection.
      */
-    SpinnerModel endPages = new SpinnerNumberModel(1, // initial value
+    private SpinnerModel endPages = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
 	    Main.glossary.numberOfPages(), // maximum value
 	    1); // step
@@ -52,47 +52,47 @@ public class PanelQuiz extends JPanel implements ActionListener {
      * The JSpinner created from the previously created SpinnerModel
      * <code>endPages</code>.
      */
-    JSpinner spinnerEnd = new JSpinner(endPages);
+    private JSpinner spinnerEnd = new JSpinner(endPages);
 
     /**
      * The button to create a new set of words to train with from the glossary,
      * between pages from values of <code>spinnerStart</code> and <code>spinnerEnd</code>.
      */
-    JButton btPlay = new JButton("Play");
-    JButton btConfirm = new JButton("confirm");
+    private JButton btPlay = new JButton("Play");
+    private JButton btConfirm = new JButton("confirm");
 
     /**
      * The JLabel placed before the <code>spinnerStart</code> JSpinner object.
      */
-    JLabel fromP = new JLabel("From page");
+    private JLabel fromP = new JLabel("From page");
     /**
      * The JLabel placed between the <code>spinnerStart</code> and <code>spinnerEnd</code> JSpinner objects.
      */
-    JLabel to = new JLabel("to");
+    private JLabel to = new JLabel("to");
     /**
      * The JLabel that'll hold the points earned by the student.
      */
-    JLabel points = new JLabel("");
+    private JLabel points = new JLabel("");
 
     /**
      * The JScrollPane that'll hold the JTable that'll store the quiz.
      */
-    JScrollPane tab = new JScrollPane();
+    private JScrollPane tab = new JScrollPane();
 
     /**
      * The JTable that'll hold the quiz.
      */
-    JTable tableau;
+    private JTable tableau;
 
     /**
      * A JCheckBox to only have mandatory words in the generated test.
      */
-    JCheckBox checkbox = new JCheckBox("only mandatory words(*)");
+    private JCheckBox checkbox = new JCheckBox("only mandatory words(*)");
 
     /**
      * An array that'll hold the quiz results.
      */
-    Object[] QuizResults;
+    private Object[] QuizResults;
 
     /**
      * The constructor of the PanelQuiz class.

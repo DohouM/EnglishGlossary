@@ -28,7 +28,7 @@ public class PanelGlossary extends JPanel implements ActionListener {
     /**
      * The SpinnerModel for starting page selection.
      */
-    SpinnerModel startPages = new SpinnerNumberModel(1, // initial value
+    private SpinnerModel startPages = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
 	    Main.glossary.numberOfPages(), // maximum value
 	    1); // step
@@ -37,12 +37,12 @@ public class PanelGlossary extends JPanel implements ActionListener {
      * The JSpinner created from the previously created SpinnerModel
      * <code>startPages</code>.
      */
-    JSpinner spinnerStart = new JSpinner(startPages);
+    private JSpinner spinnerStart = new JSpinner(startPages);
     
     /**
      * The SpinnerModel for ending page selection.
      */
-    SpinnerModel endPages = new SpinnerNumberModel(1, // initial value
+    private SpinnerModel endPages = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
 	    Main.glossary.numberOfPages(), // maximum value
 	    1); // step
@@ -51,33 +51,33 @@ public class PanelGlossary extends JPanel implements ActionListener {
      * The JSpinner created from the previously created SpinnerModel
      * <code>endPages</code>.
      */
-    JSpinner spinnerEnd = new JSpinner(endPages);
+    private JSpinner spinnerEnd = new JSpinner(endPages);
 
     /**
      * The JButton to get the glossary pages between select numbers in 
      * <code>spinnerStart</code> and <code>spinnerEnd</code>.
      */
-    JButton btRun = new JButton("run");
+    private JButton btRun = new JButton("run");
 
     /**
      * The JLabel placed before <code>spinnerStart</code>.
      */
-    JLabel fromP = new JLabel("From page");
+    private JLabel fromP = new JLabel("From page");
     /**
      * The JLabel placed after <code>spinnerStart</code>.
      */
-    JLabel to = new JLabel("to");
+    private JLabel to = new JLabel("to");
 
     /**
      * The JScrollPane that'll contain a table with all the words between
      *  selected numbers in <code>spinnerStart</code> and <code>spinnerEnd</code>.
      */
-    JScrollPane tab = new JScrollPane();
+    private JScrollPane tab = new JScrollPane();
 
     /**
      * The JTable that'll be contained in <code>tab</code>
      */
-    JTable tableau;
+    private JTable tableau;
     /**
      * The constructor for the Glossary panel of the application.
      */

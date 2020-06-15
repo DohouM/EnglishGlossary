@@ -20,38 +20,38 @@ public class HtmlTest {
     /**
      * The list of Word to pick words from.
      */
-    List<Word> wordsToPickFrom;
+    private List<Word> wordsToPickFrom;
 
     /**
      * Number of words in test.
      */
-    int numberOfWords;
+    private int numberOfWords;
     /**
      * The title of the html page.
      */
-    String title;
+    private String title;
     /**
      * The subject of the html page (can be either subject A or subject B)
      */
-    int subject;
+    private int subject;
     /**
      * The points value (is it worth 5 points on maybe 6, 10... etc)
      */
-    int pointsValue;
+    private int pointsValue;
 
     /**
      * All the words in french that must be translated in english in the test.
      */
-    List<String> wordsInFrench;
+    private List<String> wordsInFrench;
     /**
      * All the words in english that must be translated in french in the test.
      */
-    List<String> wordsInEnglish;
+    private List<String> wordsInEnglish;
     
     /**
      * The file to save.
      */
-    File fileToSave;
+    private File fileToSave;
 
     /**
      * Constructor of HtmlTest.

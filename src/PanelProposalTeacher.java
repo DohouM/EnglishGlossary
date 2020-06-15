@@ -20,12 +20,12 @@ public class PanelProposalTeacher extends JPanel implements ActionListener {
     /**
      * The JScrollPane that'll show the JTable that holds the proposals.
      */
-    JScrollPane tab = new JScrollPane();
+    private JScrollPane tab = new JScrollPane();
 
     /**
      * The JTable object containing all the proposals.
      */
-    JTable tableau;
+    private JTable tableau;
     /**
      * A JButton object used to dump the file of proposal.
      */
