@@ -33,7 +33,6 @@ public class Main {
 		try {
 			glossary= new Glossary(readWrite.importWords());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

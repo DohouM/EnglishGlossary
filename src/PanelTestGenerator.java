@@ -172,16 +172,6 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
      * @param arg0 The action performed by the user
      */
     public void actionPerformed(ActionEvent arg0) {
-
-//		JTextArea EnWords= new JTextArea();
-//		String EnWordList="";
-//		for(Word w: ApplicationContext.getGlossary().pages((int)spinnerStart.getValue(),(int) spinnerEnd.getValue()))
-//		{
-//			EnWordList = EnWordList + w.getFrenchWord()+"\n";
-//		}
-//		EnWords.setText(EnWordList);
-//		
-//		this.add(EnWords);
 	this.wordList = ApplicationContext.getGlossary().pages((int) this.spinnerStart.getValue(),
 		(int) this.spinnerEnd.getValue());
 	
@@ -233,9 +223,6 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 	}
 
 	if (arg0.getSource() == this.btExport) {
-	    // TODO export text to an html doc
-	    
-	    
 	    SaveFileDialog savefile = new SaveFileDialog();
 
 	    HtmlTest testToExport = new HtmlTest(this.newWordList, (int) this.pointValue.getValue(), (int) this.wordsNumber.getValue(), (int) this.subjectNum.getValue(), savefile.getFile());

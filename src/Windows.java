@@ -112,7 +112,6 @@ public class Windows extends JFrame implements ActionListener {
 			readWrite.exportWords(ApplicationContext.getGlossary().getGlossary());
 			System.out.println("Glossary saved");
 		    } catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		    }
 
@@ -146,7 +145,6 @@ public class Windows extends JFrame implements ActionListener {
 
 		conectpan.setLayout(new BorderLayout());
 		conectpan.add(this.title, BorderLayout.NORTH);
-		// pan.add(new Panel(), BorderLayout.CENTER);
 
 		conectpan.add(this.password, BorderLayout.CENTER);
 		this.connect.addActionListener(this);

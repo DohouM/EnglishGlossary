@@ -24,7 +24,6 @@ public class ProposalList {
 		try {
 			this.proposalList=readWrite.importWords();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     }
@@ -63,7 +62,6 @@ public class ProposalList {
 		try {
 			readWrite.exportWords(this.proposalList);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     }
@@ -79,7 +77,6 @@ public class ProposalList {
     	try {
 			readWrite.exportWords(this.proposalList);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     }

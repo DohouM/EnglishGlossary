@@ -127,6 +127,5 @@ public class HtmlTest {
 	    JOptionPane.showMessageDialog(null, "Issue while generating file... Aborting operation.", "Warning", JOptionPane.WARNING_MESSAGE);
 	}
 	JOptionPane.showMessageDialog(null, "file generated !");
-	//TODO Message Boite de dialogue
     }
 }
