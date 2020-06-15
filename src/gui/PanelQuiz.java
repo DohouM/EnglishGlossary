@@ -39,7 +39,7 @@ public class PanelQuiz extends JPanel implements ActionListener {
      */
     private SpinnerModel startPages = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
-	    Main.glossary.numberOfPages(), // maximum value
+	    EnglishGlossaryGUI.glossary.numberOfPages(), // maximum value
 	    1); // step
     /**
      * The JSpinner created from the previously created SpinnerModel
@@ -51,7 +51,7 @@ public class PanelQuiz extends JPanel implements ActionListener {
      */
     private SpinnerModel endPages = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
-	    Main.glossary.numberOfPages(), // maximum value
+	    EnglishGlossaryGUI.glossary.numberOfPages(), // maximum value
 	    1); // step
     /**
      * The JSpinner created from the previously created SpinnerModel

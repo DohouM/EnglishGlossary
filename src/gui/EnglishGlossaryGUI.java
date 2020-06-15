@@ -21,6 +21,7 @@ import javax.swing.JTextField;
 
 import core.StringUtils;
 import io.CsvFileSerializationDriver;
+import core.Glossary;
 import core.Main;
 import core.Password_Check;
 
@@ -38,6 +39,8 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
      * 
      */
     private static final long serialVersionUID = 1L;
+    
+    public static Glossary glossary; //store the when the GUI is lunched
 
     /**
      * A JButton object used to connect as a teacher, after entering the password.
@@ -73,7 +76,10 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
      * The constructor of the EnglishGlossaryGUI class. Create a JFrame and set it to visible,
      * with current object attributes.
      */
-    public EnglishGlossaryGUI() {
+    public EnglishGlossaryGUI(Glossary glossary) {
+    	
+    EnglishGlossaryGUI.glossary= glossary;
+    	
 	this.setTitle("Interactive Glossary");
 	this.setSize(400, 200);
 	this.setLocationRelativeTo(null);
@@ -114,7 +120,7 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 		if (userChoice == 0)
 
 		    try { // saving glossary before closing
-			readWrite.exportWords(Main.glossary.getGlossary());
+			readWrite.exportWords(EnglishGlossaryGUI.glossary.getGlossary());
 			System.out.println("Glossary saved");
 		    } catch (IOException e1) {
 			e1.printStackTrace();

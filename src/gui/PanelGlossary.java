@@ -34,7 +34,7 @@ public class PanelGlossary extends JPanel implements ActionListener {
      */
     private SpinnerModel startPages = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
-	    Main.glossary.numberOfPages(), // maximum value
+	    EnglishGlossaryGUI.glossary.numberOfPages(), // maximum value
 	    1); // step
     
     /**
@@ -48,7 +48,7 @@ public class PanelGlossary extends JPanel implements ActionListener {
      */
     private SpinnerModel endPages = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
-	    Main.glossary.numberOfPages(), // maximum value
+	    EnglishGlossaryGUI.glossary.numberOfPages(), // maximum value
 	    1); // step
     
     /**
@@ -113,7 +113,7 @@ public class PanelGlossary extends JPanel implements ActionListener {
 //		this.add(EnWords);
 	this.remove(tab);
 
-	List<Word> WordList = Main.glossary.pages((int) spinnerStart.getValue(),
+	List<Word> WordList = EnglishGlossaryGUI.glossary.pages((int) spinnerStart.getValue(),
 		(int) spinnerEnd.getValue());
 
 	Object[][] data = new Object[WordList.size()][2];

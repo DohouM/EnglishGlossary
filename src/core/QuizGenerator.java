@@ -3,6 +3,7 @@ package core;
 import java.util.Collections;
 import java.util.List;
 
+import gui.EnglishGlossaryGUI;
 import gui.SaveFileDialog;
 /**
  * A class that stores methods to generate and manipulate a random quiz.
@@ -18,12 +19,12 @@ public class QuizGenerator {
 	 * @return A random List of Word objects between page at spinnerStart and page at spinnerEnd
 	 */
 	public static List <Word> generate(int pageStart,int pageEnd, Boolean mandatory){
-		List <Word> WordList = Main.glossary.pages((int) pageStart,
+		List <Word> WordList = EnglishGlossaryGUI.glossary.pages((int) pageStart,
 			    (int) pageEnd);
 
 		    if (mandatory) {
 
-			WordList = Main.glossary.pagesMandatory((int) pageStart,
+			WordList = EnglishGlossaryGUI.glossary.pagesMandatory((int) pageStart,
 				(int) pageEnd);
 		    }
 

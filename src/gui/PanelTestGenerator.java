@@ -39,7 +39,7 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
      */
     private SpinnerModel startPages = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
-	    Main.glossary.numberOfPages(), // maximum value
+	    EnglishGlossaryGUI.glossary.numberOfPages(), // maximum value
 	    1); // step
     /**
      * The JSpinner created from the previously created SpinnerModel
@@ -51,7 +51,7 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
      */
     private SpinnerModel endPages = new SpinnerNumberModel(1, // initial value
 	    1, // minimum value
-	    Main.glossary.numberOfPages(), // maximum value
+	    EnglishGlossaryGUI.glossary.numberOfPages(), // maximum value
 	    1); // step
     /**
      * The JSpinner created from the previously created SpinnerModel
@@ -103,7 +103,7 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
      */
     private SpinnerModel numOfWordsSpinner = new SpinnerNumberModel(10, // initial value
 	    1, // minimum value
-	    (Main.glossary.numberOfPages()) * 51, // maximum value
+	    (EnglishGlossaryGUI.glossary.numberOfPages()) * 51, // maximum value
 	    1); // step;
     /**
      * The JSpinner objects to select the number of words in the generated test.
@@ -187,7 +187,7 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
      * @param arg0 The action performed by the user
      */
     public void actionPerformed(ActionEvent arg0) {
-	this.wordList =Main.glossary.pages((int) this.spinnerStart.getValue(),
+	this.wordList =EnglishGlossaryGUI.glossary.pages((int) this.spinnerStart.getValue(),
 		(int) this.spinnerEnd.getValue());
 	
 	
