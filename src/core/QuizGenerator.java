@@ -17,14 +17,14 @@ public class QuizGenerator {
 	 * @param mandatory A boolean to know if the list should only include mandatory words.
 	 * @return A random List of Word objects between page at spinnerStart and page at spinnerEnd
 	 */
-	public static List <Word> generate(int spinnerStart,int spinnerEnd, Boolean mandatory){
-		List <Word> WordList = Main.glossary.pages((int) spinnerStart,
-			    (int) spinnerEnd);
+	public static List <Word> generate(int pageStart,int pageEnd, Boolean mandatory){
+		List <Word> WordList = Main.glossary.pages((int) pageStart,
+			    (int) pageEnd);
 
 		    if (mandatory) {
 
-			WordList = Main.glossary.pagesMandatory((int) spinnerStart,
-				(int) spinnerEnd);
+			WordList = Main.glossary.pagesMandatory((int) pageStart,
+				(int) pageEnd);
 		    }
 
 		    Collections.shuffle(WordList); // randomize word list
