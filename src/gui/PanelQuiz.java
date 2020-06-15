@@ -130,8 +130,8 @@ public class PanelQuiz extends JPanel implements ActionListener {
 	    this.remove(tab);
 	    this.remove(points);
 	    
-	    QuizGenerator Qgen= new QuizGenerator();
-	    List <Word> WordList=Qgen.generate((int)spinnerStart.getValue(),(int) spinnerEnd.getValue(), checkbox.isSelected());
+	    List <Word> WordList=QuizGenerator.generate((int)spinnerStart.getValue(),(int) spinnerEnd.getValue(), checkbox.isSelected());
+	    
 	    
 
 	    Object[][] data = new Object[wordPerQuiz][2];
