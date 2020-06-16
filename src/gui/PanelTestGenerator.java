@@ -2,14 +2,11 @@ package gui;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
@@ -17,9 +14,7 @@ import javax.swing.JTable;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 
-import core.HtmlTest;
-import core.Main;
-import core.QuizGenerator;
+import core.Quiz;
 import core.Word;
 
 /**
@@ -196,12 +191,13 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 	    this.remove(this.tab);
 	    this.remove(this.points);
 	    
-	    this.wordList = QuizGenerator.generate((int) this.spinnerStart.getValue(),
-			(int) this.spinnerEnd.getValue(), this.checkbox.isSelected());
+	    Quiz quiz= new Quiz((int) this.spinnerStart.getValue(),
+				(int) this.spinnerEnd.getValue(), this.checkbox.isSelected());
+	    this.wordList = quiz.getWordList();
 	    
 	    
 
-	    this.data = QuizGenerator.randomPick(this.wordList, (int) this.numOfWordsSpinner.getValue());
+	    this.data = Quiz.randomPick(this.wordList, (int) this.numOfWordsSpinner.getValue());
 	    
 
 	    String title[] = { "French Words", "English Words" };
@@ -227,7 +223,7 @@ public class PanelTestGenerator extends JPanel implements ActionListener {
 	}
 
 	if (arg0.getSource() == this.btExport) {
-	    QuizGenerator.exportTest(this.newWordList, (int) this.pointValue.getValue(), (int) this.numOfWordsSpinner.getValue(), (int) this.subjectNum.getValue());
+	    Quiz.exportTest(this.newWordList, (int) this.pointValue.getValue(), (int) this.numOfWordsSpinner.getValue(), (int) this.subjectNum.getValue());
 	    this.updateUI();
 	}
     }
