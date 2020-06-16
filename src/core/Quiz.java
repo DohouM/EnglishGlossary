@@ -14,10 +14,22 @@ import gui.SaveFileDialog;
  */
 public class Quiz {
 
+    	/**
+    	 * The List of Words to pick the words from.
+    	 */
 	private List<Word> WordList;
 
+	/**
+	 * The result of the Quiz.
+	 */
 	private Object[] QuizResults;
+	/**
+	 * The array to display in the GUI.
+	 */
 	private Object[][] table;
+	/**
+	 * Number of points the quiz is worth.
+	 */
 	private int point;
 
 	/**
@@ -26,6 +38,9 @@ public class Quiz {
 	private int wordPerQuiz = 20;
 
 	/**
+	 * @param pageStart The first page to pick in the glossary.
+	 * @param pageEnd The last page to pick in the glossary.
+	 * @param mandatory Boolean to know if we only pick mandatory words.
 	 * 
 	 */
 	public Quiz(int pageStart, int pageEnd, Boolean mandatory) {
@@ -98,6 +113,7 @@ public class Quiz {
 		return wordPerQuiz;
 	}
 
+	
 	/**
 	 * A method to pick random Word objects from a <code>List&lt;Word&gt;</code>.
 	 * 
@@ -108,7 +124,7 @@ public class Quiz {
 	 * @return A 2 dimensional string array representing the words picked, and their
 	 *         french equivalent.
 	 */
-	public static String[][] randomPick(List<Word> listToPickFrom, int numberOfWordsToPick) {
+	public String[][] randomPick(List<Word> listToPickFrom, int numberOfWordsToPick) {
 		String[][] fetchedWords = new String[numberOfWordsToPick][2];
 		int loopCounter = 0;
 		while (loopCounter < numberOfWordsToPick) {

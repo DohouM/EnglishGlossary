@@ -40,7 +40,7 @@ public class Main {
 			e.printStackTrace();
 		}
 
-		new EnglishGlossaryGUI();
+		new EnglishGlossaryGUI(glossary);
 		
 
     }

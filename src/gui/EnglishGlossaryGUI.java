@@ -75,6 +75,7 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
     /**
      * The constructor of the EnglishGlossaryGUI class. Create a JFrame and set it to visible,
      * with current object attributes.
+     * @param glossary The glossary to word with.
      */
     public EnglishGlossaryGUI(Glossary glossary) {
     	
