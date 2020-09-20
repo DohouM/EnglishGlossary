@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="jar" name="Englishglossary build">
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.jarfile" value="${dir.buildfile}/dist"/>
+    <target name="jar">
+        <jar destfile="${dir.jarfile}/EnglishGlossary.jar">
+            <manifest>
+                <attribute name="Main-Class" value="core.Main"/>            
+            </manifest>
+            <fileset dir="${dir.buildfile}/bin"/>
+        </jar>       
+    </target>
+</project>
