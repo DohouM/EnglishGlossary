@@ -114,7 +114,11 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 	// Save the Glossary in a file when the windows is closed by the user//
 
 	CsvFileSerializationDriver readWrite = new CsvFileSerializationDriver("data.csv");
-
+	/*Currently, the following code isn't necessary, since we're only working with local copies of
+	 * a glossary, that won't be (or at least should NOT be) modified.
+	 */
+	
+	/*
 	this.addWindowListener(new WindowAdapter() {
 	    public void windowClosing(WindowEvent e) {
 		int userChoice = JOptionPane.showConfirmDialog(null, "Do you want to save the glossary?");
@@ -129,7 +133,7 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 
 		System.exit(0);// close the windows
 	    }
-	});
+	}); */
 
     }
 
