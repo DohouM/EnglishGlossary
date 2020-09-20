@@ -118,10 +118,12 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 	 * a glossary, that won't be (or at least should NOT be) modified.
 	 */
 	
-	/*
+	
 	this.addWindowListener(new WindowAdapter() {
 	    public void windowClosing(WindowEvent e) {
-		int userChoice = JOptionPane.showConfirmDialog(null, "Do you want to save the glossary?");
+	    	System.exit(0);
+	    }
+		/* int userChoice = JOptionPane.showConfirmDialog(null, "Do you want to save the glossary?");
 		if (userChoice == 0)
 
 		    try { // saving glossary before closing
@@ -132,8 +134,8 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 		    }
 
 		System.exit(0);// close the windows
-	    }
-	}); */
+	    } */
+	});
 
     }
 
