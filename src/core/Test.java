@@ -3,7 +3,6 @@ package core;
 import java.util.List;
 
 import gui.SaveFileDialog;
-import jdk.internal.org.objectweb.asm.tree.IntInsnNode;
 
 /**
  * A class to modelize a glossary Test.
