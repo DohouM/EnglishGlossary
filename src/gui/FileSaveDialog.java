@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 /**
  * A save file prompt to ask the location where to save a file.
  */
-public class SaveFileDialog extends JFrame {
+public class FileSaveDialog extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	/**
@@ -19,7 +19,7 @@ public class SaveFileDialog extends JFrame {
 	/**
 	 * A constructor for this class.
 	 */
-	public SaveFileDialog() {
+	public FileSaveDialog() {
 		JFileChooser fileChooser = new JFileChooser();
 		fileChooser.setDialogTitle("Specify a file to save");
 

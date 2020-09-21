@@ -19,7 +19,7 @@ import core.Quiz;
  * A class that describe the Quiz panel of the application, with Swing
  * attributes.
  */
-public class PanelQuiz extends JPanel implements ActionListener {
+public class QuizPanel extends JPanel implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	/**
@@ -93,7 +93,7 @@ public class PanelQuiz extends JPanel implements ActionListener {
 	/**
 	 * The constructor of the PanelQuiz class.
 	 */
-	public PanelQuiz() {
+	public QuizPanel() {
 		super();
 		this.add(this.fromP);
 		this.add(this.spinnerStart);

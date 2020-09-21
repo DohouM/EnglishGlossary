@@ -17,7 +17,7 @@ import core.Word;
  * attributes.
  */
 
-public class PanelProposal extends JPanel implements ActionListener {
+public class ProposalPanel extends JPanel implements ActionListener {
 	/**
 	 * A JLabel placed before the JTextField used to ask for the french word to
 	 * propose.
@@ -50,7 +50,7 @@ public class PanelProposal extends JPanel implements ActionListener {
 	/**
 	 * The constructor of the PanelProposal class.
 	 */
-	public PanelProposal() {
+	public ProposalPanel() {
 
 		this.add(this.en);
 		this.add(this.englishWord);

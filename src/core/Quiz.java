@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 
 import gui.EnglishGlossaryGUI;
-import gui.SaveFileDialog;
+import gui.FileSaveDialog;
 
 /**
  * A class that stores methods to generate and manipulate a random quiz.
@@ -142,7 +142,7 @@ public class Quiz {
 	 */
 
 	public static void exportTest(List<Word> listOfWords, int valueOfTest, int numberOfWords, int subjectId) {
-		SaveFileDialog savefile = new SaveFileDialog();
+		FileSaveDialog savefile = new FileSaveDialog();
 
 		HtmlTest testToExport = new HtmlTest(listOfWords, valueOfTest, numberOfWords, subjectId, savefile.getFile());
 		testToExport.generateTestFile();

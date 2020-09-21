@@ -115,9 +115,9 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {						
 		this.setSize(1000, 800);
 		this.setLocationRelativeTo(null);
 		JTabbedPane pane = new JTabbedPane();
-		pane.add("Glossary", new PanelGlossary());
-		pane.add("Quiz", new PanelQuiz());
-		pane.add("Proposal", new PanelProposal());
+		pane.add("Glossary", new GlossaryPanel());
+		pane.add("Quiz", new QuizPanel());
+		pane.add("Proposal", new ProposalPanel());
 		this.setContentPane(pane);
 	}
 }

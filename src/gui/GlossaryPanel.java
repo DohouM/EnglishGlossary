@@ -18,7 +18,7 @@ import core.Word;
 /**
  * Sub-part of the GUI responsible of glossary pages display.
  */
-public class PanelGlossary extends JPanel implements ActionListener {
+public class GlossaryPanel extends JPanel implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 
@@ -70,7 +70,7 @@ public class PanelGlossary extends JPanel implements ActionListener {
 	/**
 	 * Creates a new glossary panel instance
 	 */
-	public PanelGlossary() {
+	public GlossaryPanel() {
 		super();
 		this.startPageLabel = new JLabel("From page");
 		this.add(this.startPageLabel);

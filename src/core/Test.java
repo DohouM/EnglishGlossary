@@ -2,7 +2,7 @@ package core;
 
 import java.util.List;
 
-import gui.SaveFileDialog;
+import gui.FileSaveDialog;
 
 /**
  * A class to modelize a glossary Test.
@@ -52,7 +52,7 @@ public class Test {
 	 */
 
 	public void exportTest() {
-		SaveFileDialog savefile = new SaveFileDialog();
+		FileSaveDialog savefile = new FileSaveDialog();
 
 		HtmlTest testToExport = new HtmlTest(this.words, this.valueOfTest, this.numberOfWords, this.subjectId,
 				savefile.getFile());
