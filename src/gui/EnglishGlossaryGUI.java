@@ -108,6 +108,7 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 	pan.add(this.enterGlossary, BorderLayout.SOUTH);
 	pan.add(this.id, BorderLayout.CENTER);
 	this.setContentPane(pan);
+	this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 	
 	 // checking for glossary file
     String glossaryFilePath = "data.csv";
@@ -138,10 +139,7 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 	 */
     this.setVisible(true);
 	
-	this.addWindowListener(new WindowAdapter() {
-	    public void windowClosing(WindowEvent e) {
-	    	System.exit(0);
-	    }
+	
 		/* int userChoice = JOptionPane.showConfirmDialog(null, "Do you want to save the glossary?");
 		if (userChoice == 0)
 
@@ -154,7 +152,6 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 
 		System.exit(0);// close the windows
 	    } */
-	});
 
     }
 
