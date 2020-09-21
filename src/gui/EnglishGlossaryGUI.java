@@ -22,32 +22,28 @@ import core.Glossary;
 import io.CsvFileSerializationDriver;
 
 /**
- * A class that describe a Window of the application, with Swing attributes.
+ * English glossary main GUI
  */
-public class EnglishGlossaryGUI extends JFrame implements ActionListener {
+public class EnglishGlossaryGUI extends JFrame implements ActionListener {																									// image
 
-	private ImageIcon img = new ImageIcon(this.getClass().getResource("/icons/E-glossaryIcone.png")); // load the icon
-																										// image
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
-	public static Glossary glossary; // store the when the GUI is lunched
+	public static Glossary glossary; 
 
 	/**
-	 * 
+	 * Button used to enter glossary
 	 */
-	private JButton enterGlossary = new JButton("Enter Glossary");
+	private JButton enterGlossaryButton;
 
 	/**
-	 * A JLabel object used for the title of the window.
+	 * Label used for the title of the window.
 	 */
-	private JLabel title = new JLabel("E-GLOSSARY");
+	private JLabel titleLabel;
+	
 	/**
-	 * A JTextField used for the user to input it's username.
+	 * Text field used for the user to input its username.
 	 */
-	private JTextField id = new JTextField("Your User Name");
+	private JTextField userNameTextField;
 
 	/**
 	 * The currently logged user.
@@ -62,37 +58,35 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 	 */
 	public EnglishGlossaryGUI(Glossary glossary) throws IOException {
 
-		EnglishGlossaryGUI.glossary = glossary;
+		ImageIcon img = new ImageIcon(this.getClass().getResource("/icons/E-glossaryIcone.png")); // load the icon
+		
+		EnglishGlossaryGUI.glossary = glossary;	
 
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.WHITE);			
+		panel.setLayout(new BorderLayout());
+		
+		this.titleLabel = new JLabel("E-GLOSSARY");
+		this.titleLabel.setFont(new Font("impact", Font.ITALIC, 30));
+		this.titleLabel.setForeground(Color.blue);
+		this.titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		panel.add(this.titleLabel, BorderLayout.NORTH);
+		
+		this.enterGlossaryButton = new JButton("Enter Glossary");
+		this.enterGlossaryButton.addActionListener(this);
+		panel.add(this.enterGlossaryButton, BorderLayout.SOUTH);
+		
+		this.userNameTextField = new JTextField("Your User Name");
+		this.userNameTextField.setHorizontalAlignment(SwingConstants.CENTER);
+		panel.add(this.userNameTextField, BorderLayout.CENTER);
+		
 		this.setTitle("Interactive Glossary");
 		this.setSize(400, 200);
 		this.setLocationRelativeTo(null);
-		this.setIconImage(this.img.getImage()); // load the icon image
-		this.enterGlossary.addActionListener(this);
-
-		// New object JPanel
-		JPanel pan = new JPanel();
-		// background color
-		pan.setBackground(Color.WHITE);
-		// We warn our JFrame that our JPanel will be her JPanel pane
-
-		Font police = new Font("impact", Font.ITALIC, 30);
-		// It is applied to the JLabel
-		this.title.setFont(police);
-		// Changing the text color
-		this.title.setForeground(Color.blue);
-		// The text alignment is modified using static attributes
-		// JLabel class
-		this.title.setHorizontalAlignment(SwingConstants.CENTER);
-
-		this.id.setHorizontalAlignment(SwingConstants.CENTER);
-		pan.setLayout(new BorderLayout());
-		pan.add(this.title, BorderLayout.NORTH);
-		// pan.add(new Panel(), BorderLayout.CENTER);
-		pan.add(this.enterGlossary, BorderLayout.SOUTH);
-		pan.add(this.id, BorderLayout.CENTER);
-		this.setContentPane(pan);
+		this.setIconImage(img.getImage()); // load the icon image
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setContentPane(panel);
+		
 
 		// checking for glossary file
 		String glossaryFilePath = "data.csv";
@@ -101,9 +95,7 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 					"Démarrage de l'application impossible", JOptionPane.ERROR_MESSAGE);
 			throw new IOException("Fichier de glossaire introuvable!");
 		}
-
-		// Save the Glossary in a file when the windows is closed by the user//
-
+		
 		CsvFileSerializationDriver readWrite = new CsvFileSerializationDriver("data.csv");
 
 		try {
@@ -118,36 +110,14 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 
 	public void actionPerformed(ActionEvent arg0) { // Method that will be called when clicking on the button
 
-		this.user = this.id.getText();
-		this.title.setText("E-GLOSSARY AS " + this.user);
+		this.user = this.userNameTextField.getText();
+		this.titleLabel.setText("E-GLOSSARY AS " + this.user);
 		this.setSize(1000, 800);
 		this.setLocationRelativeTo(null);
-		JTabbedPane pane = loadStudentPanel();
-		// frame
-		this.setContentPane(pane);
-	}
-
-	/**
-	 * Load the student window.
-	 * 
-	 * @return The student JTabbedPane object, which contains the tabs accessible to
-	 *         students.
-	 */
-	private JTabbedPane loadStudentPanel() {
-		// Pan
 		JTabbedPane pane = new JTabbedPane();
-		String titre = "Glossary";
-		pane.add(titre, new PanelGlossary());
-		pane.setTabComponentAt(0, new Tabs(titre, pane));
-		// Pan
-
-		String titre2 = "Quiz";
-		pane.add(titre2, new PanelQuiz());
-
-		// Pan
-
-		String titre3 = "Proposal";
-		pane.add(titre3, new PanelProposal());
-		return pane;
+		pane.add("Glossary", new PanelGlossary());
+		pane.add("Quiz", new PanelQuiz());
+		pane.add("Proposal", new PanelProposal());
+		this.setContentPane(pane);
 	}
 }
