@@ -121,7 +121,7 @@ public class PanelModifyGlossary extends JPanel implements ActionListener {
 
 		if (arg0.getSource() == this.btAdd) {
 
-			EnglishGlossaryGUI.glossary.addWordStringOnly(this.englishWord.getText(), this.frenchWord.getText());
+			EnglishGlossaryGUI.glossary.addWord(this.englishWord.getText(), this.frenchWord.getText());
 
 			JOptionPane.showMessageDialog(null, "Word Saved");
 
