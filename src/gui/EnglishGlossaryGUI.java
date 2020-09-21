@@ -120,7 +120,7 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 		CsvFileSerializationDriver readWrite = new CsvFileSerializationDriver("data.csv");
 
 		try {
-			glossary = new Glossary(readWrite.importWords());
+			glossary.addWords(readWrite.importWords());
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(this, "Fichier de glossaire invalide",
 					"Démarrage de l'application impossible", JOptionPane.ERROR_MESSAGE);

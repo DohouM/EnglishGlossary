@@ -10,7 +10,6 @@ import gui.EnglishGlossaryGUI;
  */
 
 public class Main {
-	public static Glossary glossary;
 
 	/**
 	 * Main function of the program, holds all the vital functionalities.
@@ -20,7 +19,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		try {
-			new EnglishGlossaryGUI(glossary);
+			new EnglishGlossaryGUI(new Glossary());
 		} catch (IOException e) {
 			System.err.println(e.getMessage());
 			System.exit(1);
