@@ -1,4 +1,5 @@
 package core;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import gui.EnglishGlossaryGUI;
@@ -31,16 +32,15 @@ public class Main {
      */
     public static void main(String[] args) {
 
-
-    	CsvFileSerializationDriver readWrite = new CsvFileSerializationDriver("data.csv");
-    	
-		try {
-			glossary= new Glossary(readWrite.importWords());
-		} catch (IOException e) {
-			e.printStackTrace();
+		try
+		{
+			new EnglishGlossaryGUI(glossary);
 		}
-
-		new EnglishGlossaryGUI(glossary);
+		catch (IOException e)
+		{
+			System.err.println(e.getMessage());
+	    	System.exit(1);
+		}
 		
 
     }

@@ -2,13 +2,13 @@ package gui;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -20,11 +20,9 @@ import javax.swing.JPasswordField;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 
-import core.StringUtils;
-import io.CsvFileSerializationDriver;
 import core.Glossary;
-import core.Main;
 import core.Password_Check;
+import io.CsvFileSerializationDriver;
 
 /**
  * A class that describe a Window of the application, with Swing attributes.
@@ -78,7 +76,7 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
      * with current object attributes.
      * @param glossary The glossary to word with.
      */
-    public EnglishGlossaryGUI(Glossary glossary) {
+    public EnglishGlossaryGUI(Glossary glossary) throws IOException {
     	
     EnglishGlossaryGUI.glossary= glossary;
     	
@@ -110,15 +108,35 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {
 	pan.add(this.enterGlossary, BorderLayout.SOUTH);
 	pan.add(this.id, BorderLayout.CENTER);
 	this.setContentPane(pan);
-	this.setVisible(true);
-
+	
+	 // checking for glossary file
+    String glossaryFilePath = "data.csv";
+    if (!new File(glossaryFilePath).exists())
+    {
+    	JOptionPane.showMessageDialog(this,
+    		    "Fichier de glossaire introuvable",
+    		    "Démarrage de l'application impossible",
+    		    JOptionPane.ERROR_MESSAGE);
+    	throw new IOException("Fichier de glossaire introuvable!");
+    }
+    
 	// Save the Glossary in a file when the windows is closed by the user//
 
 	CsvFileSerializationDriver readWrite = new CsvFileSerializationDriver("data.csv");
+	
+	try {
+		glossary= new Glossary(readWrite.importWords());
+	} catch (IOException e) {
+		JOptionPane.showMessageDialog(this,
+    		    "Fichier de glossaire invalide",
+    		    "Démarrage de l'application impossible",
+    		    JOptionPane.ERROR_MESSAGE);
+		throw new IOException("Fichier de glossaire invalide!");
+	}
 	/*Currently, the following code isn't necessary, since we're only working with local copies of
 	 * a glossary, that won't be (or at least should NOT be) modified.
 	 */
-	
+    this.setVisible(true);
 	
 	this.addWindowListener(new WindowAdapter() {
 	    public void windowClosing(WindowEvent e) {
