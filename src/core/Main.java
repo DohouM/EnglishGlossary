@@ -1,48 +1,31 @@
 package core;
-import java.io.FileNotFoundException;
+
 import java.io.IOException;
 
 import gui.EnglishGlossaryGUI;
-import io.CsvFileSerializationDriver;
-import io.*;
 
 /**
  * Main class of the program, contains Main function, which is the core of the
  * app.
- * 
- * @author Jean-Camille LAPIERRE, Dorian MOUNIER, Gabriel SAPONARA, Cyril
- *         PIGEYRE, Medhy DOHOU
- * @version 1.5
  */
 
 public class Main {
-    public static Glossary glossary; 
-   
+	public static Glossary glossary;
 
-    /**
-     * Main function of the program, launches every vital function of it.
-     * 
-     * @author Jean-Camille LAPIERRE, Dorian MOUNIER, Gabriel SAPONARA, Cyril
-     *         PIGEYRE, Medhy DOHOU
-     */
-    /**
-     * Main function of the program, holds all the vital functionalities.
-     * 
-     * @param args useless here.
-     */
-    public static void main(String[] args) {
+	/**
+	 * Main function of the program, holds all the vital functionalities.
+	 * 
+	 * @param args useless here.
+	 */
+	public static void main(String[] args) {
 
-		try
-		{
+		try {
 			new EnglishGlossaryGUI(glossary);
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			System.err.println(e.getMessage());
-	    	System.exit(1);
+			System.exit(1);
 		}
-		
 
-    }
+	}
 
 }

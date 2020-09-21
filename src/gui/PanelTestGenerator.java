@@ -1,4 +1,5 @@
 package gui;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -21,220 +22,212 @@ import core.Word;
 /**
  * A class that describe the Test Generator panel of the application, with Swing
  * attributes.
- * 
- * @author Medhy DOHOU, Jean-Camille LAPIERRE, Dorian MOUNIER, Cyril PIGEYRE,
- *         Gabriel SAPONARA
- * @version 1.3
  */
 
 public class PanelTestGenerator extends JPanel implements ActionListener {
 
-    private static final long serialVersionUID = 1L;
-    /**
-     * The SpinnerModel for starting page selection.
-     */
-    private SpinnerModel startPages = new SpinnerNumberModel(1, // initial value
-	    1, // minimum value
-	    EnglishGlossaryGUI.glossary.numberOfPages(), // maximum value
-	    1); // step
-    /**
-     * The JSpinner created from the previously created SpinnerModel
-     * <code>startPages</code>.
-     */
-    private JSpinner spinnerStart = new JSpinner(startPages);
-    /**
-     * The SpinnerModel for ending page selection.
-     */
-    private SpinnerModel endPages = new SpinnerNumberModel(1, // initial value
-	    1, // minimum value
-	    EnglishGlossaryGUI.glossary.numberOfPages(), // maximum value
-	    1); // step
-    /**
-     * The JSpinner created from the previously created SpinnerModel
-     * <code>endPages</code>.
-     */
-    private JSpinner spinnerEnd = new JSpinner(endPages);
+	private static final long serialVersionUID = 1L;
+	/**
+	 * The SpinnerModel for starting page selection.
+	 */
+	private SpinnerModel startPages = new SpinnerNumberModel(1, // initial value
+			1, // minimum value
+			EnglishGlossaryGUI.glossary.numberOfPages(), // maximum value
+			1); // step
+	/**
+	 * The JSpinner created from the previously created SpinnerModel
+	 * <code>startPages</code>.
+	 */
+	private JSpinner spinnerStart = new JSpinner(this.startPages);
+	/**
+	 * The SpinnerModel for ending page selection.
+	 */
+	private SpinnerModel endPages = new SpinnerNumberModel(1, // initial value
+			1, // minimum value
+			EnglishGlossaryGUI.glossary.numberOfPages(), // maximum value
+			1); // step
+	/**
+	 * The JSpinner created from the previously created SpinnerModel
+	 * <code>endPages</code>.
+	 */
+	private JSpinner spinnerEnd = new JSpinner(this.endPages);
 
-    // buttons
-    private JButton btGen = new JButton("Generate");
-    private JButton btExport = new JButton("Export");
+	// buttons
+	private JButton btGen = new JButton("Generate");
+	private JButton btExport = new JButton("Export");
 
-    /**
-     * The JLabel placed before the <code>spinnerStart</code> JSpinner object.
-     */
-    private JLabel fromP = new JLabel("From page");
-    /**
-     * The JLabel placed between the <code>spinnerStart</code> and
-     * <code>spinnerEnd</code> JSpinner objects.
-     */
-    private JLabel to = new JLabel("to");
-    /**
-     * The JLabel that'll hold the points earned by the student.
-     */
-    private JLabel points = new JLabel("");
+	/**
+	 * The JLabel placed before the <code>spinnerStart</code> JSpinner object.
+	 */
+	private JLabel fromP = new JLabel("From page");
+	/**
+	 * The JLabel placed between the <code>spinnerStart</code> and
+	 * <code>spinnerEnd</code> JSpinner objects.
+	 */
+	private JLabel to = new JLabel("to");
+	/**
+	 * The JLabel that'll hold the points earned by the student.
+	 */
+	private JLabel points = new JLabel("");
 
-    /**
-     * The JScrollPane that'll hold the JTable that'll store the quiz.
-     */
-    private JScrollPane tab = new JScrollPane();
+	/**
+	 * The JScrollPane that'll hold the JTable that'll store the quiz.
+	 */
+	private JScrollPane tab = new JScrollPane();
 
-    /**
-     * The JTable that'll hold the quiz.
-     */
-    private JTable tableau;
+	/**
+	 * The JTable that'll hold the quiz.
+	 */
+	private JTable tableau;
 
-    /**
-     * A JCheckBox to only have mandatory words in the generated test.
-     */
-    private JCheckBox checkbox = new JCheckBox("Only mandatory words(*)");
+	/**
+	 * A JCheckBox to only have mandatory words in the generated test.
+	 */
+	private JCheckBox checkbox = new JCheckBox("Only mandatory words(*)");
 
+	/**
+	 * The JLabel placed before the JSpinner <code>wordNumber</code>
+	 */
+	private JLabel numOfWordsL = new JLabel("Number of words:");
 
-    /**
-     * The JLabel placed before the JSpinner <code>wordNumber</code>
-     */
-    private JLabel numOfWordsL = new JLabel("Number of words:");
+	/**
+	 * The SpinnerModel object for the <code>wordsNumber</code> JSpinner.
+	 */
+	private SpinnerModel numOfWordsSpinner = new SpinnerNumberModel(10, // initial value
+			1, // minimum value
+			(EnglishGlossaryGUI.glossary.numberOfPages()) * 51, // maximum value
+			1); // step;
+	/**
+	 * The JSpinner objects to select the number of words in the generated test.
+	 */
+	private JSpinner wordsNumber = new JSpinner(this.numOfWordsSpinner);
 
-    /**
-     * The SpinnerModel object for the <code>wordsNumber</code> JSpinner.
-     */
-    private SpinnerModel numOfWordsSpinner = new SpinnerNumberModel(10, // initial value
-	    1, // minimum value
-	    (EnglishGlossaryGUI.glossary.numberOfPages()) * 51, // maximum value
-	    1); // step;
-    /**
-     * The JSpinner objects to select the number of words in the generated test.
-     */
-    private JSpinner wordsNumber = new JSpinner(numOfWordsSpinner);
+	/**
+	 * The JLabel placed before the JSpinner <code>pointValue</code>.
+	 */
+	private JLabel pointsValueL = new JLabel("Value of test (points) :");
+	/**
+	 * The SpinnerModel object for the <code>pointValue</code> JSpinner.
+	 */
+	private SpinnerModel pointValueSpinner = new SpinnerNumberModel(1, // initial value
+			1, // minimum value
+			20, // maximum value
+			1); // step;
 
-    /**
-     * The JLabel placed before the JSpinner <code>pointValue</code>.
-     */
-    private JLabel pointsValueL = new JLabel("Value of test (points) :");
-    /**
-     * The SpinnerModel object for the <code>pointValue</code> JSpinner.
-     */
-    private SpinnerModel pointValueSpinner = new SpinnerNumberModel(1, // initial value
-	    1, // minimum value
-	    20, // maximum value
-	    1); // step;
+	/**
+	 * The JSpinner objects to select the points value of the test to generate.
+	 */
+	private JSpinner pointValue = new JSpinner(this.pointValueSpinner);
 
-    /**
-     * The JSpinner objects to select the points value of the test to generate.
-     */
-    private JSpinner pointValue = new JSpinner(pointValueSpinner);
+	/**
+	 * The JLabel placed before the JSpinner <code>subjectNum</code>.
+	 */
+	private JLabel testSubject = new JLabel("Subject number:");
 
-    /**
-     * The JLabel placed before the JSpinner <code>subjectNum</code>.
-     */
-    private JLabel testSubject = new JLabel("Subject number:");
+	/**
+	 * The SpinnerModel object for the <code>subjectNum</code> JSpinner.
+	 */
+	private SpinnerModel subject = new SpinnerNumberModel();
+	/**
+	 * The JSpinner objects that selects the number of the current test to generate.
+	 */
+	private JSpinner subjectNum = new JSpinner(this.subject);
 
-    /**
-     * The SpinnerModel object for the <code>subjectNum</code> JSpinner.
-     */
-    private SpinnerModel subject = new SpinnerNumberModel();
-    /**
-     * The JSpinner objects that selects the number of the current test to generate.
-     */
-    private JSpinner subjectNum = new JSpinner(subject);
-    
-    /**
-     * The <code>List&lt;Word&gt;</code> to pick words from for the test.
-     */
-    private List<Word> wordList;
-    
-    /**
-     * The Array containing the word asked as well as their french equivalent (All the word between the pages selected).
-     */
-    private String[][] data;
-    
-    /**
-     * The <code>List&lt;Word&gt;</code> of the new generated test (if the test is regenerated by the user).
-     */
-    private List<Word> newWordList;
-    /**
-     * The Test object to display.
-     */
-    Test theTest;
-    
-    /**
-     * The constructor of the PanelTestGenerator class.
-     */
-    public PanelTestGenerator() {
-	super();
-	this.add(this.fromP);
-	this.add(this.spinnerStart);
-	this.add(this.to);
-	this.add(this.spinnerEnd);
-	this.add(this.btGen);
-	// add to a container
-	this.add(this.checkbox);
+	/**
+	 * The <code>List&lt;Word&gt;</code> to pick words from for the test.
+	 */
+	private List<Word> words;
 
-	this.add(this.numOfWordsL);
-	this.add(this.wordsNumber);
-	// set state
-	this.checkbox.setSelected(true);
-	this.add(this.testSubject);
-	this.add(this.subjectNum);
-	this.add(this.pointsValueL);
-	this.add(this.pointValue);
-	this.btGen.addActionListener(this);
+	/**
+	 * The Array containing the word asked as well as their french equivalent (All
+	 * the word between the pages selected).
+	 */
+	private String[][] data;
 
-    }
+	/**
+	 * The <code>List&lt;Word&gt;</code> of the new generated test (if the test is
+	 * regenerated by the user).
+	 */
+	private List<Word> newWordList;
+	/**
+	 * The Test object to display.
+	 */
+	Test theTest;
 
-    /**
-     * Method that describes what to do if an action is performed.
-     * 
-     * @param arg0 The action performed by the user
-     */
-    public void actionPerformed(ActionEvent arg0) {
-	this.wordList =EnglishGlossaryGUI.glossary.pages((int) this.spinnerStart.getValue(),
-		(int) this.spinnerEnd.getValue());
-	
-	
-	if (arg0.getSource() == this.btGen) {
-	    
-	    
-	    this.data = new String[(int) this.wordsNumber.getValue()][2];
-	    this.remove(this.tab);
-	    this.remove(this.points);
-	    
-	    Quiz quiz= new Quiz((int) this.spinnerStart.getValue(),
-				(int) this.spinnerEnd.getValue(), this.checkbox.isSelected());
-	    this.wordList = quiz.getWordList();
-	    
-	    
+	/**
+	 * The constructor of the PanelTestGenerator class.
+	 */
+	public PanelTestGenerator() {
+		super();
+		this.add(this.fromP);
+		this.add(this.spinnerStart);
+		this.add(this.to);
+		this.add(this.spinnerEnd);
+		this.add(this.btGen);
+		// add to a container
+		this.add(this.checkbox);
 
-	    this.data = quiz.randomPick(this.wordList, (int) this.numOfWordsSpinner.getValue());
-	    
-
-	    String title[] = { "French Words", "English Words" };
-	    this.tableau = new JTable(this.data, title);
-
-	    this.tab = new JScrollPane(this.tableau);
-
-	    this.add(this.tab);
-
-	    this.add(this.btExport);
-	    this.btExport.addActionListener(this);
-
-	    this.btGen = new JButton("Generate Again");
-	    this.newWordList = new ArrayList<Word>();
-	    int loopCounter;
-	    for(loopCounter=0; loopCounter < (int) this.wordsNumber.getValue();loopCounter++) {
-		this.newWordList.add(new Word(this.data[loopCounter][0],this.data[loopCounter][1]));
-	    }
-	    theTest = new Test(this.newWordList, (int) this.pointValue.getValue(), (int) this.numOfWordsSpinner.getValue(), (int) this.subjectNum.getValue());
-	    
-
-	    this.updateUI();
+		this.add(this.numOfWordsL);
+		this.add(this.wordsNumber);
+		// set state
+		this.checkbox.setSelected(true);
+		this.add(this.testSubject);
+		this.add(this.subjectNum);
+		this.add(this.pointsValueL);
+		this.add(this.pointValue);
+		this.btGen.addActionListener(this);
 
 	}
 
-	if (arg0.getSource() == this.btExport) {
-	    
-	    theTest.exportTest();
-	    this.updateUI();
+	/**
+	 * Method that describes what to do if an action is performed.
+	 * 
+	 * @param arg0 The action performed by the user
+	 */
+	public void actionPerformed(ActionEvent arg0) {
+		this.words = EnglishGlossaryGUI.glossary.pages((int) this.spinnerStart.getValue(),
+				(int) this.spinnerEnd.getValue());
+
+		if (arg0.getSource() == this.btGen) {
+
+			this.data = new String[(int) this.wordsNumber.getValue()][2];
+			this.remove(this.tab);
+			this.remove(this.points);
+
+			Quiz quiz = new Quiz((int) this.spinnerStart.getValue(), (int) this.spinnerEnd.getValue(),
+					this.checkbox.isSelected());
+			this.words = quiz.getWordList();
+
+			this.data = quiz.randomPick(this.words, (int) this.numOfWordsSpinner.getValue());
+
+			String title[] = { "French Words", "English Words" };
+			this.tableau = new JTable(this.data, title);
+
+			this.tab = new JScrollPane(this.tableau);
+
+			this.add(this.tab);
+
+			this.add(this.btExport);
+			this.btExport.addActionListener(this);
+
+			this.btGen = new JButton("Generate Again");
+			this.newWordList = new ArrayList<Word>();
+			int loopCounter;
+			for (loopCounter = 0; loopCounter < (int) this.wordsNumber.getValue(); loopCounter++) {
+				this.newWordList.add(new Word(this.data[loopCounter][0], this.data[loopCounter][1]));
+			}
+			this.theTest = new Test(this.newWordList, (int) this.pointValue.getValue(),
+					(int) this.numOfWordsSpinner.getValue(), (int) this.subjectNum.getValue());
+
+			this.updateUI();
+
+		}
+
+		if (arg0.getSource() == this.btExport) {
+
+			this.theTest.exportTest();
+			this.updateUI();
+		}
 	}
-    }
 
 }
