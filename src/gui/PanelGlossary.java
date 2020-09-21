@@ -16,94 +16,94 @@ import javax.swing.SpinnerNumberModel;
 import core.Word;
 
 /**
- * A class that describe the Glossary panel of the application, with Swing
- * attributes.
+ * Sub-part of the GUI responsible of glossary pages display.
  */
 public class PanelGlossary extends JPanel implements ActionListener {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * The SpinnerModel for starting page selection.
+	 * The spinner model for starting page selection.
 	 */
-	private SpinnerModel startPages = new SpinnerNumberModel(1, // initial value
-			1, // minimum value
-			EnglishGlossaryGUI.glossary.numberOfPages(), // maximum value
-			1); // step
+	private SpinnerModel startPageSpinnerModel;
 
 	/**
-	 * The JSpinner created from the previously created SpinnerModel
-	 * <code>startPages</code>.
+	 * The spinner for start page selection
 	 */
-	private JSpinner spinnerStart = new JSpinner(this.startPages);
+	private JSpinner startSpinner;
 
 	/**
-	 * The SpinnerModel for ending page selection.
+	 * The spinner model for end page selection.
 	 */
-	private SpinnerModel endPages = new SpinnerNumberModel(1, // initial value
-			1, // minimum value
-			EnglishGlossaryGUI.glossary.numberOfPages(), // maximum value
-			1); // step
+	private SpinnerModel endPageSpinnerModel;
 
 	/**
-	 * The JSpinner created from the previously created SpinnerModel
-	 * <code>endPages</code>.
+	 * The spinner created from end page selection
 	 */
-	private JSpinner spinnerEnd = new JSpinner(this.endPages);
+	private JSpinner endSpinner;
 
 	/**
-	 * The JButton to get the glossary pages between select numbers in
-	 * <code>spinnerStart</code> and <code>spinnerEnd</code>.
+	 * The button to generate display
 	 */
-	private JButton btRun = new JButton("run");
+	private JButton displayButton;
 
 	/**
-	 * The JLabel placed before <code>spinnerStart</code>.
+	 * The label associated to start page spinner
 	 */
-	private JLabel fromP = new JLabel("From page");
+	private JLabel startPageLabel;
+	
 	/**
-	 * The JLabel placed after <code>spinnerStart</code>.
+	 * The label associated to end page spinner
 	 */
-	private JLabel to = new JLabel("to");
+	private JLabel endPageLabel;
 
 	/**
-	 * The JScrollPane that'll contain a table with all the words between selected
-	 * numbers in <code>spinnerStart</code> and <code>spinnerEnd</code>.
+	 * The scroll pane containing the table where selected pages are displayed
 	 */
-	private JScrollPane tab = new JScrollPane();
+	private JScrollPane scrollPane;
 
 	/**
-	 * The JTable that'll be contained in <code>tab</code>
+	 * The table containing selected pages
 	 */
-	private JTable tableau;
+	private JTable table;
 
 	/**
-	 * The constructor for the Glossary panel of the application.
+	 * Creates a new glossary panel instance
 	 */
 	public PanelGlossary() {
 		super();
-		this.add(this.fromP);
-		this.add(this.spinnerStart);
-		this.add(this.to);
-		this.add(this.spinnerEnd);
-		this.btRun.addActionListener(this);
-		this.add(this.btRun);
-
+		this.startPageLabel = new JLabel("From page");
+		this.add(this.startPageLabel);
+		
+		this.endPageLabel = new JLabel("to");
+		this.add(this.endPageLabel);
+		
+		this.startPageSpinnerModel = new SpinnerNumberModel(1, 1, EnglishGlossaryGUI.glossary.numberOfPages(),1);
+		this.startSpinner = new JSpinner(this.startPageSpinnerModel);
+		this.add(this.startSpinner);
+		
+		this.endPageSpinnerModel = new SpinnerNumberModel(1, 1, EnglishGlossaryGUI.glossary.numberOfPages(),1);
+		this.endSpinner = new JSpinner(this.endPageSpinnerModel);
+		this.add(this.endSpinner);
+		
+		this.displayButton = new JButton("display");
+		this.displayButton.addActionListener(this);
+		this.add(this.displayButton);
+		
+		this.scrollPane = new JScrollPane();
 	}
 
 	/**
-	 * Method that described what to do if an action is performed.
+	 * event listener responsible of updating glossary pages display
 	 * 
-	 * @param arg0 The action performed by the user
+	 * @param event source event
 	 */
-	public void actionPerformed(ActionEvent arg0) {
+	public void actionPerformed(ActionEvent event) {
 
-		this.remove(this.tab);
+		this.remove(this.scrollPane);
 
-		List<Word> words = EnglishGlossaryGUI.glossary.pages((int) this.spinnerStart.getValue(),
-				(int) this.spinnerEnd.getValue());
+		List<Word> words = EnglishGlossaryGUI.glossary.pages((int) this.startSpinner.getValue(),
+				(int) this.endSpinner.getValue());
 
 		Object[][] data = new Object[words.size()][2];
 
@@ -116,14 +116,12 @@ public class PanelGlossary extends JPanel implements ActionListener {
 		}
 
 		String title[] = { "English Words", "French Words" };
-		this.tableau = new JTable(data, title);
+		this.table = new JTable(data, title);
 
-		this.tab = new JScrollPane(this.tableau);
+		this.scrollPane = new JScrollPane(this.table);
 
-		this.add(this.tab);
+		this.add(this.scrollPane);
 
 		this.updateUI();
-
 	}
-
 }
