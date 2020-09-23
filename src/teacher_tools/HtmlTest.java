@@ -1,4 +1,4 @@
-package core;
+package teacher_tools;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -9,6 +9,9 @@ import java.util.Map.Entry;
 import java.util.Random;
 
 import javax.swing.JOptionPane;
+
+import core.Word;
+import gui.FileSaveDialog;
 
 /**
  * A class to describe an HTML page, used for the tests. 
@@ -128,5 +131,22 @@ public class HtmlTest {
 					JOptionPane.WARNING_MESSAGE);
 		}
 		JOptionPane.showMessageDialog(null, "file generated !");
+	}
+	
+	/**
+	 * Export test to an html file.
+	 * 
+	 * @param listOfWords   The list of words to pick the words from.
+	 * @param valueOfTest   The value of test in points.
+	 * @param numberOfWords The number of words into the test
+	 * @param subjectId     The number of the test (Subject One, Subject 2 , etc...)
+	 */
+
+	public static void exportTest(List<Word> listOfWords, int valueOfTest, int numberOfWords, int subjectId) {
+		FileSaveDialog savefile = new FileSaveDialog();
+
+		HtmlTest testToExport = new HtmlTest(listOfWords, valueOfTest, numberOfWords, subjectId, savefile.getFile());
+		testToExport.generateTestFile();
+
 	}
 }

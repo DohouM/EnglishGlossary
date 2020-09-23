@@ -133,23 +133,6 @@ public class Quiz {
 	}
 
 	/**
-	 * Export test to an html file.
-	 * 
-	 * @param listOfWords   The list of words to pick the words from.
-	 * @param valueOfTest   The value of test in points.
-	 * @param numberOfWords The number of words into the test
-	 * @param subjectId     The number of the test (Subject One, Subject 2 , etc...)
-	 */
-
-	public static void exportTest(List<Word> listOfWords, int valueOfTest, int numberOfWords, int subjectId) {
-		FileSaveDialog savefile = new FileSaveDialog();
-
-		HtmlTest testToExport = new HtmlTest(listOfWords, valueOfTest, numberOfWords, subjectId, savefile.getFile());
-		testToExport.generateTestFile();
-
-	}
-
-	/**
 	 * @return the wordList
 	 */
 	public List<Word> getWordList() {
