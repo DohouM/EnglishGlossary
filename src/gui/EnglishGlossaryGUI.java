@@ -58,7 +58,7 @@ public class EnglishGlossaryGUI extends JFrame implements ActionListener {						
 	 */
 	public EnglishGlossaryGUI(Glossary glossary) throws IOException {
 
-		ImageIcon img = new ImageIcon(this.getClass().getResource("/icons/E-glossaryIcone.png")); // load the icon
+		ImageIcon img = new ImageIcon(this.getClass().getResource("/icons/appIcon.png")); // load the icon
 		
 		EnglishGlossaryGUI.glossary = glossary;	
 
